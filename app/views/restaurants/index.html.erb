@@ -8,15 +8,7 @@
 
     <div class="row">
 
-      <% @restaurants.each do |restaurant| %>
-        <p><%= restaurant.name %></p>
-      <% end %>
-
-
-    </div>
-
-    <div class="row">
-    <!-- card- render partial -->
+    <%= render @restaurants %><!-- card- render partial -->
 
     </div>
 
