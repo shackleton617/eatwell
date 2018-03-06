@@ -14,10 +14,16 @@
   height: 40px;
   opacity: 0.95;
 }
-
+// User Icon
 .user-icon {
   opacity: 0.8;
   margin-bottom: 4px;
+}
+
+// Search icon
+.search-icon {
+  margin-bottom: 4px;
+  opacity: 0.8;
 }
 
 /* User Avatar */
@@ -38,7 +44,7 @@
 /* Basic navbar item */
 .navbar-wagon-item {
   cursor: pointer;
-  padding: 0 15px;
+  padding: 0 7px;
 }
 
 /* Navbar link */
