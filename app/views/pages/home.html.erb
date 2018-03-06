@@ -1,4 +1,5 @@
 
+
 <!-- temporary style tag for NavBar build -->
 <style>
 body {background-color: #17bebb;}
@@ -17,8 +18,51 @@ body {background-color: #17bebb;}
   </div>
 </div>
 
+<div class="container">
+
+  <div class="row">
+    <!-- eatwell logo text  and icons -->
+    <h2>Eatwell</h2>
+    <p>sourcing community recycling</p>
+
+  </div>
+
+  <br>
 
 
+  <div class="row">
+    <!-- search dropdown -->
+    <div class="form-group">
+          <%= form_tag(restaurants_path, method: "get") do %>
+            <%= text_area_tag(:location, "", placeholder: "Greater Lisbon", class: "form-control") %>
+            <br>
 
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+            <%= text_area_tag(:cuisine, "", placeholder: "Search for restaurant, café, cuisine...", class: "form-control") %>
+          <% end %>
+    </div>
+
+  </div>
+
+  <div class="row">
+    <!-- search any type info -->
+
+  </div>
+
+  <div class="row">
+    <!-- render cards collections -->
+    <%= render @restaurants %>
+
+  </div>
+
+</div>
+
+<script>var client = algoliasearch(ApplicationID, Search-Only-API-Key);
+var index = client.initIndex('YourIndexName');
+index.search('something', { hitsPerPage: 10, page: 0 })
+  .then(function searchDone(content) {
+    console.log(content)
+  })
+  .catch(function searchFailure(err) {
+    console.error(err);
+  });</script>
+>>>>>>> 2b9eea5e2e0b52e0e7fe2fe0add99897a90efc06
