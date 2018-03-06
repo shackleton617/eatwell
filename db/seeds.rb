@@ -1,3 +1,4 @@
+Restaurant.destroy_all
 require 'faker'
 10.times do
 

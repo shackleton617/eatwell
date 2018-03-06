@@ -1,10 +1,6 @@
 class RestaurantsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
 
-  geocoded_by :address
-  after_validation :geocode, if: :will_save_change_to_address?
-
-
   before_action :set_restaurant, only: [:show]
 
 
@@ -28,6 +24,7 @@ class RestaurantsController < ApplicationController
         #infoWindow: { content: render_to_string(partial: "/flats/map_box", locals: { flat: flat }) }
       }
   end
+end
 
   def show
   end
