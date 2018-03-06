@@ -8,7 +8,7 @@ body {background-color: #17bebb;}
 <div class="navbar-wagon">
   <!-- Logo -->
   <%= link_to root_path, class: "navbar-wagon-brand" do %>
-    <%= image_tag "logo.png", height: 50 %>
+   <p class="btn-impact">The Movement</p>
   <% end %>
   <div class="navbar-wagon-right">
     <div class="navbar-wagon-item user-icon">
@@ -56,13 +56,4 @@ body {background-color: #17bebb;}
 
 </div>
 
-<script>var client = algoliasearch(ApplicationID, Search-Only-API-Key);
-var index = client.initIndex('YourIndexName');
-index.search('something', { hitsPerPage: 10, page: 0 })
-  .then(function searchDone(content) {
-    console.log(content)
-  })
-  .catch(function searchFailure(err) {
-    console.error(err);
-  });</script>
->>>>>>> 2b9eea5e2e0b52e0e7fe2fe0add99897a90efc06
+
