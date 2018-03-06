@@ -1,0 +1,43 @@
+<div>
+
+  <div> PHOTO!!!
+  </div>
+
+  <div class="container">
+
+    <div class="card">
+      <ul class="list-inline">
+        <li><%= @restaurant.name %></li>
+        <li> AVERAGE OF ALL REVIEWS!!! </li>
+      <p> <%= @restaurant.price_for_two%>€</p>
+      </ul>
+      <ul class="list-inline">
+        <li><%= @restaurant.cuisine %></li>
+        <li><%= @restaurant.location  %></li>
+      </ul>
+      <ul style="list-style: none; padding-left:0;">
+        <li>Adress: <%= @restaurant.address %></li>
+        <li>Phone: <%= @restaurant.phone_number %></li>
+        <li>Hours: <%= @restaurant.working_hours %></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <p>Description</p>
+      <p><%= @restaurant.description  %></p>
+    </div>
+
+    <div> MAAAAP!!!!
+    </div>
+
+    <div class="card">
+      <ul class="list-inline">
+        <li>Reviews</li>
+        <li>Leave a review</li>
+      </ul>
+      <p> REVIEW CONTENT!!! </p>
+    </div>
+
+  </div>
+
+</div>
