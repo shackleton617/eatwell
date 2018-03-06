@@ -1,1 +1,17 @@
 // Specific CSS for your home-page
+
+.btn-impact {
+  border: 1px solid #FEFFFE;
+  color: #FEFFFE;
+  padding: 5px 7px;
+  margin-top: 7px;
+  border-radius: 16px;
+  font-weight: lighter;
+  font-size: 12px;
+  opacity: 0.8;
+
+  a {
+    color: #FEFFFE;
+    text-decoration: none;
+  }
+}
