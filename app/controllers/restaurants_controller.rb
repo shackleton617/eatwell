@@ -9,6 +9,7 @@ class RestaurantsController < ApplicationController
 
 
   def show
+    @review = Review.new
   end
 
   private
