@@ -1,0 +1,54 @@
+
+<% content_for :navbar do %>
+      <%= render 'shared/navbar_show' %>
+ <% end %>
+
+<div>
+
+  <div> PHOTO!!!
+  </div>
+
+  <div class="container">
+
+    <div class="card">
+      <ul class="list-inline">
+        <li><%= @restaurant.name %></li>
+        <li> AVERAGE OF ALL REVIEWS!!! </li>
+      <p> <%= @restaurant.price_for_two%>€</p>
+      </ul>
+      <ul class="list-inline">
+        <li><%= @restaurant.cuisine %></li>
+        <li><%= @restaurant.location  %></li>
+      </ul>
+      <ul style="list-style: none; padding-left:0;">
+        <li>Adress: <%= @restaurant.address %></li>
+        <li>Phone: <%= @restaurant.phone_number %></li>
+        <li>Hours: <%= @restaurant.working_hours %></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <p>Description</p>
+      <p><%= @restaurant.description  %></p>
+    </div>
+
+    <div><%= image_tag "https://maps.googleapis.com/maps/api/staticmap?zoom=15&size=400x300&sensor=false&maptype=roadmap&markers=color:red|#{@restaurant.address}" %>
+    </div>
+
+    <div class="card">
+      <ul class="list-inline">
+        <li>Reviews</li>
+        <li>Leave a review</li>
+      </ul>
+      <p><% if @restaurant.reviews.blank? %>
+        Be the first to leave a review for <%= @restaurant.name %>
+      <% else %>
+        <% @restaurant.reviews.each do |review| %>
+          <%= render 'reviews/show', review: review %>
+        <% end %>
+      <% end %></p>
+    </div>
+
+  </div>
+
+</div>

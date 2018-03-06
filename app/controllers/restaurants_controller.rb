@@ -13,7 +13,7 @@ class RestaurantsController < ApplicationController
     end
 
     unless params[:cuisine].blank?
-       @fields = @fields.where(cuisine: params[:cuisine].capitalize)
+       @restaurants = @restaurants.where(cuisine: params[:cuisine].capitalize)
     end
 
 
@@ -26,6 +26,7 @@ class RestaurantsController < ApplicationController
   end
 end
 
+
   def show
   end
 
@@ -35,10 +36,8 @@ end
     @restaurant = Restaurant.find(params[:id])
   end
 
-  def field_params
+
+  def restaurant_params
     params.require(:restaurant).permit(:address, :cuisine)
   end
-
-
-
 end
