@@ -1,12 +1,32 @@
 class RestaurantsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
 
+  geocoded_by :address
+  after_validation :geocode, if: :will_save_change_to_address?
+
 
   before_action :set_restaurant, only: [:show]
 
 
   def index
-    @restaurants = Restaurant.all
+    @restaurants = Restaurant.where.not(latitude: nil, longitude: nil)
+
+
+    unless params[:address].blank?
+       @restaurants = @restaurants.near(params[:address], 2)
+    end
+
+    unless params[:cuisine].blank?
+       @fields = @fields.where(cuisine: params[:cuisine].capitalize)
+    end
+
+
+    @markers = @restaurants.map do |restaurant|
+      {
+        lat: restaurant.latitude,
+        lng: restaurant.longitude#,
+        #infoWindow: { content: render_to_string(partial: "/flats/map_box", locals: { flat: flat }) }
+      }
   end
 
   def show
@@ -16,6 +36,10 @@ class RestaurantsController < ApplicationController
 
   def set_restaurant
     @restaurant = Restaurant.find(params[:id])
+  end
+
+  def field_params
+    params.require(:restaurant).permit(:address, :cuisine)
   end
 
 

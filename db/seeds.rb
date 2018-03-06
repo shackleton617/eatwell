@@ -15,8 +15,11 @@ working_hours:  Faker::Number.between(11, 13).to_s + '-' + Faker::Number.between
 has_community: Faker::Boolean.boolean,
 has_recycling: Faker::Boolean.boolean,
 has_sourcing: Faker::Boolean.boolean,
-photos: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTNMecUlu3OTXWxvHASQ9T_uoRCIaYX9_mSrWcTUdPqQQEthWq"
+photos: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTNMecUlu3OTXWxvHASQ9T_uoRCIaYX9_mSrWcTUdPqQQEthWq",
+latitude: Faker::Address.latitude,
+longitude: Faker::Address.longitude
 )
+
 
 restaurant.save!
 
