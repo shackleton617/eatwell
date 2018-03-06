@@ -27,9 +27,11 @@ body {background-color: #17bebb;}
 
     </div>
 
-    <div class="row">
-
-    <%= render @restaurants %><!-- card- render partial -->
+    <hr>
+  <div class="index-page__row row">
+    <div class="index-page__col-left col-xs-12 col-md-8">
+      <%= render @restaurants %>
+    </div><!-- card- render partial -->
 
     </div>
 
@@ -38,7 +40,8 @@ body {background-color: #17bebb;}
     <div
   id="map"
   style="width: 100%;
-  height: 600px;"
+  height: 600px;
+  justify-content: right"
   data-markers="<%= @markers.to_json %>"
 ></div>
 
@@ -46,7 +49,6 @@ body {background-color: #17bebb;}
 
 
   </div>
-
 
 
 
