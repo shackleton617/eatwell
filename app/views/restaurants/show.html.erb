@@ -1,11 +1,25 @@
 
 <% content_for :navbar do %>
       <%= render 'shared/navbar_show' %>
- <% end %>
+<% end %>
 
 <div>
 
   <div> PHOTO!!!
+  </div>
+
+  <div>
+    <ul class="list-inline">
+      <% if @restaurant.has_community %>
+        <li><%= image_tag("http://bit.ly/2FmtZf1", :alt => "rss feed") %></li>
+      <% end %>
+      <% if @restaurant.has_sourcing %>
+        <li><%= image_tag("http://bit.ly/2Fp7TZg", :alt => "rss feed") %></li>
+      <% end %>
+      <% if @restaurant.has_recycling %>
+       <li><%= image_tag("http://bit.ly/2I80D5S", :alt => "rss feed") %></li>
+      <% end %>
+    </ul>
   </div>
 
   <div class="container">
@@ -14,7 +28,7 @@
       <ul class="list-inline">
         <li><%= @restaurant.name %></li>
         <li> AVERAGE OF ALL REVIEWS!!! </li>
-      <p> <%= @restaurant.price_for_two%>€</p>
+      <p> <%= @restaurant.price_for_two%>€ for two (approx average)</p>
       </ul>
       <ul class="list-inline">
         <li><%= @restaurant.cuisine %></li>
