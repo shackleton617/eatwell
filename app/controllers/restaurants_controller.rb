@@ -2,11 +2,10 @@ class RestaurantsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
 
   before_action :set_restaurant, only: [:show]
+  before_action :get_location, only: [:index]
 
 
   def index
-
-
     if params[:query].present?
         sql_query = " \
         restaurants.name @@ :query \
