@@ -9,39 +9,42 @@
 
   <br>
 
+  <div class="row" style="margin-bottom: 20px">
+   <div id="map" style="width: 100%; height: 600px;" data-markers="<%= @markers.to_json %>">
 
-  <div class="row">
-    <!-- search dropdown -->
-    <div class="form-group">
-          <%= form_tag(restaurants_path, method: "get") do %>
-            <%= text_area_tag(:location, "", placeholder: "Greater Lisbon", class: "form-control") %>
-            <br>
+   </div>
 
-            <%= text_area_tag(:cuisine, "", placeholder: "Search for restaurant, café, cuisine...", class: "form-control") %>
-          <% end %>
-    </div>
+   <br>
 
-  </div>
-
-  <div class="row">
-    <!-- search any type info -->
-
-  </div>
-
-  <div class="row">
-    <!-- render cards collections -->
-    <%= render @restaurants %>
+   <div class="form-group">
+    <%= render 'shared/searchbar' %>
 
   </div>
 
 </div>
 
-<script>var client = algoliasearch(ApplicationID, Search-Only-API-Key);
-var index = client.initIndex('YourIndexName');
-index.search('something', { hitsPerPage: 10, page: 0 })
-  .then(function searchDone(content) {
-    console.log(content)
-  })
-  .catch(function searchFailure(err) {
-    console.error(err);
-  });</script>
+<div class="row" style="margin-bottom: 20px">
+  <!-- search dropdown -->
+
+
+
+
+</div>
+
+<div class="row">
+  <!-- search any type info -->
+
+</div>
+
+<div class="row">
+  <!-- render cards collections -->
+  <div class="restaurants_results">
+    <%= render @restaurants %>
+  </div>
+
+</div>
+
+</div>
+
+
+

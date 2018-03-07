@@ -38,12 +38,6 @@ GEM
       i18n (~> 0.7)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
-    algoliasearch (1.19.1)
-      httpclient (~> 2.8.3)
-      json (>= 1.5.1)
-    algoliasearch-rails (1.20.4)
-      algoliasearch (>= 1.17.0, < 2.0.0)
-      json (>= 1.5.1)
     arel (8.0.0)
     autoprefixer-rails (8.1.0)
       execjs
@@ -72,15 +66,14 @@ GEM
       thor (~> 0.14)
     font-awesome-sass (4.7.0)
       sass (>= 3.2)
+    geocoder (1.4.6)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
-    httpclient (2.8.3)
     i18n (0.9.5)
       concurrent-ruby (~> 1.0)
     jbuilder (2.7.0)
       activesupport (>= 4.2.0)
       multi_json (>= 1.2)
-    json (2.1.0)
     listen (3.0.8)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -99,6 +92,10 @@ GEM
       mini_portile2 (~> 2.3.0)
     orm_adapter (0.5.0)
     pg (0.21.0)
+    pg_search (2.1.2)
+      activerecord (>= 4.2)
+      activesupport (>= 4.2)
+      arel (>= 6)
     pry (0.11.3)
       coderay (~> 1.1.0)
       method_source (~> 0.9.0)
@@ -196,16 +193,17 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  algoliasearch-rails
   autoprefixer-rails
   bootstrap-sass (~> 3.3)
   devise
   faker
   figaro
   font-awesome-sass (~> 4.7)
+  geocoder
   jbuilder (~> 2.0)
   listen (~> 3.0.5)
   pg (~> 0.21)
+  pg_search
   pry-byebug
   pry-rails
   puma
