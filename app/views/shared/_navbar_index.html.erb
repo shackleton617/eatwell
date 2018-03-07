@@ -1,18 +1,8 @@
-<style>
-body {background-color: #17bebb;}
-</style>
 <div class="navbar-wagon">
-
-  <!-- Logo -->
   <%= link_to root_path, class: "navbar-wagon-brand" do %>
     <%= image_tag "logo.png", height: 50 %>
   <% end %>
   <div class="navbar-wagon-right">
-    <div  class="navbar-wagon-item search-icon">
-      <%= link_to restaurants_path do %>
-        <%= image_tag "search-icon.png", height: 24 %>
-      <% end %>
-    </div>
     <div class="navbar-wagon-item user-icon">
         <% if user_signed_in? %>
           <div class="dropdown">

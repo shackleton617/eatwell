@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
 
+
   def checked
     #id= ..........
     @restaurant = Restaurant.find(id)
@@ -8,5 +9,9 @@ class UsersController < ApplicationController
 
     current_user.token_wallet = @points
     current_user.save
+  end
+
+  def dashboard
+
   end
 end
