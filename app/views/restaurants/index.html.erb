@@ -1,21 +1,12 @@
-
-<!-- nav-bar style for development -->
 <style>
 body {background-color: #17bebb;}
 </style>
-<div class="navbar-wagon">
 
   <!-- Logo -->
-  <%= link_to root_path, class: "navbar-wagon-brand" do %>
-    <%= image_tag "logo.png", height: 50 %>
-  <% end %>
-  <div class="navbar-wagon-right">
-    <div class="navbar-wagon-item user-icon">
-      <!-- link to profile/sign in -->
-    <%= image_tag "user-icon.png", height: 24 %>
-    </div>
-  </div>
-</div>
+<% content_for :navbar do %>
+      <%= render 'shared/navbar_index' %>
+ <% end %>
+ <!-- logo end -->
 
   <div class="container">
 
