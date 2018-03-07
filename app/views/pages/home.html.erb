@@ -4,22 +4,12 @@
 <style>
 body {background-color: #17bebb;}
 </style>
-
-<div class="navbar-wagon">
-  <!-- Logo -->
-  <%= link_to root_path, class: "navbar-wagon-brand" do %>
-   <p class="btn-impact">The Movement</p>
-  <% end %>
-  <div class="navbar-wagon-right">
-    <div class="navbar-wagon-item user-icon">
-      <!-- link to profile/sign in -->
-    <%= image_tag "user-icon.png", height: 24 %>
-    </div>
-  </div>
-</div>
-
+<!-- navbar  -->
+<% content_for :navbar do %>
+      <%= render 'shared/navbar_home' %>
+ <% end %>
+<!-- navbar end -->
 <div class="container">
-
   <div class="row">
     <!-- eatwell logo text  and icons -->
     <h2>Eatwell</h2>
