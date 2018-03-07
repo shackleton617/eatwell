@@ -1,7 +1,8 @@
-
+<!-- navbar_show -->
 <% content_for :navbar do %>
       <%= render 'shared/navbar_show' %>
  <% end %>
+ <!-- end of navbar -->
 
 <div>
 
@@ -47,6 +48,7 @@
           <%= render 'reviews/show', review: review %>
         <% end %>
       <% end %></p>
+      <%= render 'reviews/form', restaurant: @restaurant, review: @review %>
     </div>
 
   </div>
