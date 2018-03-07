@@ -11,6 +11,8 @@
   <% end %>
 </p>
 
+<%= cl_image_tag @user.avatar, height: 300, width: 300 %>
+
 <p>You have
   <% if current_user.token_wallet == nil %>
    <%= "0 impact points." %>
@@ -29,6 +31,13 @@
   <h3> View Favourites </h3>
   <p>Check out all the amazing offers!</p>
 </div>
+
+<%= link_to edit_user_registration_path do %>
+<p>edit</p>
+<% end %>
+
+
+
 
 
 

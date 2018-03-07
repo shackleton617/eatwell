@@ -1,6 +1,5 @@
 class UsersController < ApplicationController
-
-
+  before_action :user, only: [:dashboard]
   def checked
     #id= ..........
     @restaurant = Restaurant.find(id)
@@ -14,4 +13,15 @@ class UsersController < ApplicationController
   def dashboard
 
   end
+
+  def user
+    @user = current_user
+  end
+
+
+private
+  def user_params
+  params.require(:user).permit(:photo)
+  end
+
 end
