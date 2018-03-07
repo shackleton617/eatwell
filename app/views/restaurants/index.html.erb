@@ -2,44 +2,45 @@
 body {background-color: #17bebb;}
 </style>
 
-  <!-- Logo -->
+<!-- Logo -->
 <% content_for :navbar do %>
-      <%= render 'shared/navbar_index' %>
- <% end %>
- <!-- logo end -->
+  <%= render 'shared/navbar_index' %>
+<% end %>
+<!-- logo end -->
 
-  <div class="container">
+<div class="container">
 
 
 
-    <div class="row">
+  <div class="row">
 
-    <h1> Search Bar</h1>
+     <%= render 'shared/searchbar' %>
 
-    </div>
+  </div>
 
-    <hr>
-  <div class="index-page__row row">
+  <hr>
+
+  <div class="row index-page__row">
     <div class="index-page__col-left col-xs-12 col-md-8">
       <%= render @restaurants %>
     </div><!-- card- render partial -->
 
-    </div>
+  </div>
 
-    <div class="row">
+  <div class="row">
 
     <div
-  id="map"
-  style="width: 100%;
-  height: 600px;
-  justify-content: right"
-  data-markers="<%= @markers.to_json %>"
-></div>
-
+      id="map"
+      style="width: 100%;
+      height: 600px;
+      justify-content: right"
+      data-markers="<%= @markers.to_json %>">
     </div>
 
-
   </div>
+
+
+</div>
 
 
 
