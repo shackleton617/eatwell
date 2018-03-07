@@ -49,7 +49,10 @@ end
 
   def show
     @review = Review.new
+    @points = @restaurant.calculate_points
   end
+
+
 
   private
 
