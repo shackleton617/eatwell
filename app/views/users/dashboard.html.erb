@@ -1,0 +1,32 @@
+<% content_for :navbar do %>
+      <%= render 'shared/navbar_show' %>
+ <% end %>
+
+<p>Hi
+  <% if current_user.first_name == true %>
+    <%= current_user.first_name %>
+  <% else %>
+    <%= current_user.email %>
+  <% end %>
+</p>
+
+<p>You have
+  <% if current_user.token_wallet == nil %>
+   <%= "0 impact points." %>
+  <% else %>
+    <%= current_user.token_wallet %> impact points!
+  <% end %></p>
+
+<p>Lifetime points: 1200  </p>
+
+<div>
+  <h3> Redeem points </h3>
+  <p>Check out all the amazing offers!</p>
+</div>
+
+<div>
+  <h3> View Favourites </h3>
+  <p>Check out all the amazing offers!</p>
+</div>
+
+

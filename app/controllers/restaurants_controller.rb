@@ -6,6 +6,7 @@ class RestaurantsController < ApplicationController
 
   def index
 
+
     if params[:query].present?
         sql_query = " \
         restaurants.name @@ :query \
@@ -22,16 +23,32 @@ class RestaurantsController < ApplicationController
   def get_location
     @restaurants = Restaurant.where.not(latitude: nil, longitude: nil)
 
+
+    unless params[:address].blank?
+       @restaurants = @restaurants.near(params[:address], 2)
+    end
+
+    unless params[:cuisine].blank?
+       @restaurants = @restaurants.where(cuisine: params[:cuisine].capitalize)
+    end
+
+
     @markers = @restaurants.map do |restaurant|
       {
         lat: restaurant.latitude,
-        lng: restaurant.longitude#,
+        lng: restaurant.longitude
+
         # infoWindow: { content: render_to_string(partial: "/restaurants/map_box", locals: { restaurant: restaurant }) }
       }
-    end
+
+
+
   end
+end
+
 
   def show
+    @review = Review.new
   end
 
   private
@@ -41,5 +58,7 @@ class RestaurantsController < ApplicationController
   end
 
 
-
+  def restaurant_params
+    params.require(:restaurant).permit(:address, :cuisine)
+  end
 end

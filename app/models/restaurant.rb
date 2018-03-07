@@ -1,8 +1,10 @@
 class Restaurant < ApplicationRecord
   has_many :check_ins
   has_many :users, through: :check_ins
+  has_many :reviews, dependent: :destroy
 
-  geocoded_by :location
+
+  geocoded_by :address
   after_validation :geocode, if: :will_save_change_to_address?
 
   include PgSearch
@@ -14,5 +16,6 @@ class Restaurant < ApplicationRecord
     }
     pg_search_scope :search_all_words,
       against:  [ :name, :cuisine, :address, :location ]
+
 
 end
