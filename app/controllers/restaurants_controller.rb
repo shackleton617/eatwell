@@ -48,7 +48,7 @@ end
 
   def show
     @review = Review.new
-    @points = @restaurant.calculate_points
+    @check_in = CheckIn.new
   end
 
 

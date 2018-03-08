@@ -14,5 +14,5 @@ class User < ApplicationRecord
   has_many :offers, through: :redemptions
   has_many :reviews
   validates :email, presence: true, uniqueness: true
-  validates :password, presence: true
+  validates :password, presence: true, on: :create
 end
