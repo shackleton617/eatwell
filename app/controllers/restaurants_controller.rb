@@ -5,17 +5,16 @@ class RestaurantsController < ApplicationController
 
 
   def index
-
-
-    #Restaurant.near("lisbon", 20)
+    # Restaurant.near("lisbon", 20)
 
     if  params[:query].present?
-        sql_query = " \
-        restaurants.name @@ :query \
-        OR restaurants.cuisine @@ :query \
-        OR restaurants.location @@ :query \
-        OR restaurants.address @@ :query \
-        "
+
+      sql_query = " \
+      restaurants.name @@ :query \
+      OR restaurants.cuisine @@ :query \
+      OR restaurants.location @@ :query \
+      OR restaurants.address @@ :query \
+      "
       @restaurants = Restaurant.search_by_any_word(params[:query])
       # @restaurants = Restaurant.where(sql_query, query: "%#{params[:query]}%")
 
@@ -38,16 +37,16 @@ class RestaurantsController < ApplicationController
 
         # infoWindow: { content: render_to_string(partial: "/restaurants/map_box", locals: { restaurant: restaurant }) }
       }
-
-
-
+    end
   end
-end
 
 
   def show
     @review = Review.new
+    @points = @restaurant.calculate_points
   end
+
+
 
   private
 
