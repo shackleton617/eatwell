@@ -4,7 +4,7 @@ Restaurant.destroy_all
 restaurant_1 = Restaurant.create(
 
 name: "Cozinha Popular Na Mouraria",
-address: "R. das Olarias 5, 1100-012 Lisboa",
+address: "R. das Olarias 5, w Lisboa",
 location: "Moraria, Lisbon",
 cuisine: "Portuguese",
 description: "Cozinha Popular (\'People\'s Kitchen') da Mouraria is a social project designed to revitalise the multicultural community of Mouraria in Lisbon, promoting the sharing of experiences, building community and providing employment and access to food for those in need.",
@@ -118,7 +118,7 @@ restaurant_7 = Restaurant.create(
 name: "Jardim dos Sentidos",
 address: "R. da Mãe de Água 3, 1250-154 Lisboa",
 location: "Principe Real, Lisbon",
-cuisine: "Vegeterian, vegan",
+cuisine: "Vegeterian, Vegan",
 description: "At first glance one perceives a vegetarian restaurant, no doubt. However, as one enters, the space unfolds.
 Jardim dos Sentidos has food as one of the basic pillars for growth and improvement of the human consciousness, and in addition to the restaurant, it also provides a therapeutic area open to proposals that are enriching in an authentic and genuine way the individual and collective growth of each one of us.",
 phone_number: "21 342 3670",
@@ -166,6 +166,78 @@ has_sourcing: false,
 photos: "https://b.zmtcdn.com/data/reviews_photos/1bb/c0eef1b7136604ad34e1c91aee1311bb_1508012034.jpg",
 latitude: 38.7349388,
 longitude: -9.134935
+)
+
+restaurant_10 = Restaurant.create(
+
+name: "Pois Cafe",
+address: "R. de São João da Praça 93-95, 1100-521 Lisboa",
+location: "Baixa, Lisbon",
+cuisine: "Cafe, European, Portuguese",
+description: "O ambiente relaxado para partilhar histórias em plena zona histórica e desfrutar do brunch e das tartes da casa.",
+phone_number: "21 886 2497",
+price_for_two: 20,
+working_hours: "10:00 - 23:00",
+has_community: false,
+has_recycling: false,
+has_sourcing: true,
+photos: "http://www.poiscafe.com/wp-content/uploads/menu-3-300x200.jpg",
+latitude: 38.7095065,
+longitude: -9.1340343
+)
+
+restaurant_11 = Restaurant.create(
+
+name: "Green Beans Cafe Chiado",
+address: "R. Chagas 31, 1200-106 Lisboa",
+location: "Chiado, Lisbon",
+cuisine: "Vegan and Eco Market",
+description: "A Green Beans é a uma mercearia 100% Vegan situada na baixa lisboeta. Com o objetivo de apresentar uma alternativa justa, ética e saudável, oferece uma grande variedade de produtos de qualidade, biológicos e que respeitam a sustentabilidade.",
+phone_number: "924 216 519",
+price_for_two: 20,
+working_hours: "10:00 - 19:00",
+has_community: false,
+has_recycling: false,
+has_sourcing: true,
+photos: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTF1PcPVwva_vtfhkTzj0T0smGXQeZou4W6dxNQen4AV1m9oCJS3w",
+latitude: 38.7103218,
+longitude: -9.1475147
+)
+
+restaurant_12 = Restaurant.create(
+
+name: "Rio Maravilha",
+address: "Rua Rodrigues Faria, 103, Entrada 3, Piso 4, Alcântara, Lisboa",
+location: "Alcantara, Lisbon",
+cuisine: "Author, Portuguese, Brazilian",
+description: "A homenagem ao Rio, o de Janeiro e ao Tejo, que se avista do terraço panorâmico deste quarto andar.",
+phone_number: "96 602 8229",
+price_for_two: 50,
+working_hours: "12:30 - 02:00",
+has_community: false,
+has_recycling: false,
+has_sourcing: true,
+photos: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHZ4QYP9goagnwK-0jYkgDcaPUkMh4MymKoFPqRePcPgMLkblbtw",
+latitude: 38.701856,
+longitude: -9.1803388
+)
+
+restaurant_13 = Restaurant.create(
+
+name: "Foodprintz cafe",
+address: "R. Rodrigo da Fonseca 82A, 1250-193 Lisboa",
+location: "Marques de Pombal, Lisbon",
+cuisine: "Author, Portuguese, Brazilian",
+description: "Organic, locally sourced, wholesome, fair natural food. We present flavors, colors and textures from all over the world. Thinking about the carbon footprint: reducing the incidence and impact of animal cruelty & the damage done to MOTHER EARTH by providing a full plant-based only menu with gluten free, nut free and soy free options.",
+phone_number: "96 602 8229",
+price_for_two: 22,
+working_hours: "12:00 - 19:00",
+has_community: false,
+has_recycling: false,
+has_sourcing: true,
+photos: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHZ4QYP9goagnwK-0jYkgDcaPUkMh4MymKoFPqRePcPgMLkblbtw",
+latitude: 38.7237696,
+longitude: -9.1572676
 )
 
 
