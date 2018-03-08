@@ -2,7 +2,7 @@
 
 <!-- navbar  -->
 <% content_for :navbar do %>
-  <%= render 'shared/navbar_home' %>
+<%= render 'shared/navbar_home' %>
 <% end %>
 
 <!-- navbar end -->
@@ -31,34 +31,57 @@
   <br>
 <div class="container">
   <div class="row" style="margin-bottom: 20px">
+
+   <!--  <form action="<%= restaurants_path %>">
+      <input id="restaurant_address" placeholder="Location search..." name="place">
+      <input type="submit">
+
+    </form> -->
+
+    <%= form_tag(restaurants_path, method: "get") do %>
+
+      <%= text_field_tag :place,
+      params[:place],
+      class: "form-control",
+      placeholder: "Location search...", id: "restaurant_address" %>
+
+      <%= text_field_tag :query,
+      params[:query],
+      class: "form-control",
+        placeholder: "Search by restaurant, cuisine, location ..." %>
+      <%= submit_tag "Search", class: "btn btn-block btn-primary" %>
+
+    <% end %>
+
+
+    </div>
+
     <br>
-    <div class="form-group">
-      <%= render 'shared/searchbar' %>
-    </div>
-  </div>
-  <div class="row" style="margin-bottom: 20px">
-  <!-- search dropdown -->
-  </div>
-  <div class="row">
-  <!-- search any type info -->
-  </div>
-  <div class="row">
-  <!-- render cards collections -->
-    <div class="restaurants_results">
-      <%= render @restaurants %>
-    </div>
-  </div>
-  <div class="row">
-    <div
-      id="map"
-      style="width: 100%;
-      height: 600px;"
-      data-markers="<%= @markers.to_json%>">
-    </div>
-  </div>
 
 
-</div>
+
+    <div class="row" style="margin-bottom: 20px">
+      <!-- search dropdown -->
+
+    </div>
+
+    <div class="row">
+      <!-- search any type info -->
+
+    </div>
+
+    <div class="row">
+      <!-- render cards collections -->
+      <div class="restaurants_results">
+        <%= render 'restaurants/restaurant' %>
+      </div>
+
+    </div>
+>>>>>>> ae6b5bc4e38f77939590791deb9976d2febb5890
+
+
+
+  </div>
 
 
 
