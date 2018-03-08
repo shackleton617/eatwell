@@ -29,8 +29,12 @@
   </div>
 
   <div>
-    <%= link_to "Check in", dashboard_path, class: "btn btn-primary" %>
-    <p>Get <%= @points %> impact points</p>
+    <%= form_for [@restaurant, @check_in] do |f| %>
+    <%= f.submit "Check in", class: "btn btn-primary"  %>
+    <% end %>
+
+    <p>Get <%= @restaurant.calculate_points %> impact points</p>
+
   </div>
 
   <div class="container">
