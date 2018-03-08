@@ -14,10 +14,11 @@
 <body>
   <div class="body">
     <% if content_for?(:navbar) %>
-      <%= yield(:navbar) %>
-    <% end %>
+        <%= yield(:navbar) %>
+      </div>
+      <% end %>
     <%= render 'shared/flashes' %>
-    <%= yield %>
+      <%= yield %>
   </div>
 
   <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?libraries=places&key=#{ENV['GOOGLE_API_BROWSER_KEY']}" %>
