@@ -5,10 +5,11 @@ class ReviewsController < ApplicationController
     @review = Review.new(review_params)
     @review.restaurant = @restaurant
     @review.user = current_user
+    @check_in = CheckIn.new
     if @review.save
       redirect_to restaurant_path(@restaurant)
     else
-      render 'restaurants/show'
+      render "restaurants/show"
     end
   end
 

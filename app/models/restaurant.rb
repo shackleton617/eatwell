@@ -4,7 +4,9 @@ class Restaurant < ApplicationRecord
   has_many :reviews, dependent: :destroy
 
   def average_rating
-    reviews.average(:rating).round(2)
+    if reviews != []
+      reviews.average(:rating).round(2)
+    end
   end
 
   def calculate_points
