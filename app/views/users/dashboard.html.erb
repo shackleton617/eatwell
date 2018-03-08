@@ -4,10 +4,10 @@
  <% end %>
 
 <p>Hi
-  <% if current_user.first_name == true %>
-    <%= current_user.first_name %>
-  <% else %>
+  <% if current_user.first_name.nil? %>
     <%= current_user.email %>
+  <% else %>
+  <%= current_user.first_name %>
   <% end %>
 </p>
 
@@ -22,10 +22,12 @@
 
 <p>Lifetime points: 1200  </p>
 
-<div>
-  <h3> Redeem points </h3>
-  <p>Check out all the amazing offers!</p>
-</div>
+<%= link_to offers_path do %>
+  <div>
+    <h3> Redeem points </h3>
+    <p>Check out all the amazing offers!</p>
+  </div>
+<% end %>
 
 <div>
   <h3> View Favourites </h3>

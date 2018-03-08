@@ -1,36 +1,34 @@
 class RestaurantsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
 
-  before_action :set_restaurant, only: [:show]
-  before_action :get_location, only: [:index]
+  before_action :set_restaurant, :get_location, only: [:show ]
 
 
   def index
-    if params[:query].present?
-        sql_query = " \
-        restaurants.name @@ :query \
-        OR restaurants.cuisine @@ :query \
-        OR restaurants.location @@ :query \
-        OR restaurants.address @@ :query \
-        "
+    # Restaurant.near("lisbon", 20)
+
+    if  params[:query].present?
+
+      sql_query = " \
+      restaurants.name @@ :query \
+      OR restaurants.cuisine @@ :query \
+      OR restaurants.location @@ :query \
+      OR restaurants.address @@ :query \
+      "
       @restaurants = Restaurant.search_by_any_word(params[:query])
+      # @restaurants = Restaurant.where(sql_query, query: "%#{params[:query]}%")
+
     else
       @restaurants = Restaurant.all
     end
+
+    if params[:place].present?
+      @restaurants = @restaurants.near(params[:place], 5)
+    end
+    get_location
   end
 
   def get_location
-    @restaurants = Restaurant.where.not(latitude: nil, longitude: nil)
-
-
-    unless params[:address].blank?
-       @restaurants = @restaurants.near(params[:address], 2)
-    end
-
-    unless params[:cuisine].blank?
-       @restaurants = @restaurants.where(cuisine: params[:cuisine].capitalize)
-    end
-
 
     @markers = @restaurants.map do |restaurant|
       {
@@ -39,11 +37,8 @@ class RestaurantsController < ApplicationController
 
         # infoWindow: { content: render_to_string(partial: "/restaurants/map_box", locals: { restaurant: restaurant }) }
       }
-
-
-
+    end
   end
-end
 
 
   def show

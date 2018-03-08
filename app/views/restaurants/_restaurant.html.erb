@@ -1,5 +1,6 @@
 
 <% @restaurants.each do |restaurant| %>
+
     <div class="card col-xs-12 col-sm-6 col-md-4" style= "border: 2px solid gray; height: 280px; background-color: white">
     <%=link_to restaurant_path(restaurant) do %>
       <%= image_tag restaurant.photos %>
@@ -15,9 +16,10 @@
         <% end %>
       </ul>
       <p><%= restaurant.name %></p>
-      <p><%= restaurant.description %></p>
+      <!-- <p><%= restaurant.description %></p> -->
       <p><%= restaurant.location %></p>
       <p><%= restaurant.price_for_two %></p>
     </div>
   <% end %>
+
 <% end %>
