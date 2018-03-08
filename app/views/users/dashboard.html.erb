@@ -3,13 +3,7 @@
       <%= render 'shared/navbar_show' %>
  <% end %>
 
-<p>Hi
-  <% if current_user.first_name.nil? %>
-    <%= current_user.email %>
-  <% else %>
-  <%= current_user.first_name %>
-  <% end %>
-</p>
+<p>Hi <%= current_user.first_name %></p>
 
 <%= cl_image_tag @user.avatar, height: 300, width: 300 %>
 
