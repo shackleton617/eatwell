@@ -1,7 +1,4 @@
 <!-- temporary style tag for NavBar build -->
-<style>
-body {background-color: #17bebb;}
-</style>
 
 <!-- navbar  -->
 <% content_for :navbar do %>
@@ -9,9 +6,9 @@ body {background-color: #17bebb;}
 <% end %>
 
 <!-- navbar end -->
-<div class="container">
+
   <div class="row">
-    <!-- eatwell logo text  and icons -->
+    <!-- eatwell logo  and icons -->
     <%= image_tag "eatwell-home-logo.png" %>
 
     <div>
@@ -28,46 +25,29 @@ body {background-color: #17bebb;}
       <%= image_tag "home_recycle_icon.png" %>
       <p>recycling</p>
     </div>
-  </div>
-
-
-
-
-
+    </div>
   </div>
 
   <br>
-
+<div class="container">
   <div class="row" style="margin-bottom: 20px">
-
-
     <br>
-
     <div class="form-group">
-    <%= render 'shared/searchbar' %>
-
+      <%= render 'shared/searchbar' %>
     </div>
-
   </div>
-
   <div class="row" style="margin-bottom: 20px">
   <!-- search dropdown -->
-
   </div>
-
   <div class="row">
   <!-- search any type info -->
-
   </div>
-
   <div class="row">
   <!-- render cards collections -->
     <div class="restaurants_results">
       <%= render @restaurants %>
     </div>
-
   </div>
-
   <div class="row">
     <div
       id="map"
@@ -75,12 +55,12 @@ body {background-color: #17bebb;}
       height: 600px;"
       data-markers="<%= @markers.to_json%>">
     </div>
-
-
   </div>
 
 
 </div>
+
+
 
 
 
