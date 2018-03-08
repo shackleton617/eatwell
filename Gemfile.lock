@@ -86,13 +86,12 @@ GEM
     geocoder (1.4.6)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
-<<<<<<< HEAD
+
     gmaps-autocomplete-rails (0.3.1)
       rails (>= 3.1.0)
-=======
+
     http-cookie (1.0.3)
       domain_name (~> 0.5)
->>>>>>> 4fcc0e84aa8eacd755dd859b45f503ea6217db49
     i18n (0.9.5)
       concurrent-ruby (~> 1.0)
     jbuilder (2.7.0)
@@ -234,12 +233,11 @@ PLATFORMS
 DEPENDENCIES
   autoprefixer-rails
   bootstrap-sass (~> 3.3)
-<<<<<<< HEAD
+
   coffee-rails
-=======
+
   carrierwave (~> 1.2)
   cloudinary
->>>>>>> 4fcc0e84aa8eacd755dd859b45f503ea6217db49
   devise
   faker
   figaro
