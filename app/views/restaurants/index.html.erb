@@ -1,49 +1,37 @@
 <style>
-body {background-color: #17bebb;}
+  body {background-color: #17bebb;}
 </style>
 
-<!-- Logo -->
+
 <% content_for :navbar do %>
-  <%= render 'shared/navbar_index' %>
+  <div class="top-section">
+    <%= render 'shared/navbar_index' %>
+    <div class="container">
+      <%= render 'shared/searchbar' %>
+    </div>
+  </div>
 <% end %>
-<!-- logo end -->
 
+<div class="body-section wraper">
 
-<div class="container">
-
-
-
-  <div class="row">
-
-     <%= render 'shared/searchbar' %>
-
-  </div>
-
-  <hr>
-
-  <div class="row index-page__row">
-    <div class="index-page__col-left col-xs-12 col-md-8">
+  <div class="search-page__row row">
+    <div class="search-page__col-left col-xs-12 col-md-8">
       <%= render 'restaurants/restaurant' %>
-    </div><!-- card- render partial -->
-
-
-
-  </div>
-
-  <div class="row">
-
-    <div
-      id="map"
-      style="width: 100%;
-      height: 600px;
-      justify-content: right"
-      data-markers="<%= @markers.to_json %>">
     </div>
 
+
+    <div class="search-page__col-right col-xs-12 col-md-4">
+      <div
+      id="map" data-markers="<%= @markers.to_json %>">
+      </div>
+
+    </div>
   </div>
 
-
 </div>
+
+
+
 
 
 
