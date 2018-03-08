@@ -1,13 +1,25 @@
-
 <% @restaurants.each do |restaurant| %>
-    <div class="card col-xs-12 col-sm-6 col-md-4" style= "border: 2px solid gray; height: 280px">
-        <p><%= restaurant.photos %></p>
-        <p><%= restaurant.name %></p>
-        <p><%= restaurant.description %></p>
-        <p><%= restaurant.price_for_two %></p>
-        <p><%= restaurant.has_community %></p>
-        <p><%= restaurant.has_sourcing %></p>
-        <p><%= restaurant.has_recycling %></p>
 
+    <div class="card col-xs-12 col-sm-6 col-md-4" style= "border: 2px solid gray; height: 280px; background-color: white">
+    <%=link_to restaurant_path(restaurant) do %>
+      <%= image_tag restaurant.photos %>
+        <ul class="list-inline">
+      <% if restaurant.has_community %>
+        <li><%= image_tag("btn-community.png", :alt => "community badge") %></li>
+        <% end %>
+      <% if restaurant.has_sourcing %>
+        <li><%= image_tag("btn-sourcing.png", :alt => "sourcing badge") %></li>
+        <% end %>
+      <% if restaurant.has_recycling %>
+        <li><%= image_tag("btn-recycling", :alt => "recycling badge") %></li>
+        <% end %>
+      </ul>
+      <p><%= restaurant.name %></p>
+      <!-- <p><%= restaurant.description %></p> -->
+      <p><%= restaurant.location %></p>
+      <p><%= restaurant.price_for_two %></p>
     </div>
+  <% end %>
+
 <% end %>
+

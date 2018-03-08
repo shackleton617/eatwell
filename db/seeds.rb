@@ -1,44 +1,253 @@
-require 'faker'
-10.times do
-
-restaurant = Restaurant.new(
+Restaurant.destroy_all
 
 
-name: Faker::Company.name,
-address: Faker::Address.street_address,
-location: Faker::Address.city,
-cuisine: Faker::Address.country,
-description: Faker::Lorem.sentence,
-phone_number: Faker::Number.number(9),
-price_for_two: Faker::Number.between(7, 200),
-working_hours:  Faker::Number.between(11, 13).to_s + '-' + Faker::Number.between(19, 23).to_s,
-has_community: Faker::Boolean.boolean,
-has_recycling: Faker::Boolean.boolean,
-has_sourcing: Faker::Boolean.boolean,
-photos: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTNMecUlu3OTXWxvHASQ9T_uoRCIaYX9_mSrWcTUdPqQQEthWq"
+restaurant_1 = Restaurant.create(
+
+name: "Cozinha Popular Na Mouraria",
+address: "R. das Olarias 5, w Lisboa",
+location: "Moraria, Lisbon",
+cuisine: "Portuguese",
+description: "Cozinha Popular (\'People\'s Kitchen') da Mouraria is a social project designed to revitalise the multicultural community of Mouraria in Lisbon, promoting the sharing of experiences, building community and providing employment and access to food for those in need.",
+phone_number: "926 520 568",
+price_for_two: 20,
+working_hours: "13:00 - 24:00",
+has_community: true,
+has_recycling: true,
+has_sourcing: true,
+photos: "http://blogues.publico.pt/olhos-barriga/files/2015/06/Cozinhas-do-mundo_Ines-Malvar.jpg",
+latitude: 38.717780,
+longitude: -9.1510395
 )
 
-restaurant.save!
+restaurant_2 = Restaurant.create(
 
-end
-
-
-5.times do
-
-user = User.new(
-
-first_name: Faker::Name.first_name,
-last_name: Faker::Name.last_name,
-username: Faker::Internet.user_name,
-password: Faker::Internet.password(8),
-email: Faker::Internet.free_email,
-token_wallet: Faker::Number.between(10, 1000),
-photo: "https://avatars0.githubusercontent.com/u/25618195?v=4"
+name: "Lisbon Winery",
+address: "R. da Barroca 13, 1200-047 Lisboa",
+location: "Bairo Alto, Lisbon",
+cuisine: "Portuguese tapas",
+description: "Lisbon Winery is a tasting center and wine bar in Bairro Alto. The space has an unique 16th century cistern and a premium collection of Portuguese wines served by the glass. The selection includes wines from local small producers and artisanal cheeses and charcuterie.",
+phone_number: "21 826 0132",
+price_for_two: 50,
+working_hours: "15:00 - 24:00",
+has_community: false,
+has_recycling: false,
+has_sourcing: true,
+photos: "https://u.tfstatic.com/restaurant_photos/223/280223/169/612/lisbon-winery-tabua-ea226.jpg",
+latitude: 38.711532,
+longitude: -9.144525
 )
 
-user.save!
+restaurant_3 = Restaurant.create(
 
-end
+name: "Terra",
+address: "R. da Palmeira 15, 1200-311 Lisboa",
+location: "Rossio, Lisbon",
+cuisine: "Vegetarian, Vegan",
+description: "Terra has an excellent lunch buffet with a range of Portuguese dishes adapted for vegetarians and vegans. The ingredients are mostly organic. Be sure to get a spot on the charming terrace!",
+phone_number: "21 342 1407",
+price_for_two: 35,
+working_hours: "12:30 - 24:00",
+has_community: false,
+has_recycling: true,
+has_sourcing: true,
+photos: "https://assets3.thrillist.com/v1/image/1762665/size/tmg-article_default_mobile.jpg",
+latitude: 38.7152811,
+longitude: -9.1539152
+)
+
+restaurant_4 = Restaurant.create(
+
+name: "Cantina Das Freiras (\'The Nuns\')",
+address: "Tv. Ferragial n.1, 1200-184 ferragial@gmail",
+location: "Baixa, Lisbon",
+cuisine: "Mediterranean; Portuguese",
+description: "The Cantina Das Freiras is a former nunnery on the top floor of a typical old building with a roof terrace, a rarity in Lisbon. The decor is as unpretentious as the food is good and the view is stunning.",
+phone_number: "21 324 0910",
+price_for_two: 20,
+working_hours: "8:30 - 15:00",
+has_community: true,
+has_recycling: false,
+has_sourcing: false,
+photos: "https://media-cdn.tripadvisor.com/media/photo-s/08/c9/6f/5c/photo4jpg.jpg",
+latitude: 38.7078982,
+longitude: -9.1432334
+)
+
+restaurant_5 = Restaurant.create(
+
+name: "A Padaria Portuguesa",
+address: "Av. 24 de Julho 1G, 1200-425 Lisboa",
+location: "Cais do Sodre, Lisbon",
+cuisine: "Portuguese bakery",
+description: "A Padaria Portuguesa has many bakeries all over town. Grab a ticket, wait for your number to be called, and order away. Service is fast, the food is cheap and delicious. The decor is warm and modern.  This is a local and visitor's favourite!",
+phone_number: "21 346 0105",
+price_for_two: 14,
+working_hours: "7:00 - 22:45",
+has_community: false,
+has_recycling: true,
+has_sourcing: false,
+photos: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT66GvnE7qBlgUcjxdAU88KuWi0FCI-CozAEnJL_hNCEAj2ncoB",
+latitude: 38.7066727,
+longitude: -9.1465186
+)
+
+restaurant_6 = Restaurant.create(
+
+name: "AO 26 Vegan Food Project",
+address: "R. Vítor Cordon 26, 1200-484 Lisboa",
+location: "Cais do Sodre, Lisbon",
+cuisine: "Vegetarian, Vegan",
+description: "Comprometemo-nos a respeitar a Terra, as pessoas e os animais.
+Comprometemo-nos a cuidar do espaço que nos rodeia.
+Comprometemo-nos a agradecer as pequenas coisas que nos acontecem.
+Manter os pés na Terra e a cabeça e o coração bem lá no alto.
+A nossa comida é o resultado da nossa paixão.",
+phone_number: "967 989 184",
+price_for_two: 30,
+working_hours: "12:30 - 23:00",
+has_community: false,
+has_recycling: false,
+has_sourcing: true,
+photos: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRGVhnvEcL8-S2PzQU8l-JIBIv-uVBL2AKIy-gLFNJhIZr0LQ6",
+latitude: 38.7080286,
+longitude: -9.1437444
+)
+
+restaurant_7 = Restaurant.create(
+
+name: "Jardim dos Sentidos",
+address: "R. da Mãe de Água 3, 1250-154 Lisboa",
+location: "Principe Real, Lisbon",
+cuisine: "Vegeterian, Vegan",
+description: "At first glance one perceives a vegetarian restaurant, no doubt. However, as one enters, the space unfolds.
+Jardim dos Sentidos has food as one of the basic pillars for growth and improvement of the human consciousness, and in addition to the restaurant, it also provides a therapeutic area open to proposals that are enriching in an authentic and genuine way the individual and collective growth of each one of us.",
+phone_number: "21 342 3670",
+price_for_two: 30,
+working_hours: "12:00 - 22:30",
+has_community: false,
+has_recycling: false,
+has_sourcing: true,
+photos: "https://www.madebychoices.pt/wp-content/uploads/2016/04/Restaurante-vegetariano-Jardim-dos-sentidos.jpg",
+latitude: 38.717501,
+longitude: -9.1486827
+)
+
+restaurant_8 = Restaurant.create(
+
+name: "PSI",
+address: "Alameda Santo António dos Capuchos, 1150-314 Lisboa",
+location: "Avenida, Lisbon",
+cuisine: "Indian, Asian, Vegeterian, vegan",
+description: "PSI is one of Lisbon´s oldest vegetarian restaurants, having opened its doors more than 15 years ago. The owning founder, a doctor, decided she was going to open the restaurant , and soon after turned what was an abandoned park and cafe into a charming and delightful establishment where one can escape the hustle and bustle of the daily city life and enjoy a wonderful meal.",
+phone_number: "21 359 0573",
+price_for_two: 30,
+working_hours: "12:30 - 22:30",
+has_community: false,
+has_recycling: false,
+has_sourcing: true,
+photos: "https://media-cdn.tripadvisor.com/media/photo-s/08/c9/6f/5c/photo4jpg.jpg",
+latitude: 38.7228795,
+longitude: -9.1467319
+)
+
+restaurant_9 = Restaurant.create(
+
+name: "Mezze",
+address: "R. Ângela Pinto 22/23, 1900-067 Lisboa",
+location: "Arroios, Lisbon",
+cuisine: "Middle Eastern cuisine",
+description: "Espaço de encontro multicultural para a integração dos refugiados do Médio Oriente, com excelente comida árabe e workshops culturais.",
+phone_number: "21 249 4788",
+price_for_two: 35,
+working_hours: "12:30 - 22:30",
+has_community: true,
+has_recycling: false,
+has_sourcing: false,
+photos: "https://b.zmtcdn.com/data/reviews_photos/1bb/c0eef1b7136604ad34e1c91aee1311bb_1508012034.jpg",
+latitude: 38.7349388,
+longitude: -9.134935
+)
+
+restaurant_10 = Restaurant.create(
+
+name: "Pois Cafe",
+address: "R. de São João da Praça 93-95, 1100-521 Lisboa",
+location: "Baixa, Lisbon",
+cuisine: "Cafe, European, Portuguese",
+description: "O ambiente relaxado para partilhar histórias em plena zona histórica e desfrutar do brunch e das tartes da casa.",
+phone_number: "21 886 2497",
+price_for_two: 20,
+working_hours: "10:00 - 23:00",
+has_community: false,
+has_recycling: false,
+has_sourcing: true,
+photos: "http://www.poiscafe.com/wp-content/uploads/menu-3-300x200.jpg",
+latitude: 38.7095065,
+longitude: -9.1340343
+)
+
+restaurant_11 = Restaurant.create(
+
+name: "Green Beans Cafe Chiado",
+address: "R. Chagas 31, 1200-106 Lisboa",
+location: "Chiado, Lisbon",
+cuisine: "Vegan and Eco Market",
+description: "A Green Beans é a uma mercearia 100% Vegan situada na baixa lisboeta. Com o objetivo de apresentar uma alternativa justa, ética e saudável, oferece uma grande variedade de produtos de qualidade, biológicos e que respeitam a sustentabilidade.",
+phone_number: "924 216 519",
+price_for_two: 20,
+working_hours: "10:00 - 19:00",
+has_community: false,
+has_recycling: false,
+has_sourcing: true,
+photos: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTF1PcPVwva_vtfhkTzj0T0smGXQeZou4W6dxNQen4AV1m9oCJS3w",
+latitude: 38.7103218,
+longitude: -9.1475147
+)
+
+restaurant_12 = Restaurant.create(
+
+name: "Rio Maravilha",
+address: "Rua Rodrigues Faria, 103, Entrada 3, Piso 4, Alcântara, Lisboa",
+location: "Alcantara, Lisbon",
+cuisine: "Author, Portuguese, Brazilian",
+description: "A homenagem ao Rio, o de Janeiro e ao Tejo, que se avista do terraço panorâmico deste quarto andar.",
+phone_number: "96 602 8229",
+price_for_two: 50,
+working_hours: "12:30 - 02:00",
+has_community: false,
+has_recycling: false,
+has_sourcing: true,
+photos: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHZ4QYP9goagnwK-0jYkgDcaPUkMh4MymKoFPqRePcPgMLkblbtw",
+latitude: 38.701856,
+longitude: -9.1803388
+)
+
+restaurant_13 = Restaurant.create(
+
+name: "Foodprintz cafe",
+address: "R. Rodrigo da Fonseca 82A, 1250-193 Lisboa",
+location: "Marques de Pombal, Lisbon",
+cuisine: "Author, Portuguese, Brazilian",
+description: "Organic, locally sourced, wholesome, fair natural food. We present flavors, colors and textures from all over the world. Thinking about the carbon footprint: reducing the incidence and impact of animal cruelty & the damage done to MOTHER EARTH by providing a full plant-based only menu with gluten free, nut free and soy free options.",
+phone_number: "96 602 8229",
+price_for_two: 22,
+working_hours: "12:00 - 19:00",
+has_community: false,
+has_recycling: false,
+has_sourcing: true,
+photos: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHZ4QYP9goagnwK-0jYkgDcaPUkMh4MymKoFPqRePcPgMLkblbtw",
+latitude: 38.7237696,
+longitude: -9.1572676
+)
+
+
+
+
+
+
+
+Offer.destroy_all
+
 
 4.times do
 

@@ -1,6 +1,40 @@
+<!-- navbar_show -->
+<% content_for :navbar do %>
+      <%= render 'shared/navbar_show' %>
+<% end %>
+ <!-- end of navbar -->
+
 <div>
 
+  <div class="row">
+    <%= render 'shared/searchbar' %>
+
+  </div>
+
   <div> PHOTO!!!
+  </div>
+
+  <div>
+    <ul class="list-inline">
+      <% if @restaurant.has_community %>
+        <li><%= image_tag("btn-community.png", :alt => "community badge") %></li>
+      <% end %>
+      <% if @restaurant.has_sourcing %>
+        <li><%= image_tag("btn-sourcing.png", :alt => "sourcing badge") %></li>
+      <% end %>
+      <% if @restaurant.has_recycling %>
+       <li><%= image_tag("btn-recycling", :alt => "recycling badge") %></li>
+      <% end %>
+    </ul>
+  </div>
+
+  <div>
+    <%= form_for [@restaurant, @check_in] do |f| %>
+    <%= f.submit "Check in", class: "btn btn-primary"  %>
+    <% end %>
+
+    <p>Get <%= @restaurant.calculate_points %> impact points</p>
+
   </div>
 
   <div class="container">
@@ -8,8 +42,8 @@
     <div class="card">
       <ul class="list-inline">
         <li><%= @restaurant.name %></li>
-        <li> AVERAGE OF ALL REVIEWS!!! </li>
-      <p> <%= @restaurant.price_for_two%>€</p>
+        <li><%= @restaurant.average_rating %></li>
+      <p> <%= @restaurant.price_for_two%>€ for two (approx average)</p>
       </ul>
       <ul class="list-inline">
         <li><%= @restaurant.cuisine %></li>
@@ -27,7 +61,7 @@
       <p><%= @restaurant.description  %></p>
     </div>
 
-    <div> MAAAAP!!!!
+    <div><%= image_tag "https://maps.googleapis.com/maps/api/staticmap?zoom=15&size=400x300&sensor=false&maptype=roadmap&markers=color:red|#{@restaurant.address}" %>
     </div>
 
     <div class="card">
@@ -35,7 +69,14 @@
         <li>Reviews</li>
         <li>Leave a review</li>
       </ul>
-      <p> REVIEW CONTENT!!! </p>
+      <p><% if @restaurant.reviews.blank? %>
+        Be the first to leave a review for <%= @restaurant.name %>
+      <% else %>
+        <% @restaurant.reviews.each do |review| %>
+          <%= render 'reviews/show', review: review %>
+        <% end %>
+      <% end %></p>
+      <%= render 'reviews/form', restaurant: @restaurant, review: @review %>
     </div>
 
   </div>

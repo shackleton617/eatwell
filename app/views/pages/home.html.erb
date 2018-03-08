@@ -1,47 +1,71 @@
+<!-- temporary style tag for NavBar build -->
+
+<!-- navbar  -->
+<% content_for :navbar do %>
+  <%= render 'shared/navbar_home' %>
+<% end %>
+
+<!-- navbar end -->
+
+
+    <!-- eatwell logo  and icons -->
+
+  <div class="banner text-center">
+    <%= image_tag "eatwell-home-logo.png", width: "180", class: "logo-home" %>
+    <ul class="list-inline text-center">
+      <li>
+        <div class="group-icon">
+          <%= image_tag "home_sourcing_icon.png", height: "25" %>
+          <p>sourcing</p>
+        </div>
+      </li>
+      <li>
+        <div class="group-icon">
+          <%= image_tag "home_community_icon.png", height: "25" %>
+          <p>community</p>
+        </div>
+      </li>
+      <li>
+        <div class="group-icon">
+          <%= image_tag "home_recycle_icon.png", height: "25" %>
+          <p>recycling</p>
+        </div>
+      </li>
+    </ul>
+  </div>
 <div class="container">
+  <div class="row" style="margin-bottom: 20px">
+   <!--  <form action="<%= restaurants_path %>">
+      <input id="restaurant_address" placeholder="Location search..." name="place">
+      <input type="submit">
+    </form> -->
+    <%= form_tag(restaurants_path, method: "get") do %>
+      <%= text_field_tag :place,
+      params[:place],
+      class: "form-control",
+      placeholder: "Location search...", id: "restaurant_address" %>
 
-  <div class="row">
-    <!-- eatwell logo text  and icons -->
-    <h2>Eatwell</h2>
-    <p>sourcing community recycling</p>
-
+      <%= text_field_tag :query,
+      params[:query],
+      class: "form-control",
+        placeholder: "Search by restaurant, cuisine, location ..." %>
+      <%= submit_tag "Search", class: "btn btn-block btn-primary" %>
+    <% end %>
   </div>
-
-  <br>
-
-
-  <div class="row">
-    <!-- search dropdown -->
-    <div class="form-group">
-          <%= form_tag(restaurants_path, method: "get") do %>
-            <%= text_area_tag(:location, "", placeholder: "Greater Lisbon", class: "form-control") %>
-            <br>
-
-            <%= text_area_tag(:cuisine, "", placeholder: "Search for restaurant, café, cuisine...", class: "form-control") %>
-          <% end %>
-    </div>
-
-  </div>
-
-  <div class="row">
-    <!-- search any type info -->
-
-  </div>
-
+<div class="text-center">
+  <h1>Discover Lisbon restaurants that care.</h1>
+  <h1>Collect reward points</h1>
+</div>
   <div class="row">
     <!-- render cards collections -->
-    <%= render @restaurants %>
-
+    <div class="restaurants_results">
+      <%= render 'restaurants/restaurant' %>
+    </div>
   </div>
-
 </div>
 
-<script>var client = algoliasearch(ApplicationID, Search-Only-API-Key);
-var index = client.initIndex('YourIndexName');
-index.search('something', { hitsPerPage: 10, page: 0 })
-  .then(function searchDone(content) {
-    console.log(content)
-  })
-  .catch(function searchFailure(err) {
-    console.error(err);
-  });</script>
+
+
+
+
+

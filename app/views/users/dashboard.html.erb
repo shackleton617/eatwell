@@ -1,0 +1,39 @@
+
+<% content_for :navbar do %>
+      <%= render 'shared/navbar_show' %>
+ <% end %>
+
+<p>Hi <%= current_user.first_name %></p>
+
+<%= cl_image_tag @user.avatar, height: 300, width: 300 %>
+
+<p>You have
+  <% if current_user.token_wallet == nil %>
+   <%= "0 impact points." %>
+  <% else %>
+    <%= current_user.token_wallet %> impact points!
+  <% end %></p>
+
+<p>Lifetime points: 1200  </p>
+
+<%= link_to offers_path do %>
+  <div>
+    <h3> Redeem points </h3>
+    <p>Check out all the amazing offers!</p>
+  </div>
+<% end %>
+
+<div>
+  <h3> View Favourites </h3>
+  <p>Check out all the amazing offers!</p>
+</div>
+
+<%= link_to edit_user_registration_path do %>
+<p>edit</p>
+<% end %>
+
+
+
+
+
+

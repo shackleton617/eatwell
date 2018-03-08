@@ -1,0 +1,18 @@
+
+  <% @offers.each do |offer| %>
+  <div class="card col-xs-12 col-sm-6 col-md-4" style= "border: 3px solid gray; height: 280px; background-color: white; margin-bottom: 10px">
+      <div class = "image-offer" style= "height: 2px"><p><%= image_tag offer.photo %></p>
+      </div>
+      <p><%= offer.company %></p>
+      <p><%= offer.token_value %></p>
+      <p><%= offer.description %></p>
+      <div>
+    <%= form_for [offer, @redemption] do |f| %>
+    <%= f.submit "Redeem", class: "btn btn-primary"  %>
+    <% end %>
+      <p><%= offer.expiration_date %></p>
+
+
+  </div>
+<% end %>
+

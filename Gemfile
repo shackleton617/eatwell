@@ -1,7 +1,10 @@
 source 'https://rubygems.org'
 ruby '2.4.3'
 
-gem "algoliasearch-rails"
+gem 'jquery-rails'
+gem 'gmaps-autocomplete-rails'
+gem "geocoder"
+gem 'pg_search'
 gem 'devise'
 gem 'figaro'
 gem 'jbuilder', '~> 2.0'
@@ -9,6 +12,11 @@ gem 'pg', '~> 0.21'
 gem 'puma'
 gem 'rails', '5.1.5'
 gem 'redis'
+gem 'coffee-rails'
+
+gem 'cloudinary'
+gem 'carrierwave', '~> 1.2'
+
 
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass', '~> 3.3'

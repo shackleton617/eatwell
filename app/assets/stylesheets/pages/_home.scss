@@ -1,1 +1,61 @@
 // Specific CSS for your home-page
+
+//nav
+.btn-impact {
+  border: 1.2px solid #FEFFFE;
+  color: #FEFFFE;
+  padding: 3px 7px;
+  margin-top: 9px;
+  border-radius: 16px;
+  font-weight: lighter;
+  font-size: 14px;
+  opacity: 0.8;
+
+  a {
+    color: #FEFFFE;
+    text-decoration: none;
+  }
+}
+//nav end
+
+//background
+body {
+  background: url("background-image.png");
+  background-repeat: repeat-y;
+  background-size: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.body {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: transparentize($green, 0.05)
+}
+
+//background image
+
+.banner p {
+  margin-top: 10px;
+  color: $white;
+  font-weight: 300;
+  font-size: 12px;
+  letter-spacing: 0.8px;
+}
+
+
+.group-icon {
+  margin: 30px 0px;
+  padding: 0px 2px;
+}
+
+.logo-home {
+  margin-top: 30px;
+}
+
+
+
+
+

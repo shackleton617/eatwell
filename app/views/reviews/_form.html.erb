@@ -1,0 +1,8 @@
+<%= simple_form_for([ @restaurant, @review ]) do |form| %>
+  <%= form.input :content, placeholder: 'You can leave your review here', label: false, as: :text %>
+  <%= form.input :rating, as: :select, placeholder: 'Please rate this restaurant (1 - 5)', collection: 1..5, label: false %>
+  <%= form.button :submit, value:'Submit'%>
+<% end %>
+
+
+
