@@ -1,8 +1,6 @@
 // Specific CSS for your home-page
 
-@import "homesearch";
-
-
+//nav
 .btn-impact {
   border: 1.2px solid #FEFFFE;
   color: #FEFFFE;
@@ -18,4 +16,23 @@
     text-decoration: none;
   }
 }
+//nav end
 
+//background image
+body {
+  background: url("background-image.png");
+  background-repeat: repeat-y;
+  background-size: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.body {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: transparentize($green, 0.05)
+}
+
+//background image end

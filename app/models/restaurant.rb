@@ -3,6 +3,7 @@ class Restaurant < ApplicationRecord
   has_many :users, through: :check_ins
   has_many :reviews, dependent: :destroy
 
+
  include PgSearch
   pg_search_scope :search_by_any_word,
     against: [ :name, :cuisine, :address, :location, :description ],
@@ -17,17 +18,22 @@ class Restaurant < ApplicationRecord
     geocoded_by :address
   after_validation :geocode, if: :will_save_change_to_address?
 
-
-  def calculate_points
-    @points = 0
-    @points += 10 if self.has_community
-    @points += 10 if self.has_recycling
-    @points += 10 if self.has_sourcing
-    @points
+  def average_rating
+    if reviews != []
+      reviews.average(:rating).round(2)
+    end
   end
 
-  geocoded_by :address
-  after_validation :geocode, if: :will_save_change_to_address?
+  def calculate_points
+
+    points = 0
+    points += 10 if self.has_community
+    points += 10 if self.has_recycling
+    points += 10 if self.has_sourcing
+    points
+  end
+
+
 
 
 
