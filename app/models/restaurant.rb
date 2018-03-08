@@ -28,6 +28,6 @@ class Restaurant < ApplicationRecord
   pg_search_scope :search_all_words,
     against:  [ :name, :cuisine, :address, :location ]
 
-
+end
 
 # @points = @restaurant.calculate_points
