@@ -1,5 +1,5 @@
 class Restaurant < ApplicationRecord
-  has_many :check_ins
+  has_many :check_ins, dependent: :destroy
   has_many :users, through: :check_ins
   has_many :reviews, dependent: :destroy
 
@@ -9,13 +9,13 @@ class Restaurant < ApplicationRecord
 
   include PgSearch
   pg_search_scope :search_by_any_word,
-    against: [ :name, :cuisine, :address, :location ],
+    against: [ :name, :cuisine, :address, :location, :description ],
     using: {
       tsearch: { prefix: true, any_word: true }
 
     }
-    pg_search_scope :search_all_words,
-      against:  [ :name, :cuisine, :address, :location ]
+  pg_search_scope :search_all_words,
+    against:  [ :name, :cuisine, :address, :location ]
 
 
 end
