@@ -2,44 +2,44 @@
 
 <!-- navbar  -->
 <% content_for :navbar do %>
-<%= render 'shared/navbar_home' %>
+  <%= render 'shared/navbar_home' %>
 <% end %>
 
 <!-- navbar end -->
 
-  <div class="row">
+
     <!-- eatwell logo  and icons -->
-    <%= image_tag "eatwell-home-logo.png" %>
 
-    <div>
-      <%= image_tag "home_sourcing_icon.png" %>
-      <p>sourcing</p>
-    </div>
-
-    <div>
-      <%= image_tag "home_community_icon.png" %>
-      <p>community</p>
-    </div>
-
-    <div>
-      <%= image_tag "home_recycle_icon.png" %>
-      <p>recycling</p>
-    </div>
-    </div>
+  <div class="banner text-center">
+    <%= image_tag "eatwell-home-logo.png", width: "180", class: "logo-home" %>
+    <ul class="list-inline text-center">
+      <li>
+        <div class="group-icon">
+          <%= image_tag "home_sourcing_icon.png", height: "25" %>
+          <p>sourcing</p>
+        </div>
+      </li>
+      <li>
+        <div class="group-icon">
+          <%= image_tag "home_community_icon.png", height: "25" %>
+          <p>community</p>
+        </div>
+      </li>
+      <li>
+        <div class="group-icon">
+          <%= image_tag "home_recycle_icon.png", height: "25" %>
+          <p>recycling</p>
+        </div>
+      </li>
+    </ul>
   </div>
-
-  <br>
 <div class="container">
   <div class="row" style="margin-bottom: 20px">
-
    <!--  <form action="<%= restaurants_path %>">
       <input id="restaurant_address" placeholder="Location search..." name="place">
       <input type="submit">
-
     </form> -->
-
     <%= form_tag(restaurants_path, method: "get") do %>
-
       <%= text_field_tag :place,
       params[:place],
       class: "form-control",
@@ -50,38 +50,19 @@
       class: "form-control",
         placeholder: "Search by restaurant, cuisine, location ..." %>
       <%= submit_tag "Search", class: "btn btn-block btn-primary" %>
-
     <% end %>
-
-
-    </div>
-
-    <br>
-
-
-
-    <div class="row" style="margin-bottom: 20px">
-      <!-- search dropdown -->
-
-    </div>
-
-    <div class="row">
-      <!-- search any type info -->
-
-    </div>
-
-    <div class="row">
-      <!-- render cards collections -->
-      <div class="restaurants_results">
-        <%= render 'restaurants/restaurant' %>
-      </div>
-
-    </div>
->>>>>>> ae6b5bc4e38f77939590791deb9976d2febb5890
-
-
-
   </div>
+<div class="text-center">
+  <h1>Discover Lisbon restaurants that care.</h1>
+  <h1>Collect reward points</h1>
+</div>
+  <div class="row">
+    <!-- render cards collections -->
+    <div class="restaurants_results">
+      <%= render 'restaurants/restaurant' %>
+    </div>
+  </div>
+</div>
 
 
 
