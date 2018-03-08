@@ -1,7 +1,7 @@
 class RestaurantsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
 
-  before_action :set_restaurant, :get_location, only: [:show ]
+  before_action :set_restaurant, only: [:show ]
 
 
   def index
