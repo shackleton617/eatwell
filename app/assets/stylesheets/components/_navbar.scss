@@ -9,6 +9,16 @@
   justify-content: space-between;
 }
 
+.navbar-wagon-solid {
+  background-color: $green;
+  transition: all 0.3s ease;
+  height: 70px;
+  padding: 0px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 /* Logo */
 .navbar-wagon-brand img {
   height: 40px;
