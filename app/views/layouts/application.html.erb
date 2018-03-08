@@ -12,7 +12,8 @@
 </head>
 
 <body>
-  <div class="body">
+  <%  %>
+  <div class="body<%= yield(:background) == 'white' ? ' white-background' : '' %>">
     <% if content_for?(:navbar) %>
         <%= yield(:navbar) %>
       </div>
