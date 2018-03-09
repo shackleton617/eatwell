@@ -7,22 +7,27 @@
   </div>
 <% end %>
 
-<div class="body-section wraper">
+<div class="body-section wrapper">
+  <div class="container">
+    <div class="search-page-row row">
+    <!-- Cards container -->
+      <div class="col-xs-12 col-md-8" style="padding: 2px;">
+        <div class="container cards-container">
+          <div class="row">
+            <!-- card -->
+            <%= render 'restaurants/restaurant' %>
+          </div>
+        </div>
+      </div>
 
-  <div class="search-page__row row">
-    <div class="search-page__col-left col-xs-12 col-md-8">
-      <%= render 'restaurants/restaurant' %>
-    </div>
-
-
-    <div class="search-page__col-right col-xs-12 col-md-4">
-      <div
-      id="map" data-markers="<%= @markers.to_json %>">
+      <div class="col-xs-12 col-md-4">
+        <div class="map-container">
+          <div id="map" data-markers="<%= @markers.to_json %>"></div>
+        </div>
       </div>
 
     </div>
   </div>
-
 </div>
 
 

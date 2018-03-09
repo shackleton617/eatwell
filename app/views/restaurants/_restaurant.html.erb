@@ -1,31 +1,32 @@
 <% @restaurants.each do |restaurant| %>
+  <div class="col-xs-12 col-sm-6 col-md-4">
+    <div class="card-search">
+      <%= link_to restaurant_path(restaurant) do %>
 
-  <div class="card-search col-xs-12 col-sm-6 col-md-4">
-    <%=link_to restaurant_path(restaurant) do %>
-      <div class="card__img" style="background-image: url('<%= restaurant.photos %>')";>
+        <div class="card__img" style="background-image: url('<%= restaurant.photos %>')";>
         </div>
 
-      <div>
-        <ul class="list-inline">
-          <% if restaurant.has_community %>
-            <li><%= image_tag("btn-community.png", :alt => "community badge") %></li>
-          <% end %>
-          <% if restaurant.has_sourcing %>
-            <li><%= image_tag("btn-sourcing.png", :alt => "sourcing badge") %></li>
-          <% end %>
-          <% if restaurant.has_recycling %>
-            <li><%= image_tag("btn-recycling.png", :alt => "recycling badge") %></li>
-          <% end %>
-        </ul>
-      </div>
+        <div>
+          <ul class="list-inline">
+            <% if restaurant.has_community %>
+              <li><%= image_tag("btn-community.png", alt: "community badge", class: "symbols") %></li>
+            <% end %>
+            <% if restaurant.has_sourcing %>
+              <li><%= image_tag("btn-sourcing.png", alt: "sourcing badge", class: "symbols") %></li>
+            <% end %>
+            <% if restaurant.has_recycling %>
+              <li><%= image_tag("btn-recycling.png", alt: "recycling badge", class: "symbols") %></li>
+            <% end %>
+          </ul>
+        </div>
 
-      <p><%= restaurant.name %></p>
-      <!-- <p><%= restaurant.description %></p> -->
-      <p><%= restaurant.location %></p>
-      <p><%= restaurant.price_for_two %></p>
+        <p class="title"><%= restaurant.name %></p>
+        <!-- <p><%= restaurant.description %></p> -->
 
-    <% end %>
+        <p class="price"><%= restaurant.price_for_two %><span class="euro"> €</span></p>
+        <p class="location"><%= restaurant.location %></p>
+      <% end %>
+    </div>
   </div>
-
 <% end %>
 
