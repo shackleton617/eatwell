@@ -27,7 +27,7 @@
 
   <div>
     <%= form_for [@restaurant, @check_in] do |f| %>
-    <%= f.submit "Check in", class: "btn btn-primary"  %>
+    <%= f.submit "Check in", class: "btn btn-danger"  %>
     <% end %>
 
     <p>Get <%= @restaurant.calculate_points %> impact points</p>
