@@ -283,7 +283,7 @@ Offer.destroy_all
 
 offer_1 = Offer.create(
 
-expiration_date: "April 1, 2018",
+expiration_date: Date.today + 20.days,
 company: "Vegana Burgers",
 token_value: 30,
 description: "Get a free burger meal!",
@@ -292,10 +292,10 @@ photo: "https://assets3.thrillist.com/v1/image/1762665/size/tmg-article_default_
 
 offer_2 = Offer.create(
 
-expiration_date: "May 5, 2018",
+expiration_date: Date.today + 30.days,
 company: "Sama Sama",
 token_value: 10,
-description: "Exchange your impact tokens for a healthy cocktail!",
+description: "Get a free healthy cocktail!",
 photo: "http://del.h-cdn.co/assets/16/46/980x1471/spiked-chery-lemonade-slushies.jpg"
 
 )

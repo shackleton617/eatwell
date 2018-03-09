@@ -11,7 +11,7 @@
   <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
 </head>
 
-<body style="background-image: url('<%= image_url("background-image.png") %>')">
+<body>
   <div class="body<%= yield(:background) == 'white' ? ' white-background' : '' %>">
     <% if content_for?(:navbar) %>
         <%= yield(:navbar) %>
