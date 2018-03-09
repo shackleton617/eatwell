@@ -1,8 +1,9 @@
-<%= form_tag(restaurants_path, method: "get") do %>
 
-  <%= text_field_tag :query,
-    params[:query],
-    class: "form-control",
-    placeholder: "Search by restaurant, cuisine, location ..." %>
 
-<% end %>
+  <%= form_tag(restaurants_path, method: "get") do %>
+    <%= text_field_tag :query,
+      params[:query],
+      class: "form-control",
+      placeholder: "Search by restaurant, cuisine, location ..." %>
+  <% end %>
+</div>

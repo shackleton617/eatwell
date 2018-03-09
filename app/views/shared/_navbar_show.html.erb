@@ -3,7 +3,11 @@
     <%= image_tag "logo.png", height: 50 %>
   <% end %>
   <div class="navbar-wagon-right">
-    <div  class="navbar-wagon-item search-icon">
+
+    <div class="navbar-wagon-item search-icon">
+      <%= link_to root_path do %>
+        <%= image_tag "search-icon.png", height: 24 %>
+      <% end %>
 
     </div>
     <div class="navbar-wagon-item user-icon">
