@@ -297,6 +297,7 @@ company: "Sama Sama",
 token_value: 10,
 description: "Exchange your impact tokens for a healthy cocktail!",
 photo: "http://del.h-cdn.co/assets/16/46/980x1471/spiked-chery-lemonade-slushies.jpg"
+
 )
 
 
