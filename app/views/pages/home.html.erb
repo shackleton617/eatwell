@@ -33,25 +33,28 @@
       </li>
     </ul>
   </div>
-<div class="container">
-  <div class="row" style="margin-bottom: 20px">
-   <!--  <form action="<%= restaurants_path %>">
-      <input id="restaurant_address" placeholder="Location search..." name="place">
-      <input type="submit">
-    </form> -->
-    <%= form_tag(restaurants_path, method: "get") do %>
-      <%= text_field_tag :place,
-      params[:place],
-      class: "form-control",
-      placeholder: "Location search...", id: "restaurant_address" %>
+<div class="form-container">
+  <div class="container">
+    <div class="row" style="margin-bottom: 20px">
+     <!--  <form action="<%= restaurants_path %>">
+        <input id="restaurant_address" placeholder="Location search..." name="place">
+        <input type="submit">
+      </form> -->
+      <%= form_tag(restaurants_path, method: "get") do %>
+        <%= text_field_tag :place,
+        params[:place],
+        class: "form-control",
+        placeholder: "Location search...", id: "restaurant_address" %>
 
-      <%= text_field_tag :query,
-      params[:query],
-      class: "form-control",
-        placeholder: "Search by restaurant, cuisine, location ..." %>
-      <%= submit_tag "Search", class: "btn btn-block btn-primary" %>
-    <% end %>
+        <%= text_field_tag :query,
+        params[:query],
+        class: "form-control",
+          placeholder: "Search by restaurant, cuisine, location ..." %>
+        <%= submit_tag "Search", class: "btn btn-block btn-danger" %>
+      <% end %>
+    </div>
   </div>
+</div>
 <div class="text-center">
   <h1>Discover Lisbon restaurants that care.</h1>
   <h1>Collect reward points</h1>
