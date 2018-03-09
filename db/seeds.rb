@@ -227,42 +227,80 @@ restaurant_13 = Restaurant.create(
 name: "Foodprintz cafe",
 address: "R. Rodrigo da Fonseca 82A, 1250-193 Lisboa",
 location: "Marques de Pombal, Lisbon",
-cuisine: "Author, Portuguese, Brazilian",
+cuisine: "Organic, Vegan",
 description: "Organic, locally sourced, wholesome, fair natural food. We present flavors, colors and textures from all over the world. Thinking about the carbon footprint: reducing the incidence and impact of animal cruelty & the damage done to MOTHER EARTH by providing a full plant-based only menu with gluten free, nut free and soy free options.",
-phone_number: "96 602 8229",
+phone_number: "21 581 7577",
 price_for_two: 22,
 working_hours: "12:00 - 19:00",
-has_community: false,
-has_recycling: false,
+has_community: true,
+has_recycling: true,
 has_sourcing: true,
 photos: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHZ4QYP9goagnwK-0jYkgDcaPUkMh4MymKoFPqRePcPgMLkblbtw",
 latitude: 38.7237696,
 longitude: -9.1572676
 )
 
+restaurant_14 = Restaurant.create(
 
+name: "Vegana Burgers Cais do Sodré",
+address: "30, Praça Dom Luís i, 1200-152 Lisboa",
+location: "Cais do Sodre, Lisbon",
+cuisine: "Vegan fast food",
+description: "Há cada vez mais famosos a aderirem às novas tendências, e o veganismo é uma delas. E como todas as modas, há aquelas que vêm para ficar, e nós esperamos que esta seja uma delas. Que todas as modas fossem tão benéficas para os animais, para a nossa saúde e para o nosso planeta como ser vegano.",
+phone_number: "21 246 3511",
+price_for_two: 20,
+working_hours: "12:00 - 22:00",
+has_community: false,
+has_recycling: true,
+has_sourcing: true,
+photos: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQChbUBOTxxMVIMDaOhe-gYFSClYnlf0bE5omzqElf0avFI48qK",
+latitude: 38.7203784,
+longitude: -9.1629675
+)
 
+restaurant_15 = Restaurant.create(
+
+name: "The Food Temple",
+address: "Beco do Jasmim 18, 1100-289 Lisboa",
+location: "Socorro, Lisbon",
+cuisine: "Vegetarian, Vegan, International, Fusion",
+description: "The Food Temple prides itself as a Cultural Food Community. Indeed the people and ambience are buzzing with a positive spirit. Vegan and vegetarian fare, with a changing menu every day.",
+phone_number: "21 887 4397",
+price_for_two: 40,
+working_hours: "7:30 - 12:00",
+has_community: false,
+has_recycling: false,
+has_sourcing: true,
+photos: "https://assets3.thrillist.com/v1/image/1762665/size/tmg-article_default_mobile.jpg",
+latitude: 38.7159032,
+longitude: -9.1364453
+)
 
 
 
 
 Offer.destroy_all
 
+offer_1 = Offer.create(
 
-4.times do
-
-offers = Offer.new(
-
-expiration_date: Faker::Date.forward(90),
-company: Faker::Company.name,
-token_value: Faker::Number.between(10, 10000),
-description: "Best Voucher you will ever see in your life!",
-photo: "https://media.portaldaqueixa.com/l/5c8b42fbeb5ac309881b5321b8085e5a.jpg"
+expiration_date: "April 1, 2018",
+company: "Vegana Burgers",
+token_value: 30,
+description: "Get a free burger meal!",
+photo: "https://assets3.thrillist.com/v1/image/1762665/size/tmg-article_default_mobile.jpg"
 )
 
-offers.save!
+offer_2 = Offer.create(
 
-end
+expiration_date: "May 5, 2018",
+company: "Sama Sama",
+token_value: 10,
+description: "Exchange your impact tokens for a healthy cocktail!",
+photo: "http://del.h-cdn.co/assets/16/46/980x1471/spiked-chery-lemonade-slushies.jpg"
+
+)
+
+
 
 
 
