@@ -1,7 +1,7 @@
 <% @restaurants.each do |restaurant| %>
 
-  <div class="card-search col-xs-12 col-sm-6 col-md-4">
-    <%=link_to restaurant_path(restaurant) do %>
+  <div class="card-search">
+    <%= link_to restaurant_path(restaurant) do %>
       <div class="card__img" style="background-image: url('<%= restaurant.photos %>')";>
         </div>
 

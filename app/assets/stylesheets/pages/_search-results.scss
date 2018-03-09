@@ -14,19 +14,19 @@
 }
 
 
-.search-page__row {
+.search-page-row {
   padding: 0px;
 }
 
-.search-page__col-left {
-  height: calc(100vh - 70px);
-  overflow-y: scroll;
-  // padding-left: 20px;
-  // padding-right: 10px;
+.cards-container {
+height: calc(100vh - 70px);
+overflow-y: scroll;
+// padding-left: 20px;
+// padding-right: 10px;
 }
 
 
-.search-page__col-right {
+.map-container {
   height: calc(100vh - 70px);
   padding-left: 10px;
   padding-right: 10px;
