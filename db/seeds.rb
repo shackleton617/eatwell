@@ -255,7 +255,7 @@ offers = Offer.new(
 
 expiration_date: Faker::Date.forward(90),
 company: Faker::Company.name,
-token_value: Faker::Number.between(10, 10000),
+token_value: Faker::Number.between(10, 15),
 description: "Best Voucher you will ever see in your life!",
 photo: "https://media.portaldaqueixa.com/l/5c8b42fbeb5ac309881b5321b8085e5a.jpg"
 )
