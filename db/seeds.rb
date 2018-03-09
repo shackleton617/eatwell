@@ -3,7 +3,7 @@ Restaurant.destroy_all
 
 restaurant_1 = Restaurant.create(
 
-name: "Cozinha Popular Na Mouraria",
+name: "Cozinha Popular da Mouraria",
 address: "R. das Olarias 5, w Lisboa",
 location: "Moraria, Lisbon",
 cuisine: "Portuguese",
