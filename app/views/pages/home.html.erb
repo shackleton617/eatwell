@@ -43,12 +43,12 @@
       <%= form_tag(restaurants_path, method: "get") do %>
         <%= text_field_tag :place,
         params[:place],
-        class: "form-control",
+        class: "form-control form-padding-home",
         placeholder: "Location search...", id: "restaurant_address" %>
 
         <%= text_field_tag :query,
         params[:query],
-        class: "form-control",
+        class: "form-control form-padding-home",
           placeholder: "Search by restaurant, cuisine, location ..." %>
         <%= submit_tag "Search", class: "btn btn-block btn-danger" %>
       <% end %>
