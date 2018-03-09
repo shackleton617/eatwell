@@ -7,14 +7,7 @@ class RestaurantsController < ApplicationController
   def index
     # Restaurant.near("lisbon", 20)
 
-    if  params[:query].present?
-
-      sql_query = " \
-      restaurants.name @@ :query \
-      OR restaurants.cuisine @@ :query \
-      OR restaurants.location @@ :query \
-      OR restaurants.address @@ :query \
-      "
+    unless params[:query].empty?
       @restaurants = Restaurant.search_by_any_word(params[:query])
       # @restaurants = Restaurant.where(sql_query, query: "%#{params[:query]}%")
 
@@ -22,9 +15,10 @@ class RestaurantsController < ApplicationController
       @restaurants = Restaurant.all
     end
 
-    if params[:place].present?
-      @restaurants = @restaurants.near(params[:place], 5)
+    unless params[:place].empty?
+      @restaurants = @restaurants.near(params[:place], 1) unless @restaurants.near(params[:place], 1).empty?
     end
+    @restaurants = Restaurant.all if @restaurants.empty?
     get_location
   end
 

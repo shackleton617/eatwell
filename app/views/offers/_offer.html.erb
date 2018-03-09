@@ -1,18 +1,27 @@
 
-  <% @offers.each do |offer| %>
-  <div class="card col-xs-12 col-sm-6 col-md-4" style= "border: 3px solid gray; height: 280px; background-color: white; margin-bottom: 10px">
-      <div class = "image-offer" style= "height: 2px"><p><%= image_tag offer.photo %></p>
+<% @offers.each do |offer| %>
+ <br>
+
+  <div class="card-search col-xs-12 col-sm-6 col-md-4" style="margin-top: 50px; background-clip: center; background-size: cover">
+
+
+      <div class="card__img" style="background-image: url('<%= offer.photo %>')";>
+
       </div>
-      <p><%= offer.company %></p>
-      <p><%= offer.token_value %></p>
-      <p><%= offer.description %></p>
+
       <div>
-    <%= form_for [offer, @redemption] do |f| %>
-    <%= f.submit "Redeem", class: "btn btn-primary"  %>
-    <% end %>
-      <p><%= offer.expiration_date %></p>
+        <p><%= offer.company %></p>
+        <p><%= offer.token_value %> tokens </p>
+        <p><%= offer.description %></p>
+        <p><%= offer.expiration_date.strftime("Expires on %m/%d/%Y") %></p>
+
+        <%= form_for [offer, @redemption] do |f| %>
+          <%= f.submit "Redeem", class: "btn btn-danger" %>
+        <% end %>
+      </div>
 
 
   </div>
+
 <% end %>
 
