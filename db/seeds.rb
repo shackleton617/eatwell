@@ -300,6 +300,17 @@ photo: "http://del.h-cdn.co/assets/16/46/980x1471/spiked-chery-lemonade-slushies
 
 )
 
+offer_3 = Offer.create(
+
+expiration_date: Date.today + 60.days,
+company: "Ria Maravilha",
+token_value: 10,
+description: "Get a caneca of artesanal beer!",
+photo: "https://flggcanyonaletrail.files.wordpress.com/2014/04/savdist-com.jpg"
+
+)
+
+
 
 
 
