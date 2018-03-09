@@ -5,12 +5,12 @@ class RedemptionsController < ApplicationController
     @offer = Offer.find(params[:offer_id])
 
 
-    if current_user.token_wallet > @offer.token_value || current_user.token_wallet = @offer.token_value
+    if current_user.token_wallet >= @offer.token_value
     @redemption = Redemption.new
     @redemption.user = current_user
     @redemption.offer = @offer
     @redemption.save
-flash[:notice] = "enjoy your offer"
+flash[:notice] = "Enjoy your offer!"
 
     new_value = current_user.token_wallet - @offer.token_value
 

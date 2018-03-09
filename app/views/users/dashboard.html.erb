@@ -1,39 +1,55 @@
 <% content_for :background, 'white' %>
 
-
-  <% content_for :navbar do %>
-      <%= render 'shared/navbar_show' %>
-  <% end %>
-
-  <p>Hi <%= current_user.first_name %></p>
-
-  <%= cl_image_tag @user.avatar, height: 300, width: 300 %>
-
-  <p>You have
-    <% if current_user.token_wallet == nil %>
-     <%= "0 impact points." %>
-    <% else %>
-      <%= current_user.token_wallet %> impact points!
-    <% end %></p>
-
-  <!-- <p>Lifetime points: 1200  </p> -->
-
-  <%= link_to offers_path do %>
-    <div>
-      <h3> Redeem points </h3>
-      <p>Check out all the amazing offers!</p>
+<div class="wrapper-dashboard">
+  <div class="nav-dashboard">
+    <div class>
+      <%= link_to root_path do  %>
+        <% image_tag "logo.png", height: 40, class: "logo-dashboard" %>
+        <% end %>
+      </div>
+    <div class="edit-profile-dashboard">
+      <%= link_to edit_user_registration_path do %>
+        <p>Edit Profile</p>
+      <% end %>
     </div>
-  <% end %>
-
-  <div>
-    <h3> View Favourites </h3>
-    <p>Check out all the amazing offers!</p>
+  </div>
+  <div class="center-avatar-dashboard">
+    <div class="container-dashboard">
+      <%= cl_image_tag(@user.avatar, height: 130, width: 130, class: "user-avatar-dashboard") %>
+    </div>
   </div>
 
-  <%= link_to edit_user_registration_path do %>
-  <p>edit</p>
-  <% end %>
+  <h4 class="text-center text-greeting-dashboard">Hi <%= current_user.first_name %>!</h4>
 
+    <ul class="list-inline text-center padding-over-ride-dashboard">
+      <li class="text-impact-gray">You have</li>
+      <% if current_user.token_wallet == nil %>
+        <li class="text-impact-red"><strong><%= "0" %></strong> impact points. </style></li>
+      <% else %>
+        <li><%= current_user.token_wallet %> impact points!
+      <% end %></li>
+    </ul>
+
+  <div class="card-container-dashboard">
+    <%= link_to offers_path do %>
+      <div class="card-dashboard">
+        <%= image_tag("dashboard-offers-icon", height: 70, class: "flex-item offers-icon-padding") %>
+        <div class="card-text-container-dashboard flex-item">
+          <h4> Redeem points </h4>
+          <p>Check out all the amazing offers!</p>
+        </div>
+      </div>
+    <% end %>
+    <div class="card-dashboard">
+      <%= image_tag("dashboard-fav-icon", height: 70, class: "flex-item offers-icon-padding") %>
+      <div class="card-text-container-dashboard flex-item">
+        <h4> Favorites </h4>
+        <p> 12 restaurants that care</p>
+      </div>
+    </div>
+  </div>
+
+</div>
 
 
 
