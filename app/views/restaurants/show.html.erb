@@ -4,14 +4,10 @@
 <% end %>
  <!-- end of navbar -->
 
-<div>
+<div class="container">
 
-  <div class="row">
-    <%= render 'shared/searchbar' %>
 
-  </div>
-
-  <div> PHOTO!!!
+  <div class="banner" style="width: 200px; background-image: url('<%= @restaurant.photos %>')";>
   </div>
 
   <div>
@@ -38,6 +34,7 @@
   </div>
 
   <div class="container">
+
 
     <div class="card">
       <ul class="list-inline">
