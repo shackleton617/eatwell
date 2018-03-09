@@ -1,7 +1,6 @@
 <% content_for :background, 'white' %>
 
 <div class="wrapper-dashboard">
-
   <div class="nav-dashboard">
     <div class>
       <%= link_to root_path do  %>
@@ -13,9 +12,7 @@
         <p>Edit Profile</p>
       <% end %>
     </div>
-
   </div>
-
   <div class="center-avatar-dashboard">
     <div class="container-dashboard">
       <%= cl_image_tag(@user.avatar, height: 130, width: 130, class: "user-avatar-dashboard") %>
@@ -44,13 +41,12 @@
       </div>
     <% end %>
     <div class="card-dashboard">
-        <%= image_tag("dashboard-fav-icon", height: 70, class: "flex-item offers-icon-padding") %>
-        <div class="card-text-container-dashboard flex-item">
-          <h4> Favorites </h4>
-          <p> 12 restaurants that care</p>
-        </div>
+      <%= image_tag("dashboard-fav-icon", height: 70, class: "flex-item offers-icon-padding") %>
+      <div class="card-text-container-dashboard flex-item">
+        <h4> Favorites </h4>
+        <p> 12 restaurants that care</p>
       </div>
-
+    </div>
   </div>
 
 </div>

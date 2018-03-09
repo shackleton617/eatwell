@@ -10,6 +10,7 @@
   height: 80vh;
   overflow-y: scroll;
   top: 20vh;
+  background-color: transparent;
 }
 
 
@@ -20,14 +21,14 @@
 .search-page__col-left {
   height: calc(100vh - 70px);
   overflow-y: scroll;
-  padding-left: 40px;
-  padding-right: 40px;
+  // padding-left: 20px;
+  // padding-right: 10px;
 }
 
 .search-page__col-right {
   height: calc(100vh - 70px);
-  padding-left: 40px;
-  padding-right: 40px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 #map {
