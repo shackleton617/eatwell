@@ -14,13 +14,13 @@
   <div>
     <ul class="list-inline">
       <% if @restaurant.has_community %>
-        <li><%= image_tag("btn-community.png", :alt => "community badge") %></li>
+        <li><%= image_tag("btn-community.png", alt: "community badge") %></li>
       <% end %>
       <% if @restaurant.has_sourcing %>
-        <li><%= image_tag("btn-sourcing.png", :alt => "sourcing badge") %></li>
+        <li><%= image_tag("btn-sourcing.png", alt: "sourcing badge") %></li>
       <% end %>
       <% if @restaurant.has_recycling %>
-       <li><%= image_tag("btn-recycling.png", :alt => "recycling badge") %></li>
+       <li><%= image_tag("btn-recycling.png", alt: "recycling badge") %></li>
       <% end %>
     </ul>
   </div>
