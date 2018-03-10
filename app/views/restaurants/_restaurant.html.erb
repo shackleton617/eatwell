@@ -1,13 +1,13 @@
 <% @restaurants.each do |restaurant| %>
   <div class="col-xs-12 col-sm-6 col-md-4">
-    <div class="card-search">
+    <div class="card-box">
       <%= link_to restaurant_path(restaurant) do %>
 
         <div class="card__img" style="background-image: url('<%= restaurant.photos %>')";>
         </div>
 
         <div>
-          <ul class="list-inline">
+          <ul class="list-inline" style="margin: 0px;">
             <% if restaurant.has_community %>
               <li><%= image_tag("btn-community.png", alt: "community badge", class: "symbols") %></li>
             <% end %>
@@ -18,13 +18,31 @@
               <li><%= image_tag("btn-recycling.png", alt: "recycling badge", class: "symbols") %></li>
             <% end %>
           </ul>
+
         </div>
 
-        <p class="title"><%= restaurant.name %></p>
-        <!-- <p><%= restaurant.description %></p> -->
 
-        <p class="price"><%= restaurant.price_for_two %><span class="euro"> €</span></p>
-        <p class="location"><%= restaurant.location %></p>
+        <div class="name"><%= restaurant.name %></div>
+
+
+
+
+
+        <p class="main-text"><%= restaurant.cuisine %></p>
+
+        <p class="main-text"><%= restaurant.location %></p>
+
+        <ul class="list-inline" style="margin: 0px; padding-left: 0px;">
+          <li class="main-text" style="padding-left: 0px;"><%= restaurant.price_for_two %><span class="euro"> €</span><span class="av-price"> (avg. price for two)</span></li>
+          <li>
+            <% if restaurant.average_rating.nil? %>
+              <span class="no-rating">No ratings yet</span>
+            <% else %>
+              <span class="average-rating"><%= restaurant.average_rating %></span>
+            <% end %>
+          </li>
+        </ul>
+
       <% end %>
     </div>
   </div>

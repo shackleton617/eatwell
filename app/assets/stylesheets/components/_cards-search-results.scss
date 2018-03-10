@@ -1,86 +1,81 @@
 
-.card-search {
-  height: 350px;
+.card-box {
+  height: 370px;
   border-radius: 4px;
   background-color: #FFFFFF;
   margin-top: 0px;
-  margin: 0;
   padding: 0px 5px 5px 5px;
-  box-shadow: 4px 4px 4px 0 rgba(0,0,0,0.2);
   margin-bottom: 10px;
-
+  box-shadow: 4px 4px 4px 0 rgba(0,0,0,0.2);
+  position: relative;
 }
 
 .card__img {
   height: 58%;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
   background-size: cover;
   background-clip: center;
 }
 
 .symbols {
-  height: 40px;
+  height: 55px;
   margin: 5px 5px 5px 5px;
+  margin-top: -22px;
 }
 
-.price {
+.main-text {
   font-size: 16px;
   color: #A4A9AD;
-  margin: 0px 5px 5px 5px;
+  margin: 0px 10px;
   font-weight: lighter;
 }
+
+.name {
+  font-size: 24px;
+  color: rgba(30, 50, 49, 0.9);
+  font-weight: bold;
+  font-decoration: none;
+  padding: 0px 10px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  margin: 5px 0px;
+}
+
+.average-rating {
+  color: white;
+  font-size: 18px;
+  padding: 0px 5px 0px 5px;
+  border-radius: 4px;
+  font-weight: 500;
+  background: #FFBA49;
+  margin-left: 8px;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+.no-rating {
+  font-size: 14px;
+  color: #FFBA49;
+  margin: 0px 0px 0px 0px;
+  font-weight: 100;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+
 
 .euro {
   height: 16px;
   color: rgb(23, 190, 187);
 }
 
-.location {
-  font-size: 16px;
+.av-price {
+  font-size: 14px;
   color: #A4A9AD;
-  margin: 0px 5px 5px 5px;
+  margin: 0px 0px 0px 0px;
   font-weight: lighter;
 }
-
-.title {
-  font-size: 18px;
-  color: rgba(30, 50, 49, 0.9);
-  font-weight: bold;
-  font-decoration: none;
-  margin: 0 5px 5px 5px;
-  padding-top: 0px;
-}
-
-// .sport-text-style {
-//   padding: 2px 8px;
-//   color: white;
-//   font-size: 12px;
-//   background-color: #E37C54;
-//   border-radius: 5px;
-//   margin-left: 5px;
-// }
-
-// .location-text-style {
-//   color: #E37C54;
-//   font-size: 12px;
-// }
-
-// .card-details {
-//   color: #484848;
-//   margin-top: 10px;
-//   font-family: "Montserrat", Helvetica, sans-serif;
-// }
-
-
-// .card-title h6 {
-//   font-size: 22px;
-//   font-weight: 600;
-//   margin-top: 0px;
-// }
-
-// .card-price {
-//   font-family: "Monserrat", Helvetica, sans-serif;
-//   font-size: 14px;
-//   color: #484848;
-//   font-weight: lighter;
-//   letter-spacing: 0.35px;
-// }
