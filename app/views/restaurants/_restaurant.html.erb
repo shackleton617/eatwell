@@ -33,10 +33,10 @@
         <p class="main-text"><%= restaurant.location %></p>
 
         <ul class="list-inline" style="margin: 0px; padding-left: 0px;">
-          <li class="main-text price" style="padding-left: 0px;"><%= restaurant.price_for_two %><span class="euro">€</span><span class="av-price"> (avg. price for two)</span></li>
+          <li class="main-text price" style="padding-left: 0px;"><%= restaurant.price_for_two %><span class="euro">€</span><span class="av-price"> (avg. for two)</span></li>
           <li>
             <% if restaurant.average_rating.nil? %>
-              <span class="no-rating">No ratings yet</span>
+              <span class="no-rating">No ratings</span>
             <% else %>
               <span class="average-rating"><%= restaurant.average_rating %></span>
             <% end %>
