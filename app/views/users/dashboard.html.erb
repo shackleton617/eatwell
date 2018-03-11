@@ -9,7 +9,7 @@
       </div>
     <div class="edit-profile-dashboard">
       <%= link_to edit_user_registration_path do %>
-        <p>Edit Profile</p>
+        <p>Edit profile</p>
       <% end %>
     </div>
   </div>
@@ -19,16 +19,16 @@
     </div>
   </div>
 
-  <h4 class="text-center text-greeting-dashboard">Hi <%= current_user.first_name %>!</h4>
+  <h4 class="text-center text-greeting-dashboard">Hi <%= current_user.first_name.capitalize %>!</h4>
 
-    <ul class="list-inline text-center padding-over-ride-dashboard">
-      <li class="text-impact-gray">You have</li>
+    <p class="text-center padding-over-ride-dashboard">
+      <span class="text-impact-gray">You have</span>
       <% if current_user.token_wallet == nil %>
-        <li class="text-impact-red"><strong><%= "0" %></strong> impact points. </style></li>
+        <span class="text-impact-red"><%= "0" %> impact points </span>
       <% else %>
-        <li><%= current_user.token_wallet %> impact points!
-      <% end %></li>
-    </ul>
+        <span class="text-impact-red"><%= current_user.token_wallet %> impact points
+      <% end %></span>
+    </p>
 
   <div class="card-container-dashboard">
     <%= link_to offers_path do %>

@@ -1,8 +1,8 @@
-<div style="color: #A4A9AD; font-weight: lighter;">
+<div>
   <%= form_tag(restaurants_path, method: "get") do %>
     <%= text_field_tag :query,
       params[:query],
-      class: "form-control",
+      class: "form-control form-search-results",
       placeholder: "Search by restaurant, cuisine, location ..." %>
   <% end %>
 </div>
