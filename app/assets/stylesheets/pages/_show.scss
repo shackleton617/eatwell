@@ -1,0 +1,74 @@
+.background-show {
+  background-color: $white;
+}
+
+.nav-show {
+  background-color: $green;
+  height: 20px;
+  width: 100%;
+}
+
+
+.card-show {
+  border-radius: 4px;
+  border-style: solid;
+  border-color: $light-gray;
+  border-width: 0.4px;
+  background-color: $white;
+  margin: 0px 10px 5px 10px;
+  padding: 15px;
+  box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.2);
+  position: relative;
+}
+
+.name-show {
+  font-size: 24px;
+  color: $gray;
+  font-weight: bold;
+  font-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  margin: 0px 0px 5px 0px;
+}
+
+.card-show p {
+  margin: 0px;
+}
+
+.map-show {
+  height: 100%;
+  width: 100%;
+}
+
+.btn-danger {
+  background-color: $red;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: normal;
+  margin-top: -110px;
+  margin-right: 0px;
+  width: 125px;
+  box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.2);
+}
+
+.check-in-section {
+  text-align: right;
+  margin-right: 10px;
+}
+
+.rest-points {
+  color: $red;
+  font-size: 14px;
+  font-weight: lighter;
+}
+
+.impact-points {
+  color: $light-gray;
+  font-size: 14px;
+  font-weight: lighter;
+  margin-top: -43px;
+}
+
+
+
