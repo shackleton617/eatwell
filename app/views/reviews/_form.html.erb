@@ -1,7 +1,7 @@
 <div>
   <%= simple_form_for([ @restaurant, @review ]) do |form| %>
-    <%= form.input :content, placeholder: 'You can leave your review here', label: false, as: :text, input_html: { class: "recognitionStyling" }%>
-    <%= form.input :rating, prompt: 'How would you rate this restaurant?', as: :select, collection: 1..5, label: false, input_html: { class: "recognitionStyling" } %>
+    <%= form.input :content, placeholder: 'How did you like this place?', label: false, as: :text, input_html: { class: "recognitionStyling" }, error: 'Oops, too short! The review must have at least 20 characters.' %>
+    <%= form.input :rating, prompt: 'How would you rate it?', as: :select, collection: 1..5, label: false, input_html: { class: "recognitionStyling" }, error: 'You forgot to rate this restaurant!' %>
     <%= form.button :submit, value:'Submit', class: "reviews-button" %>
   <% end %>
 </div>

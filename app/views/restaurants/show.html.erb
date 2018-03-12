@@ -73,14 +73,20 @@
       <div class="card-show cards-text">
         <p style="font-weight: 500;">Reviews</p>
         <p class="review"><% if @restaurant.reviews.blank? %>
-          Be the first to leave a review for <span class="rest-reviewed"><%= @restaurant.name %></span>
+          <span class="cards-text">Be the first to leave a review for</span> <span class="rest-reviewed"><%= @restaurant.name %></span>
           <% else %>
-          <p class="review">Leave a review</p>
+          <span class="cards-text">Leave a review for </span><span class="rest-reviewed"><%= @restaurant.name %></span>
+          <% end %>
+
+          <%= render 'reviews/form', restaurant: @restaurant, review: @review %></p>
+
           <% @restaurant.reviews.each do |review| %>
           <%= render 'reviews/show', review: review %>
+
           <% end %>
-          <% end %></p>
-          <%= render 'reviews/form', restaurant: @restaurant, review: @review %>
+
+
+
         </div>
 
       </div>
