@@ -1,0 +1,49 @@
+.card-box-offer {
+  height: 420px;
+  border-radius: 4px;
+  background-color: $white;
+  margin: 0 0 10px 0;
+  box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.2);
+  position: relative;
+  padding: 0px;
+}
+
+.card-img-offer {
+  height: 58%;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  background-size: cover;
+  background-clip: center;
+}
+
+.container-description-offers {
+  padding: 0 10px;
+}
+
+.name-offers {
+  font-size: 24px;
+  color: $gray;
+  font-weight: 400;
+  font-decoration: none;
+  padding: 0px 0px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  margin: 12px 0px 4px 0px;
+}
+
+.btn-redeem-offers {
+  margin-top: 10px;
+}
+
+.offers-wrapper {
+  padding: 10px;
+}
+
+.card-padding-offers {
+  padding: 30px;
+}
+
+.offers-wrapper h3 {
+  color: white;
+}

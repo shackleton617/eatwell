@@ -1,27 +1,23 @@
 
 <% @offers.each do |offer| %>
- <br>
-
-  <div class="card-search col-xs-12 col-sm-6 col-md-4" style="margin-bottom: 60px; margin-left: 2px; background-clip: center; background-size: cover">
-
-
-      <div class="card__img" style="background-image: url('<%= offer.photo %>')";>
-
-      </div>
-
-      <div>
-        <p><%= offer.company %></p>
-        <p><%= offer.token_value %> tokens </p>
-        <p><%= offer.description %></p>
-        <p><%= offer.expiration_date.strftime("Expires on %m/%d/%Y") %></p>
-
-        <%= form_for [offer, @redemption] do |f| %>
-          <%= f.submit "Redeem", class: "btn btn-danger" %>
-        <% end %>
-      </div>
+  <div class="row">
+    <div class="card-box-offer col-xs-12 col-sm-6 col-md-4">
 
 
+        <div class="card-img-offer" style="background-image: url('<%= offer.photo %>')";>
+
+        </div>
+
+        <div class="container-description-offers">
+          <h4 class="name-offers"><%= offer.company %></h4>
+          <p class="cards-text">Redeem for <%= offer.token_value %> impact points </p>
+          <p class="cards-text"><%= offer.description %></p>
+          <p class="cards-text"><%= offer.expiration_date.strftime("Expires on %m/%d/%Y") %></p>
+          <%= form_for [offer, @redemption] do |f| %>
+            <%= f.submit "Redeem", class: "btn btn-danger btn-redeem-offers" %>
+          <% end %>
+        </div>
+    </div>
   </div>
-
 <% end %>
 
