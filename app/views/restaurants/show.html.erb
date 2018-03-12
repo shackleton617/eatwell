@@ -80,10 +80,11 @@
           <% end %>
 
           <%= render 'reviews/form', restaurant: @restaurant, review: @review %></p>
-
-          <% @restaurant.reviews.each do |review| %>
+        <div id="reviews">
+          <% @reviews.each do |review| %>
           <%= render 'reviews/show', review: review %>
           <% end %>
+        </div>
     </div>
 
   </div>

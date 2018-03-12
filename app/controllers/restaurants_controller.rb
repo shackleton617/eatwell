@@ -38,7 +38,7 @@ class RestaurantsController < ApplicationController
   def show
     @review = Review.new
     @check_in = CheckIn.new
-
+    @reviews = @restaurant.reviews.order(created_at: :desc)
      @markers =
       [{
         lat: @restaurant.latitude,
