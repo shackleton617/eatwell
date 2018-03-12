@@ -1,5 +1,5 @@
-<p style="font-weight: 325";> <%= review.user.first_name %> <%= review.user.last_name  %></p>
-<p><%= review.content %></p>
+<span style="font-weight: 325";> <%= review.user.first_name.capitalize %> <%= review.user.last_name.capitalize  %></span>, <span style="font-size: 14px;"><%= review.created_at.to_date %></span>
+<p style="margin-bottom: 0px;"><%= review.content %></p>
 <p>Rating: <%= review.rating %></p>
 
 

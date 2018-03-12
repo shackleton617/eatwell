@@ -6,7 +6,9 @@
     <div class="navbar-wagon-right">
       <div class="navbar-wagon-item user-icon">
           <% @user = current_user %>
-          <% if user_signed_in? == true && @user.avatar.blank? == true %>
+
+          <% if user_signed_in? && @user.avatar.blank? %>
+
             <div class="dropdown">
               <%=  image_tag "user-icon.png", height: 24, id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
               <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">

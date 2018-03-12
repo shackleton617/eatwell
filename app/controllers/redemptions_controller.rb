@@ -1,5 +1,7 @@
 class RedemptionsController < ApplicationController
 
+
+
   def create
 
     @offer = Offer.find(params[:offer_id])
@@ -10,13 +12,14 @@ class RedemptionsController < ApplicationController
     @redemption.user = current_user
     @redemption.offer = @offer
     @redemption.save
-flash[:notice] = "Enjoy your offer!"
+    flash[:notice] = "Enjoy your offer!"
 
     new_value = current_user.token_wallet - @offer.token_value
 
     current_user.update(token_wallet: new_value)
 
-    redirect_to dashboard_path
+    UserMailer.creation_confirmation(@redemption).deliver_now
+      redirect_to dashboard_path
 
   else
 
