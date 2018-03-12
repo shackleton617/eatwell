@@ -13,8 +13,8 @@
           <p class="cards-text">Redeem for <%= offer.token_value %> impact points </p>
           <p class="cards-text"><%= offer.description %></p>
           <p class="cards-text"><%= offer.expiration_date.strftime("Expires on %m/%d/%Y") %></p>
-          <%= form_for [offer, @redemption] do |f| %>
-            <%= f.submit "Redeem", class: "btn btn-danger btn-redeem-offers" %>
+          <%= form_for [offer, @redemption], remote: true do |f| %>
+            <%= f.submit "Redeem", id: "redeem-#{offer.id}", class: "btn btn-danger btn-redeem-offers" %>
           <% end %>
         </div>
     </div>

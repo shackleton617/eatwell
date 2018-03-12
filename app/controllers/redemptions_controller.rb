@@ -6,25 +6,23 @@ class RedemptionsController < ApplicationController
 
     @offer = Offer.find(params[:offer_id])
 
+    @current_token_wallet = current_user.token_wallet
+    if @current_token_wallet >= @offer.token_value
+      @redemption = Redemption.new
+      @redemption.user = current_user
+      @redemption.offer = @offer
+      @redemption.save
 
-    if current_user.token_wallet >= @offer.token_value
-    @redemption = Redemption.new
-    @redemption.user = current_user
-    @redemption.offer = @offer
-    @redemption.save
-    flash[:notice] = "Enjoy your offer!"
+      new_value = current_user.token_wallet - @offer.token_value
 
-    new_value = current_user.token_wallet - @offer.token_value
+      current_user.update(token_wallet: new_value)
 
-    current_user.update(token_wallet: new_value)
-
-    UserMailer.creation_confirmation(@redemption).deliver_now
-      redirect_to dashboard_path
+      # UserMailer.creation_confirmation(@redemption).deliver_now
+        # redirect_to dashboard_path
 
   else
 
-    flash[:alert] = "You dont have enough points for #{@offer.company}"
-    redirect_to offers_path
+    # redirect_to offers_path
   end
 
 

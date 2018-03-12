@@ -15,7 +15,7 @@ class Restaurant < ApplicationRecord
   pg_search_scope :search_all_words,
     against:  [ :name, :cuisine, :address, :location ]
 
-    geocoded_by :address
+  geocoded_by :address
   after_validation :geocode, if: :will_save_change_to_address?
 
   def average_rating

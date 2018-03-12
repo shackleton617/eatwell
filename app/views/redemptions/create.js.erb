@@ -1,0 +1,35 @@
+  <% if @current_token_wallet >= @offer.token_value %>
+    swal({
+             title: "Enjoy your offer!",
+             text: "Check your email for details.",
+             icon: "success"
+           },
+           )
+           .then(() => {
+
+            // This only happens after btn clicked
+           // REDIRECT AND CONTROLLER ACTION
+
+           // Redirect the user
+            window.location.href = "users/dashboard";
+
+           });
+  <% else %>
+    swal({
+             title: "Sorry, you don't have enough points!",
+             text: "Check-in to get some more.",
+             icon: "error"
+           },
+           )
+           .then(() => {
+
+            // This only happens after btn clicked
+           // REDIRECT AND CONTROLLER ACTION
+
+           // Redirect the user
+            window.location.href = "restaurants";
+
+           });
+
+  <% end %>
+
