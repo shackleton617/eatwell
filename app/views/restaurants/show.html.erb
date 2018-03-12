@@ -11,38 +11,35 @@
   <div class="banner-show" style=" background-image: url('<%= @restaurant.photos %>');"></div>
   <!-- end of photo -->
 
-  <!-- badges -->
-  <div>
-    <ul class="list-inline" style="margin-left: 10px";>
-      <% if @restaurant.has_community %>
-      <li><%= image_tag("btn-community.png", alt: "community badge", class: "symbols") %></li>
+  <div class="container">
+    <!-- badges -->
+    <div>
+      <ul class="list-inline" style="margin-left: 10px";>
+        <% if @restaurant.has_community %>
+        <li><%= image_tag("btn-community.png", alt: "community badge", class: "symbols") %></li>
+        <% end %>
+        <% if @restaurant.has_sourcing %>
+        <li><%= image_tag("btn-sourcing.png", alt: "sourcing badge", class: "symbols symbol-sourcing") %></li>
+        <% end %>
+        <% if @restaurant.has_recycling %>
+        <li><%= image_tag("btn-recycling.png", alt: "recycling badge", class: "symbols") %></li>
+        <% end %>
+      </ul>
+    </div>
+    <!-- end of badges -->
+
+    <!-- check in -->
+    <div class="check-in-section">
+      <%= form_for [@restaurant, @check_in] do |f| %>
+      <%= f.submit "Check in", class: "btn btn-danger button-show"  %>
       <% end %>
-      <% if @restaurant.has_sourcing %>
-      <li><%= image_tag("btn-sourcing.png", alt: "sourcing badge", class: "symbols symbol-sourcing") %></li>
-      <% end %>
-      <% if @restaurant.has_recycling %>
-      <li><%= image_tag("btn-recycling.png", alt: "recycling badge", class: "symbols") %></li>
-      <% end %>
-    </ul>
-  </div>
-  <!-- end of badges -->
 
-  <!-- check in -->
-  <div class="check-in-section">
-    <%= form_for [@restaurant, @check_in] do |f| %>
-    <%= f.submit "Check in", class: "btn btn-danger button-show"  %>
-    <% end %>
+      <p class="impact-points">Get <span class="rest-points"><%= @restaurant.calculate_points %></span> impact points</p>
+    </div>
+    <!-- end of check in -->
 
-    <p class="impact-points">Get <span class="rest-points"><%= @restaurant.calculate_points %></span> impact points</p>
-  </div>
-  <!-- end of check in -->
-
-  <!-- cards -->
-  <div class="background-show">
-
-    <div class="container">
-
-      <div class="card-show">
+    <!-- cards -->
+    <div class="card-show">
 
         <div class="name-show"><%= @restaurant.name %></div>
         <p class="cards-text" style="font-weight: 400;"><%= @restaurant.cuisine %></p>
@@ -59,21 +56,25 @@
             <% end %>
           </li>
         </ul>
-      </div>
+    </div>
 
-      <div class="card-show">
+    <div class="card-show">
         <p class="cards-text" style="font-weight: 500;">Description</p>
         <p class="cards-text"><%= @restaurant.description %></p>
-      </div>
+    </div>
 
-      <div class="card-show" style="padding: 0px;">
-        <%= image_tag "https://maps.googleapis.com/maps/api/staticmap?zoom=15&size=400x300&sensor=false&maptype=roadmap&markers=color:red|#{@restaurant.address}" %>
-      </div>
 
-      <div class="card-show cards-text">
+    <div class="card-show" style="padding: 0px 0px;">
+      <div class="map-container-show">
+        <div id="map" data-markers="<%= @markers.to_json %>"></div>
+      </div>
+    </div>
+
+
+    <div class="card-show cards-text" style="margin-bottom: 20px;">
         <p style="font-weight: 500;">Reviews</p>
         <p class="review"><% if @restaurant.reviews.blank? %>
-          <span class="cards-text">Be the first to leave a review for</span> <span class="rest-reviewed"><%= @restaurant.name %></span>
+          <span class="cards-text">Be the first to leave a review for </span><span class="rest-reviewed"><%= @restaurant.name %></span>
           <% else %>
           <span class="cards-text">Leave a review for </span><span class="rest-reviewed"><%= @restaurant.name %></span>
           <% end %>
@@ -82,15 +83,8 @@
 
           <% @restaurant.reviews.each do |review| %>
           <%= render 'reviews/show', review: review %>
-
           <% end %>
-
-
-
-        </div>
-
-      </div>
-
     </div>
 
   </div>
+</div>
