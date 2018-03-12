@@ -7,7 +7,7 @@
   padding: 3px 7px;
   margin-top: 9px;
   border-radius: 16px;
-  font-weight: lighter;
+  font-weight: 300;
   font-size: 14px;
   opacity: 0.8;
 
@@ -77,9 +77,11 @@ body {
 }
 
 .button-home {
-  border-radius: 4px;
-  background-color: $red;
+  background-color: transparent;
   font-weight: lighter;
+  border: 1px solid $white;
+  color: $white;
+  font-weight: 300;
 }
 
 
