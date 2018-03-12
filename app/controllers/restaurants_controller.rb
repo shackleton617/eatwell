@@ -23,21 +23,6 @@ class RestaurantsController < ApplicationController
     get_location
   end
 
-  private
-
-  def get_location
-
-    @markers = @restaurants.map do |restaurant|
-      {
-        lat: restaurant.latitude,
-        lng: restaurant.longitude
-
-        # infoWindow: { content: render_to_string(partial: "/restaurants/map_box", locals: { restaurant: restaurant }) }
-      }
-    end
-  end
-
-
   def show
     @review = Review.new
     @check_in = CheckIn.new
@@ -61,5 +46,17 @@ class RestaurantsController < ApplicationController
 
   def restaurant_params
     params.require(:restaurant).permit(:address, :cuisine)
+  end
+
+  def get_location
+
+    @markers = @restaurants.map do |restaurant|
+      {
+        lat: restaurant.latitude,
+        lng: restaurant.longitude
+
+        # infoWindow: { content: render_to_string(partial: "/restaurants/map_box", locals: { restaurant: restaurant }) }
+      }
+    end
   end
 end

@@ -30,8 +30,8 @@
 
     <!-- check in -->
     <div class="check-in-section">
-      <%= form_for [@restaurant, @check_in] do |f| %>
-      <%= f.submit "Check in", class: "btn btn-danger button-show"  %>
+      <%= form_for [@restaurant, @check_in], remote: true do |f| %>
+      <%= f.submit "Check in", class: "btn btn-danger button-show btn-checkin-alert"  %>
       <% end %>
 
       <p class="impact-points">Get <span class="rest-points"><%= @restaurant.calculate_points %></span> impact points</p>
