@@ -27,17 +27,15 @@ body {
 }
 
 .body {
-  background: linear-gradient(0deg, rgba(23,  190, 187, 0.93), rgba(23,  190, 187, 0.93)), url(background-image.png);
-  background-size: contain;
-  background-repeat: repeat-y;
+  background: linear-gradient(0deg, rgba(23,  190, 187, 0.92), rgba(23,  190, 187, 0.92)), url(background-image.png);
+  background-size: 300px;
+  background-repeat: repeat;
   top: 0;
   left: 0;
 }
 
 .white-background {
-  background-color: white;
-  z-index: -1;
-  position: absolute;
+  background-color: $white !important;
 }
 
 //background image
