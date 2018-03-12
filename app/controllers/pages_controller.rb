@@ -5,6 +5,10 @@ class PagesController < ApplicationController
     @restaurants = Restaurant.all
   end
 
+  def about
+    @user = current_user
+  end
+
 
 
 end

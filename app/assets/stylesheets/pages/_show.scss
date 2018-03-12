@@ -1,3 +1,5 @@
+
+
 .background-show {
   background-color: $white;
 }
@@ -80,10 +82,18 @@
   font-weight: lighter;
 }
 
-.rest-reviewed {
+.rest-reviewed  s{
   font-weight: lighter;
 }
 
+#map {
+  width: 100%;
+  height: 100%;
+}
+
+.map-container-show {
+  height: 200px;
+}
 
 
 

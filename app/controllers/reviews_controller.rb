@@ -7,9 +7,15 @@ class ReviewsController < ApplicationController
     @review.user = current_user
     @check_in = CheckIn.new
     if @review.save
-      redirect_to restaurant_path(@restaurant)
+      respond_to do |format|
+        format.html { redirect_to restaurant_path(@restaurant) }
+        format.js  # <-- will render `app/views/reviews/create.js.erb`
+      end
     else
-      render "restaurants/show"
+      respond_to do |format|
+        format.html { render 'restaurants/show' }
+        format.js  # <-- idem
+      end
     end
   end
 
