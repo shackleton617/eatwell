@@ -1,6 +1,7 @@
 .wrapper-dashboard {
   position: relative;
   width: 100%;
+  background-color: $white;
 }
 
 .nav-dashboard {
@@ -60,9 +61,10 @@
 }
 
 .card-container-dashboard {
-  width: 100%;
-  padding: 0px 15px;
+  // width: 100%;
+  // padding: 0px 15px;
   margin-top: 25px;
+  max-width: 600px;
 }
 
 .card-dashboard {
