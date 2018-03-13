@@ -1,4 +1,11 @@
 /* Main navbar */
+.navbar-wagon-wrapper {
+  background-color: $green;
+  transition: all 0.3s ease;
+  height: 70px;
+  padding: 0px 0px;
+}
+
 .navbar-wagon {
   background-color: rgba(0,0,0,0.00);
   transition: all 0.3s ease;
@@ -13,11 +20,14 @@
   background-color: $green;
   transition: all 0.3s ease;
   height: 70px;
-  padding: 0px 10px;
+  padding: 0px 0px;
+  margin: 0 -7px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+
+
 
 /* Logo */
 .navbar-wagon-brand img {
@@ -38,6 +48,12 @@
 
 /* User Avatar */
 .navbar-wagon .avatar {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+}
+
+.navbar-wagon-solid .avatar {
   height: 35px;
   width: 35px;
   border-radius: 50%;

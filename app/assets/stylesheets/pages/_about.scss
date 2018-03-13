@@ -1,0 +1,65 @@
+.about-white-background {
+  background-color: white;
+  color: $light-gray;
+}
+
+.content-wrapper-about {
+  padding: 10px 20px;
+ }
+
+.content-wrapper-about h2 {
+  font-weight: 300;
+  padding-top: 20px;
+  margin-bottom: 20px;
+  color: $gray;
+  font-size: 28px;
+  opacity: 0.8;
+ }
+
+ .content-wrapper-about h3 {
+  font-weight: 300;
+  padding-top: 20px;
+  margin-bottom: 20px;
+  font-size: 22px;
+  color: $gray;
+  opacity: 0.8;
+ }
+
+ .content-wrapper-about p {
+  font-weight: 300;
+  margin: 12px 0;
+ }
+
+hr {
+  border: 0.4px solid $light-gray;
+  margin: 24px 0px 0px 0px;
+  opacity: 0.5;
+}
+
+
+.impact-key-box {
+  padding: 10px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.impact-key-img {
+  margin-right: 12px;
+}
+
+.impact-key-text {
+  flex-grow: 1;
+}
+
+.bottom-padding-about {
+  padding-bottom: 14px;
+}
+
+
+
+
+
+
+
+

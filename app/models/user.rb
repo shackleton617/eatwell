@@ -6,7 +6,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
 
-
+  has_many :favorites
+  has_many :favorite_restaurants, through: :favorites
   has_many :check_ins, dependent: :destroy
   has_many :redemptions, dependent: :destroy
   has_many :restaurants, through: :check_ins

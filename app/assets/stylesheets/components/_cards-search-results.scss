@@ -4,7 +4,7 @@
   background-color: $white;
   margin-top: 0px;
   margin-bottom: 10px;
-  box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.2);
+  box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.1);
   position: relative;
 }
 
@@ -14,6 +14,21 @@
   border-top-right-radius: 4px;
   background-size: cover;
   background-clip: center;
+  position: relative;
+}
+
+.card__img:hover {
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+  position: relative;
+}
+
+.heart {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 25px;
+  z-index: 100;
 }
 
 .heart {
@@ -30,6 +45,11 @@
   margin: 0px;
   margin-top: -22px;
   margin-left: 0px;
+<<<<<<< HEAD
+=======
+  position: relative;
+  z-index: 100;
+>>>>>>> 747156e45d898cabf093335367a2423d03a9a791
 }
 
 .symbol-sourcing {

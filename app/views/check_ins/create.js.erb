@@ -1,0 +1,33 @@
+<% if current_user.save %>
+swal({
+         title: "Thank you for checking in!",
+         text: "See offers to redeem your points or go to your profile.",
+         buttons: {
+
+           offer: {
+            text: "See offers",
+            value: "offers",
+           },
+           dashboard: {
+            text: "Profile",
+            value: "profile"
+           },
+         },
+       })
+       .then((value) => {
+
+        // This only happens after btn clicked
+       // REDIRECT AND CONTROLLER ACTION
+
+       // Redirect the user
+        if (value == "offers") {
+
+            window.location.href = "../offers";
+          }
+        else {
+
+            window.location.href = "../users/dashboard"
+         }
+
+       });
+<% end %>

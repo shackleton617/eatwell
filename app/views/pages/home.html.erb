@@ -2,80 +2,72 @@
 
 <!-- navbar  -->
 <% content_for :navbar do %>
-  <%= render 'shared/navbar_home' %>
+<%= render 'shared/navbar_home' %>
 <% end %>
-
 <!-- navbar end -->
 
+<div class="container">
+  <div class="row">
+    <div class="col-sm-offset-3 col-sm-6">  <!-- eatwell logo  and icons -->
+      <div class="banner text-center">
+        <%= image_tag "eatwell-home-logo.png", width: "180", class: "logo-home" %>
+        <ul class="list-inline text-center">
+          <li>
+            <div class="group-icon">
+              <%= image_tag "home_sourcing_icon.png", height: "25" %>
+              <p>sourcing</p>
+            </div>
+          </li>
+          <li>
+            <div class="group-icon">
+              <%= image_tag "home_community_icon.png", height: "25" %>
+              <p>community</p>
+            </div>
+          </li>
+          <li>
+            <div class="group-icon">
+              <%= image_tag "home_recycle_icon.png", height: "25" %>
+              <p>recycling</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <!-- eatwell logo  and icons end -->
 
-    <!-- eatwell logo  and icons -->
-
-  <div class="banner text-center">
-    <%= image_tag "eatwell-home-logo.png", width: "180", class: "logo-home" %>
-    <ul class="list-inline text-center">
-      <li>
-        <div class="group-icon">
-          <%= image_tag "home_sourcing_icon.png", height: "25" %>
-          <p>sourcing</p>
-        </div>
-      </li>
-      <li>
-        <div class="group-icon">
-          <%= image_tag "home_community_icon.png", height: "25" %>
-          <p>community</p>
-        </div>
-      </li>
-      <li>
-        <div class="group-icon">
-          <%= image_tag "home_recycle_icon.png", height: "25" %>
-          <p>recycling</p>
-        </div>
-      </li>
-    </ul>
-  </div>
-<div class="form-container">
-  <div class="container">
-    <div class="row" style="margin-bottom: 20px">
-     <!--  <form action="<%= restaurants_path %>">
-        <input id="restaurant_address" placeholder="Location search..." name="place">
-        <input type="submit">
-      </form> -->
+      <!-- search form -->
+      <div style="margin-bottom: 20px">
         <%= form_tag(restaurants_path, method: "get") do %>
-        <%= text_field_tag :place,
-        params[:place],
-        class: "form-control form-home",
+          <%= text_field_tag :place, params[:place], class: "form-control form-home",
         placeholder: "Location search...", id: "restaurant_address" %>
-
-        <%= text_field_tag :query,
-        params[:query],
-        class: "form-control form-home",
-          placeholder: "Search by restaurant, cuisine, location ..." %>
-        <%= submit_tag "SEARCH", class: "btn btn-block  button-home" %>
-      <% end %>
+          <%= text_field_tag :query, params[:query], class: "form-control form-home",
+        placeholder: "Search by restaurant, cuisine, location ..." %>
+          <%= submit_tag "SEARCH", class: "btn btn-block  button-home" %>
+        <% end %>
+      </div>
+      <!-- search form end -->
 
     </div>
   </div>
 </div>
 
-
-<div class="text-center">
-  <h1>Discover Lisbon restaurants that care.</h1>
-  <h1>Collect impact points!</h1>
-</div>
+      <!-- impact sentence -->
+      <div class="text-center">
+        <h1>Discover Lisbon restaurants that care.</h1>
+        <h1>Collect impact points!</h1>
+      </div>
+      <!-- impact sentence end -->
 
 <div class="container">
-  <div class="row  card-container-margin-home">
-    <!-- render cards collections -->
-    <div class="restaurants-results">
-      <%= render 'restaurants/restaurant' %>
+  <div class="row">
+    <div class="col-sm-offset-3 col-sm-6">
+      <!-- collections -->
+      <div class="card-container-margin-home">
+        <%= render 'restaurants/collections-cards' %>
+      </div>
+      <!-- collections end -->
     </div>
   </div>
 </div>
-
-</div>
-
-
-
 
 
 

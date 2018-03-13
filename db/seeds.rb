@@ -15,9 +15,10 @@ has_community: true,
 has_recycling: true,
 has_sourcing: true,
 photos: "http://blogues.publico.pt/olhos-barriga/files/2015/06/Cozinhas-do-mundo_Ines-Malvar.jpg",
-latitude: 38.717780,
-longitude: -9.1510395
+
 )
+
+sleep(2)
 
 restaurant_2 = Restaurant.create(
 
@@ -33,63 +34,67 @@ has_community: false,
 has_recycling: false,
 has_sourcing: true,
 photos: "https://u.tfstatic.com/restaurant_photos/223/280223/169/612/lisbon-winery-tabua-ea226.jpg",
-latitude: 38.711532,
-longitude: -9.144525
+
 )
+
+sleep(2)
 
 restaurant_3 = Restaurant.create(
 
-name: "Terra",
-address: "R. da Palmeira 15, 1200-311 Lisboa",
-location: "Rossio, Lisbon",
-cuisine: "Vegetarian/Vegan",
-description: "Terra has an excellent lunch buffet with a range of Portuguese dishes adapted for vegetarians and vegans. The ingredients are mostly organic. Be sure to get a spot on the charming terrace!",
-phone_number: "21 342 1407",
-price_for_two: 35,
-working_hours: "12:30 - 24:00",
-has_community: false,
+name: "Foodprintz cafe",
+address: "R. Rodrigo da Fonseca 82A, 1250-193 Lisboa",
+location: "Marquês de Pombal, Lisbon",
+cuisine: "Vegan",
+description: "Organic, locally sourced, wholesome, fair natural food. We present flavors, colors and textures from all over the world. Thinking about the carbon footprint: reducing the incidence and impact of animal cruelty & the damage done to MOTHER EARTH by providing a full plant-based only menu with gluten free, nut free and soy free options.",
+phone_number: "21 581 7577",
+price_for_two: 22,
+working_hours: "12:00 - 19:00",
+has_community: true,
 has_recycling: true,
 has_sourcing: true,
-photos: "https://assets3.thrillist.com/v1/image/1762665/size/tmg-article_default_mobile.jpg",
-latitude: 38.7152811,
-longitude: -9.1539152
+photos: "https://media-cdn.tripadvisor.com/media/photo-s/0d/de/07/db/foodprintz-made-banana.jpg",
+
 )
+
+sleep(2)
 
 restaurant_4 = Restaurant.create(
 
-name: "Cantina das Freiras",
-address: "Tv. Ferragial n.1, 1200-184 ferragial@gmail",
-location: "Baixa, Lisbon",
-cuisine: "Mediterranean/Portuguese",
-description: "The Cantina Das Freiras is a former nunnery on the top floor of a typical old building with a roof terrace, a rarity in Lisbon. The decor is as unpretentious as the food is good and the view is stunning.",
-phone_number: "21 324 0910",
+name: "Vegana Burgers Cais do Sodré",
+address: "30, Praça Dom Luís i, 1200-152 Lisboa",
+location: "Cais do Sodré, Lisbon",
+cuisine: "Vegan",
+description: "Há cada vez mais famosos a aderirem às novas tendências, e o veganismo é uma delas. E como todas as modas, há aquelas que vêm para ficar, e nós esperamos que esta seja uma delas. Que todas as modas fossem tão benéficas para os animais, para a nossa saúde e para o nosso planeta como ser vegano.",
+phone_number: "21 246 3511",
 price_for_two: 20,
-working_hours: "8:30 - 15:00",
-has_community: true,
-has_recycling: false,
-has_sourcing: false,
-photos: "https://media-cdn.tripadvisor.com/media/photo-s/08/c9/6f/5c/photo4jpg.jpg",
-latitude: 38.7078982,
-longitude: -9.1432334
+working_hours: "12:00 - 22:00",
+has_community: false,
+has_recycling: true,
+has_sourcing: true,
+photos: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQChbUBOTxxMVIMDaOhe-gYFSClYnlf0bE5omzqElf0avFI48qK",
+
 )
+
+sleep(2)
 
 restaurant_5 = Restaurant.create(
 
-name: "A Padaria Portuguesa",
-address: "Av. 24 de Julho 1G, 1200-425 Lisbon",
-location: "Cais do Sodré, Lisbon",
-cuisine: "Portuguese bakery",
-description: "A Padaria Portuguesa has many bakeries all over town. Grab a ticket, wait for your number to be called, and order away. Service is fast, the food is cheap and delicious. The decor is warm and modern.  This is a local and visitor's favourite!",
-phone_number: "21 346 0105",
-price_for_two: 14,
-working_hours: "7:00 - 22:45",
+name: "The Food Temple",
+address: "Beco do Jasmim 18, 1100-289 Lisboa",
+location: "Socorro, Lisbon",
+cuisine: "Vegetarian/Vegan/Fusion",
+description: "The Food Temple prides itself as a Cultural Food Community. Indeed the people and ambience are buzzing with a positive spirit. Vegan and vegetarian fare, with a changing menu every day.",
+phone_number: "21 887 4397",
+price_for_two: 40,
+working_hours: "7:30 - 12:00",
 has_community: false,
-has_recycling: true,
-has_sourcing: false,
-photos: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT66GvnE7qBlgUcjxdAU88KuWi0FCI-CozAEnJL_hNCEAj2ncoB",
-latitude: 38.7066727,
-longitude: -9.1465186
+has_recycling: false,
+has_sourcing: true,
+photos: "https://media.timeout.com/images/103673553/630/472/image.jpg",
+
 )
+
+sleep(2)
 
 restaurant_6 = Restaurant.create(
 
@@ -109,9 +114,10 @@ has_community: false,
 has_recycling: false,
 has_sourcing: true,
 photos: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRGVhnvEcL8-S2PzQU8l-JIBIv-uVBL2AKIy-gLFNJhIZr0LQ6",
-latitude: 38.7080286,
-longitude: -9.1437444
+
 )
+
+  sleep(2)
 
 restaurant_7 = Restaurant.create(
 
@@ -127,10 +133,11 @@ working_hours: "12:00 - 22:30",
 has_community: false,
 has_recycling: false,
 has_sourcing: true,
-photos: "https://www.madebychoices.pt/wp-content/uploads/2016/04/Restaurante-vegetariano-Jardim-dos-sentidos.jpg",
-latitude: 38.717501,
-longitude: -9.1486827
+photos: "https://u.tfstatic.com/restaurant_photos/908/64908/169/612/jardim-dos-sentidos-mini-tabua-de-queijos-vegan-d4d57.jpg",
+
 )
+
+sleep(2)
 
 restaurant_8 = Restaurant.create(
 
@@ -145,10 +152,11 @@ working_hours: "12:30 - 22:30",
 has_community: false,
 has_recycling: false,
 has_sourcing: true,
-photos: "https://media-cdn.tripadvisor.com/media/photo-s/08/c9/6f/5c/photo4jpg.jpg",
-latitude: 38.7228795,
-longitude: -9.1467319
+photos: "https://media-cdn.tripadvisor.com/media/photo-s/0b/53/7b/d9/restaurante-vegetariano.jpg",
+
 )
+
+sleep(2)
 
 restaurant_9 = Restaurant.create(
 
@@ -164,15 +172,17 @@ has_community: true,
 has_recycling: false,
 has_sourcing: false,
 photos: "https://b.zmtcdn.com/data/reviews_photos/1bb/c0eef1b7136604ad34e1c91aee1311bb_1508012034.jpg",
-latitude: 38.7349388,
-longitude: -9.134935
+
 )
+
+sleep(2)
+
 
 restaurant_10 = Restaurant.create(
 
 name: "Pois Cafe",
 address: "R. de São João da Praça 93-95, 1100-521 Lisboa",
-location: "Baixa, Lisbon",
+location: "Baixa-Chiado, Lisbon",
 cuisine: "European/Portuguese",
 description: "O ambiente relaxado para partilhar histórias em plena zona histórica e desfrutar do brunch e das tartes da casa.",
 phone_number: "21 886 2497",
@@ -182,15 +192,16 @@ has_community: false,
 has_recycling: false,
 has_sourcing: true,
 photos: "http://www.poiscafe.com/wp-content/uploads/menu-3-300x200.jpg",
-latitude: 38.7095065,
-longitude: -9.1340343
+
 )
+
+sleep(2)
 
 restaurant_11 = Restaurant.create(
 
 name: "Green Beans Cafe Chiado",
 address: "R. Chagas 31, 1200-106 Lisboa",
-location: "Chiado, Lisbon",
+location: "Baixa-Chiado, Lisbon",
 cuisine: "Vegan",
 description: "A Green Beans é a uma mercearia 100% Vegan situada na baixa lisboeta. Com o objetivo de apresentar uma alternativa justa, ética e saudável, oferece uma grande variedade de produtos de qualidade, biológicos e que respeitam a sustentabilidade.",
 phone_number: "924 216 519",
@@ -200,9 +211,10 @@ has_community: false,
 has_recycling: false,
 has_sourcing: true,
 photos: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTF1PcPVwva_vtfhkTzj0T0smGXQeZou4W6dxNQen4AV1m9oCJS3w",
-latitude: 38.7103218,
-longitude: -9.1475147
+
 )
+
+sleep(2)
 
 restaurant_12 = Restaurant.create(
 
@@ -218,63 +230,67 @@ has_community: false,
 has_recycling: false,
 has_sourcing: true,
 photos: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHZ4QYP9goagnwK-0jYkgDcaPUkMh4MymKoFPqRePcPgMLkblbtw",
-latitude: 38.701856,
-longitude: -9.1803388
+
 )
+
+sleep(2)
 
 restaurant_13 = Restaurant.create(
 
-name: "Foodprintz cafe",
-address: "R. Rodrigo da Fonseca 82A, 1250-193 Lisboa",
-location: "Marquês de Pombal, Lisbon",
-cuisine: "Vegan",
-description: "Organic, locally sourced, wholesome, fair natural food. We present flavors, colors and textures from all over the world. Thinking about the carbon footprint: reducing the incidence and impact of animal cruelty & the damage done to MOTHER EARTH by providing a full plant-based only menu with gluten free, nut free and soy free options.",
-phone_number: "21 581 7577",
-price_for_two: 22,
-working_hours: "12:00 - 19:00",
-has_community: true,
+name: "Terra",
+address: "R. da Palmeira 15, 1200-311 Lisboa",
+location: "Rossio, Lisbon",
+cuisine: "Vegetarian/Vegan",
+description: "Terra has an excellent lunch buffet with a range of Portuguese dishes adapted for vegetarians and vegans. The ingredients are mostly organic. Be sure to get a spot on the charming terrace!",
+phone_number: "21 342 1407",
+price_for_two: 35,
+working_hours: "12:30 - 24:00",
+has_community: false,
 has_recycling: true,
 has_sourcing: true,
-photos: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHZ4QYP9goagnwK-0jYkgDcaPUkMh4MymKoFPqRePcPgMLkblbtw",
-latitude: 38.7237696,
-longitude: -9.1572676
+photos: "https://media-cdn.tripadvisor.com/media/photo-s/10/02/ab/10/img-20170723-161056-102.jpg",
+
 )
+
+sleep(2)
 
 restaurant_14 = Restaurant.create(
 
-name: "Vegana Burgers Cais do Sodré",
-address: "30, Praça Dom Luís i, 1200-152 Lisboa",
-location: "Cais do Sodré, Lisbon",
-cuisine: "Vegan",
-description: "Há cada vez mais famosos a aderirem às novas tendências, e o veganismo é uma delas. E como todas as modas, há aquelas que vêm para ficar, e nós esperamos que esta seja uma delas. Que todas as modas fossem tão benéficas para os animais, para a nossa saúde e para o nosso planeta como ser vegano.",
-phone_number: "21 246 3511",
+name: "Cantina das Freiras",
+address: "Tv. Ferragial n.1, 1200-184 ferragial@gmail",
+location: "Baixa-Chiado, Lisbon",
+cuisine: "Mediterranean/Portuguese",
+description: "The Cantina Das Freiras is a former nunnery on the top floor of a typical old building with a roof terrace, a rarity in Lisbon. The decor is as unpretentious as the food is good and the view is stunning.",
+phone_number: "21 324 0910",
 price_for_two: 20,
-working_hours: "12:00 - 22:00",
-has_community: false,
-has_recycling: true,
-has_sourcing: true,
-photos: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQChbUBOTxxMVIMDaOhe-gYFSClYnlf0bE5omzqElf0avFI48qK",
-latitude: 38.7203784,
-longitude: -9.1629675
+working_hours: "8:30 - 15:00",
+has_community: true,
+has_recycling: false,
+has_sourcing: false,
+photos: "https://media-cdn.tripadvisor.com/media/photo-s/0e/38/eb/64/20170119-143855-largejpg.jpg",
+
 )
+
+sleep(2)
 
 restaurant_15 = Restaurant.create(
 
-name: "The Food Temple",
-address: "Beco do Jasmim 18, 1100-289 Lisboa",
-location: "Socorro, Lisbon",
-cuisine: "Vegetarian/Vegan/Fusion",
-description: "The Food Temple prides itself as a Cultural Food Community. Indeed the people and ambience are buzzing with a positive spirit. Vegan and vegetarian fare, with a changing menu every day.",
-phone_number: "21 887 4397",
-price_for_two: 40,
-working_hours: "7:30 - 12:00",
+name: "A Padaria Portuguesa",
+address: "Av. 24 de Julho 1G, 1200-425 Lisbon",
+location: "Cais do Sodré, Lisbon",
+cuisine: "Portuguese bakery",
+description: "A Padaria Portuguesa has many bakeries all over town. Grab a ticket, wait for your number to be called, and order away. Service is fast, the food is cheap and delicious. The decor is warm and modern.  This is a local and visitor's favourite!",
+phone_number: "21 346 0105",
+price_for_two: 14,
+working_hours: "7:00 - 22:45",
 has_community: false,
-has_recycling: false,
-has_sourcing: true,
-photos: "https://assets3.thrillist.com/v1/image/1762665/size/tmg-article_default_mobile.jpg",
-latitude: 38.7159032,
-longitude: -9.1364453
+has_recycling: true,
+has_sourcing: false,
+photos: "http://api.ning.com/files/JtotRF7dxCUCf-6m1VzohywPnoU5yTdu1*T0rcH*tyMj*E44QRov1s7fD7ParZVumhtp3kdAfap4SKJin3mV77LldU7IJFQY/APadariaPortuguesa1.jpg",
+
 )
+
+
 
 
 

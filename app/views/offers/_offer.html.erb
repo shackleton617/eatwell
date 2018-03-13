@@ -1,23 +1,21 @@
 
+
 <% @offers.each do |offer| %>
-  <div class="row">
-    <div class="card-box-offer col-xs-12 col-sm-6 col-md-4">
+    <div class="card-box-offer col-xs-12 col-sm-6 col-md-4 col-lg-4">
+      <div class="card-img-offer" style="background-image: url('<%= offer.photo %>')";>
+      </div>
 
-
-        <div class="card-img-offer" style="background-image: url('<%= offer.photo %>')";>
-
-        </div>
-
-        <div class="container-description-offers">
-          <h4 class="name-offers"><%= offer.company %></h4>
-          <p class="cards-text">Redeem for <%= offer.token_value %> impact points </p>
-          <p class="cards-text"><%= offer.description %></p>
-          <p class="cards-text"><%= offer.expiration_date.strftime("Expires on %m/%d/%Y") %></p>
-          <%= form_for [offer, @redemption] do |f| %>
-            <%= f.submit "Redeem", class: "btn btn-danger btn-redeem-offers" %>
-          <% end %>
-        </div>
+      <div class="container-description-offers">
+        <h4 class="name-offers"><%= offer.company %></h4>
+        <p class="cards-text">Redeem for <%= offer.token_value %> impact points </p>
+        <p class="cards-text"><%= offer.description %></p>
+        <p class="cards-text"><%= offer.expiration_date.strftime("Expires on %m/%d/%Y") %></p>
+        <%= form_for [offer, @redemption], remote: true do |f| %>
+          <%= f.submit "Redeem", id: "redeem-#{offer.id}", class: "btn btn-danger btn-redeem-offers" %>
+        <% end %>
+      </div>
     </div>
-  </div>
 <% end %>
+
+
 
