@@ -7,9 +7,10 @@
         </div>
 
         <div>
+        <%= link_to restaurant_favorites_path(restaurant), method: :post, remote: true do %>
           <i class="far fa-heart heart"></i>
+        <% end %>
         </div>
-
 
         <div>
           <ul class="list-inline" style="padding-left: 10px;">
