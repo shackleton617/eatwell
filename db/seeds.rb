@@ -41,7 +41,7 @@ sleep(2)
 
 restaurant_3 = Restaurant.create(
 
-name: "Foodprintz cafe",
+name: "Foodprintz Cafe",
 address: "R. Rodrigo da Fonseca 82A, 1250-193 Lisboa",
 location: "Marquês de Pombal, Lisbon",
 cuisine: "Vegan",
@@ -257,7 +257,7 @@ sleep(2)
 restaurant_14 = Restaurant.create(
 
 name: "Cantina das Freiras",
-address: "Tv. Ferragial n.1, 1200-184 ferragial@gmail",
+address: "Tv. Ferragial n.1, 1200-184",
 location: "Baixa-Chiado, Lisbon",
 cuisine: "Mediterranean/Portuguese",
 description: "The Cantina Das Freiras is a former nunnery on the top floor of a typical old building with a roof terrace, a rarity in Lisbon. The decor is as unpretentious as the food is good and the view is stunning.",
