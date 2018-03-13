@@ -1,9 +1,11 @@
 <div class="container">
 
-  <div class="coll-card">
-    <div><%= link_to "Portuguese", restaurants_path(query: "portuguese", place:"")%>
-  <%= image_tag "collection_photos/vegetarian.png" %>
+
+  <div><%= link_to restaurants_path(query: "portuguese", place:"") do %>
+    <div class="coll-card">
+      <%= image_tag "collection_photos/vegetarian.png" %>
     </div>
+     <% end %>
   </div>
 
   <div class="coll-card">
