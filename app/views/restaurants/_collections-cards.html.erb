@@ -1,23 +1,32 @@
-<div class="container">
-
-
-  <div><%= link_to restaurants_path(query: "portuguese", place:"") do %>
-    <div class="coll-card">
-      <%= image_tag "collection_photos/vegetarian.png", class: "coll-img" %>
+<div><%= link_to restaurants_path(query: "vegan", place:"") do %>
+  <div class="coll-card">
+    <%= image_tag "collection_photos/vegetarian.png", class: "coll-img" %>
+    <div class="coll-text">
+      <p class="coll-title">Vegetarian/Vegan</p>
+      <p class="coll-descr">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
     </div>
-  <% end %>
   </div>
+<% end %>
+</div>
 
-  <div><%= link_to restaurants_path(query: "mediterranean", place:"") do %>
-    <div class="coll-card">
-      <%= image_tag "collection_photos/mediterranean.png" %>
+<div><%= link_to restaurants_path(query: "portuguese", place:"") do %>
+  <div class="coll-card">
+    <%= image_tag "collection_photos/portuguese.png", class: "coll-img" %>
+    <div class="coll-text">
+      <p class="coll-title">Portuguese</p>
+      <p class="coll-descr">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
     </div>
-  <% end %>
   </div>
+<% end %>
+</div>
 
-  <div><%= link_to restaurants_path(query: "vegan", place:"") do %>
-    <div class="coll-card">
-    <%= image_tag "collection_photos/vegetarian.png" %>
-    <div>
-  <% end %>
+<div><%= link_to restaurants_path(query: "mediterranean", place:"") do %>
+  <div class="coll-card">
+    <%= image_tag "collection_photos/mediterranean.png", class: "coll-img" %>
+    <div class="coll-text">
+      <p class="coll-title">Mediterranean</p>
+      <p class="coll-descr">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+    </div>
+  </div>
+<% end %>
 </div>
