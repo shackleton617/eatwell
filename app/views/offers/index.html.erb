@@ -2,19 +2,21 @@
 <div class="offers-wrapper">
   <div class="container">
     <div class="row text-center">
-      <h3>Redeem your
+      <h3>Redeem your <span class="impact-count-text-offer">
         <% if current_user.token_wallet == nil %>
           <%= "0" %> impact points
         <% else %>
           <%= current_user.token_wallet %> impact points
-        <% end %>
+        <% end %> </span>
         for delicious offers!
       </h3>
     </div>
-    <div class="row card-padding-offers">
-      <%= render 'offer' %>
-    </div>
   </div>
+      <div class="container cards-container">
+        <div class="row">
+          <%= render 'offer' %>
+        </div>
+      </div>
 </div>
 
 <!-- home link -->
