@@ -8,27 +8,31 @@ function bindSweetAlertCheckIn() {
      checkin.addEventListener('click', (e) => {
        // e.preventDefault();
        swal({
-         title: "Thank you!",
-         text: "See offers to redeem your points.",
-         // icon: "success"
-         buttons {
-          offer: "See offers",
-          dash: "Dashboard",
-
+         title: "Thank you for checking in!",
+         text: "See offers to redeem your points or go to your profile.",
+         offer: {
+          text: "See offers",
+          value: "offer",
          },
-       },
-       )
-       .then(() => {
+         dashboard: {
+          text: "Profile",
+          value: "profile"
+         },
+       })
+       .then((value) => {
 
         // This only happens after btn clicked
        // REDIRECT AND CONTROLLER ACTION
 
        // Redirect the user
-        case "offer":
-          window.location.href = "offers";
+        if (value == "offers") {
 
-        case "dash":
-          window.location.href = "users/dashboard"
+          window.location.href = "../offers";
+          }
+        else {
+
+          window.location.href = "../users/dashboard"
+       }
 
        });
 

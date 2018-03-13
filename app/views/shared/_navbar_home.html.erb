@@ -8,8 +8,8 @@
           <% @user = current_user %>
           <% if user_signed_in? == true && @user.avatar.blank? == true %>
             <div class="dropdown">
-              <%=  image_tag "user-icon.png", height: 24, class: "dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
-              <ul id="ul-dropdown" class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+              <%=  image_tag "user-icon.png", height: 24, id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
+              <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
                 <li>
                   <%= link_to dashboard_path do %>
                     <i class="fa fa-user"></i> <%= t(".profile", default: "Profile") %>
