@@ -16,10 +16,20 @@
   background-clip: center;
 }
 
+.heart {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  color: rgba(30, 50, 49, 0.5);
+  font-size: 25px;
+  color: $white;
+}
+
 .symbols {
   height: 55px;
   margin: 0px;
   margin-top: -22px;
+  margin-left: 0px;
 }
 
 .symbol-sourcing {
