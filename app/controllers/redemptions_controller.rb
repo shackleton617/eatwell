@@ -20,10 +20,10 @@ class RedemptionsController < ApplicationController
       # UserMailer.creation_confirmation(@redemption).deliver_now
         # redirect_to dashboard_path
 
-  else
+    else
 
-    # redirect_to offers_path
-  end
+      # redirect_to offers_path
+    end
 
 
   end

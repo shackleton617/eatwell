@@ -2,37 +2,36 @@
 
 <!-- navbar  -->
 <% content_for :navbar do %>
-  <%= render 'shared/navbar_home' %>
+<%= render 'shared/navbar_home' %>
 <% end %>
-
 <!-- navbar end -->
 
 
-    <!-- eatwell logo  and icons -->
+      <!-- eatwell logo  and icons -->
+<div class="banner text-center">
+        <%= image_tag "eatwell-home-logo.png", width: "180", class: "logo-home" %>
+  <ul class="list-inline text-center">
+    <li>
+      <div class="group-icon">
+        <%= image_tag "home_sourcing_icon.png", height: "25" %>
+        <p>sourcing</p>
+      </div>
+    </li>
+    <li>
+      <div class="group-icon">
+        <%= image_tag "home_community_icon.png", height: "25" %>
+        <p>community</p>
+      </div>
+    </li>
+    <li>
+      <div class="group-icon">
+        <%= image_tag "home_recycle_icon.png", height: "25" %>
+        <p>recycling</p>
+      </div>
+    </li>
+  </ul>
+</div>
 
-  <div class="banner text-center">
-    <%= image_tag "eatwell-home-logo.png", width: "180", class: "logo-home" %>
-    <ul class="list-inline text-center">
-      <li>
-        <div class="group-icon">
-          <%= image_tag "home_sourcing_icon.png", height: "25" %>
-          <p>sourcing</p>
-        </div>
-      </li>
-      <li>
-        <div class="group-icon">
-          <%= image_tag "home_community_icon.png", height: "25" %>
-          <p>community</p>
-        </div>
-      </li>
-      <li>
-        <div class="group-icon">
-          <%= image_tag "home_recycle_icon.png", height: "25" %>
-          <p>recycling</p>
-        </div>
-      </li>
-    </ul>
-  </div>
 <div class="form-container">
   <div class="container">
     <div class="row" style="margin-bottom: 20px">
@@ -40,45 +39,35 @@
         <input id="restaurant_address" placeholder="Location search..." name="place">
         <input type="submit">
       </form> -->
-        <%= form_tag(restaurants_path, method: "get") do %>
-        <%= text_field_tag :place,
-        params[:place],
-        class: "form-control form-home",
-        placeholder: "Location search...", id: "restaurant_address" %>
-
-        <%= text_field_tag :query,
-        params[:query],
-        class: "form-control form-home",
-          placeholder: "Search by restaurant, cuisine, location ..." %>
-        <%= submit_tag "SEARCH", class: "btn btn-block  button-home" %>
+      <%= form_tag(restaurants_path, method: "get") do %>
+      <%= text_field_tag :place, params[:place], class: "form-control form-home",
+      placeholder: "Location search...", id: "restaurant_address" %>
+      <%= text_field_tag :query, params[:query], class: "form-control form-home",
+      placeholder: "Search by restaurant, cuisine, location ..." %>
+      <%= submit_tag "SEARCH", class: "btn btn-block  button-home" %>
       <% end %>
-
     </div>
   </div>
 </div>
+<!-- eatwell logo  and icons end -->
 
-
+<!-- impact sentence -->
 <div class="text-center">
   <h1>Discover Lisbon restaurants that care.</h1>
   <h1>Collect impact points!</h1>
 </div>
+<!-- impact sentence end -->
 
-<%= link_to "Portuguese", restaurants_path(query: "portuguese", place:"") %>
-<%= link_to "Mediterranean", restaurants_path(query: "mediterranean", place:"") %>
-<%= link_to "Vegetarian", restaurants_path(query: "vegan", place:"") %>
-
-
+<!-- collections -->
 <div class="container">
-  <div class="row  card-container-margin-home">
-    <!-- render cards collections -->
-    <div class="restaurants-results">
+  <div class="row card-container-margin-home">
+    <%= render 'restaurants/collections-cards' %>
+<!--     <div class="restaurants-results">
       <%= render 'restaurants/restaurant' %>
-    </div>
+    </div> -->
   </div>
 </div>
-
-</div>
-
+<!-- collections end -->
 
 
 

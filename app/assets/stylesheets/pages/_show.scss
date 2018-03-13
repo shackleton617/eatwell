@@ -9,7 +9,6 @@
   width: 100%;
 }
 
-
 .card-show {
   border-radius: 4px;
   border-style: solid;
@@ -31,6 +30,12 @@
   white-space: nowrap;
   overflow: hidden;
   margin: 0px 0px 5px 0px;
+}
+
+.cuisine {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .cards-text {
@@ -58,7 +63,7 @@
 
 .check-in-section {
   text-align: right;
-  margin-right: 15px;
+  margin-right: 0px;
 }
 
 .rest-points {
@@ -93,6 +98,4 @@
 .map-container-show {
   height: 200px;
 }
-
-
 
