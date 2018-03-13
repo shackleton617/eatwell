@@ -3,21 +3,21 @@
 
   <div><%= link_to restaurants_path(query: "portuguese", place:"") do %>
     <div class="coll-card">
-      <%= image_tag "collection_photos/vegetarian.png" %>
+      <%= image_tag "collection_photos/vegetarian.png", class: "coll-img" %>
     </div>
-     <% end %>
+  <% end %>
   </div>
 
-  <div class="coll-card">
-    <div><%= link_to "Mediterranean", restaurants_path(query: "mediterranean", place:"") %>
-    <%= image_tag "collection_photos/mediterranean.png" %>
+  <div><%= link_to restaurants_path(query: "mediterranean", place:"") do %>
+    <div class="coll-card">
+      <%= image_tag "collection_photos/mediterranean.png" %>
     </div>
+  <% end %>
   </div>
 
-  <div class="coll-card">
-    <div><%= link_to "Vegetarian", restaurants_path(query: "vegan", place:"") %>
+  <div><%= link_to restaurants_path(query: "vegan", place:"") do %>
+    <div class="coll-card">
     <%= image_tag "collection_photos/vegetarian.png" %>
     <div>
-  </div>
-
+  <% end %>
 </div>
