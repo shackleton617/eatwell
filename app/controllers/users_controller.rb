@@ -16,6 +16,10 @@ class UsersController < ApplicationController
 
   end
 
+  def favorites
+
+  end
+
   def user
     @user = current_user
   end

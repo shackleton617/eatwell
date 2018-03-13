@@ -41,6 +41,7 @@
       </div>
     <% end %>
     <div class="card-dashboard">
+    <%= link_to favorite_restaurants_path do %>
       <%= image_tag("dashboard-fav-icon.png", height: 70, class: "flex-item offers-icon-padding") %>
       <div class="card-text-container-dashboard flex-item">
         <h4> Favorites </h4>
@@ -48,6 +49,8 @@
       </div>
     </div>
   </div>
+
+  <% end %>
 
 </div>
 

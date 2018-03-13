@@ -7,9 +7,12 @@
         </div>
 
         <div>
-          <%= image_tag "heart-inactive.png", class: "heart" %>
-        </div>
 
+        <%= link_to restaurant_favorites_path(restaurant), method: :post, remote: true do %>
+           <%= image_tag "heart-inactive.png", class: "heart" %>  
+         <% end %>
+
+        </div>
 
         <div>
           <ul class="list-inline" style="padding-left: 10px;">
