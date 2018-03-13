@@ -7,9 +7,9 @@
 <!-- navbar end -->
 
 
-<!-- eatwell logo  and icons -->
+      <!-- eatwell logo  and icons -->
 <div class="banner text-center">
-  <%= image_tag "eatwell-home-logo.png", width: "180", class: "logo-home" %>
+        <%= image_tag "eatwell-home-logo.png", width: "180", class: "logo-home" %>
   <ul class="list-inline text-center">
     <li>
       <div class="group-icon">
@@ -40,11 +40,11 @@
         <input type="submit">
       </form> -->
       <%= form_tag(restaurants_path, method: "get") do %>
-        <%= text_field_tag :place, params[:place], class: "form-control form-home",
-        placeholder: "Location search...", id: "restaurant_address" %>
-        <%= text_field_tag :query, params[:query], class: "form-control form-home",
-          placeholder: "Search by restaurant, cuisine, location ..." %>
-        <%= submit_tag "SEARCH", class: "btn btn-block  button-home" %>
+      <%= text_field_tag :place, params[:place], class: "form-control form-home",
+      placeholder: "Location search...", id: "restaurant_address" %>
+      <%= text_field_tag :query, params[:query], class: "form-control form-home",
+      placeholder: "Search by restaurant, cuisine, location ..." %>
+      <%= submit_tag "SEARCH", class: "btn btn-block  button-home" %>
       <% end %>
     </div>
   </div>
@@ -60,23 +60,14 @@
 
 <!-- collections -->
 <div class="container">
-  <div>
-    <%= link_to "Portuguese", restaurants_path(query: "portuguese", place:"") %>
-    <%= link_to "Mediterranean", restaurants_path(query: "mediterranean", place:"") %>
-    <%= link_to "Vegetarian", restaurants_path(query: "vegan", place:"") %>
+  <div class="row card-container-margin-home">
+    <%= render 'restaurants/collections-cards' %>
+<!--     <div class="restaurants-results">
+      <%= render 'restaurants/restaurant' %>
+    </div> -->
   </div>
 </div>
 <!-- collections end -->
-
-<!-- <div class="container">
-  <div class="row  card-container-margin-home">
-    <!-- render cards collections -->
-    <!-- <div class="restaurants-results">
-      <%= render 'restaurants/restaurant' %>
-    </div>
-  </div>
-</div> --> <!-- -->
-
 
 
 
