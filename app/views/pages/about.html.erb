@@ -1,36 +1,60 @@
 
 
   <!-- navbar_show -->
-  <div class="navbar-show"><% content_for :navbar do %>
+<div class="navbar-show">
+  <% content_for :navbar do %>
     <%= render 'shared/navbar_show' %>
-    <% end %>
-  </div>
+  <% end %>
+</div>
 
-<div class="about-white-background text-center">
+<div class="about-white-background">
+  <div class="col-sm-offset-3 col-sm-6">
   <div class=" content-wrapper-about">
-    <h3>Conscious dining is here.</h3>
+    <h2>Conscious dining is here.</h2>
 
-    <p>The world is shaped more by the way we spend than by how we vote on election day. </p>
+    <p class="bottom-padding-about">We believe the world is shaped more by the way we spend than by how we vote on election day. That's why we built Eatwell... to make it easier to create positive global impact when we dine out.</p>
 
-    <p> Eatwell makes it easy to create positive global impact through your dining choices. </p>
+    <hr>
+    <div>
+      <h3>Impact key</h3>
+      <p>Restaurants are evaluated on three criteria developed by the Sustainable Restaraunt Association.</p>
+      <div class="row">
+          <div class="impact-key-box">
+            <div class="impact-key-img">
+              <%= image_tag "about-community-icon", height: 40 %>
+            </div>
+            <div class="impact-key-text">
+              <p>Given to restaurants who make a difference by training and/or employing marginalized communities.</p>
+            </div>
+          </div>
+          <div class="impact-key-box">
+            <div class="impact-key-img">
+              <%= image_tag "about-sourcing-icon", height: 40  %>
+            </div>
+            <div class="impact-key-text">
+              <p>Given to restaurants with supply chains that favor local, organic and seasonal produce or better vegetables, fish and meat.</p>
+            </div>
+          </div>
+          <div class="impact-key-box">
+            <div class="impact-key-img">
+              <%= image_tag "about-recycle-icon", height: 40  %>
+            </div>
+            <div class="impact-key-text">
+              <p>Given to restaurants that contribute to food recycling programs and/or value natural resources in their operations.</p>
+            </div>
+          </div>
+        </div>
+      </div>
 
-    <p> Restaurants are evaluated on three criteria developed by the Sustainable Restaraunt Association.</p>
+
+    <hr>
+
+    <h3>Impact reward points</h3>
+
+    <p> When you check-in at restaurants on Eatwell, you earn impact points. You can think of these credits as "unofficial" citizen carbon-credits that can be redeemed with our partners for free products and discount coupons. </p>
   </div>
 </div>
-
-<div class="content-wrapper-about text-center text-about-white">
-  <h3>Impact key</h3>
-  <%= image_tag "home_community_icon", height: 40  %>
-  <p>Given to restaurants who make a difference by training and/or employing marginalized communities. </p>
-  <%= image_tag "home_sourcing_icon", height: 40  %>
-  <p>Given to restaurants with supply chains that favor local, organic and seasonal produce or better vegetables, fish and meat.</p>
-  <%= image_tag "home_recycle_icon", height: 40  %>
-  <p>Given to restaurants that contribute to food recycling programs and/or value natural resources in their operations.</p>
 </div>
-
-<h3>Impact reward points</h3>
-
-<p> We build advertising partnerships with companies who care to off</p>
 
 
 
