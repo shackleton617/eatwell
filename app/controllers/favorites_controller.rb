@@ -10,7 +10,6 @@ class FavoritesController < ApplicationController
     @favorite = Favorite.new
     @favorite.restaurant = @restaurant
     @favorite.user = current_user
-    byebug
     if @favorite.save
       respond_to do |format|
         format.html { redirect_to restaurants }
