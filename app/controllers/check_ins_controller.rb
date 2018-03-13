@@ -11,6 +11,6 @@ class CheckInsController < ApplicationController
     current_user.token_wallet = 0 unless current_user.token_wallet
     current_user.token_wallet += @points
     current_user.save
-    redirect_to dashboard_path
+    # redirect_to dashboard_path
 end
 end
