@@ -48,10 +48,10 @@
           <div class="name-show"><%= @restaurant.name %></div>
           <p class="cards-text" style="font-weight: 400;"><%= @restaurant.cuisine %></p>
           <p class="cards-text"><%= @restaurant.price_for_two%></span>€ for two (approx average)</p>
-          <p class="cards-text"><span style="font-weight: 325;">Adress: </span><%= @restaurant.address %></p>
+          <p class="cards-text"><span style="font-weight: 325;">Address: </span><%= @restaurant.address %></p>
           <p class="cards-text"><span style="font-weight: 325;">Phone: </span> <%= @restaurant.phone_number %></p>
           <ul class="list-inline" style="margin: 0px; padding-left: 0px;">
-            <li style="padding-left: 0px";><span class="cards-text" style="font-weight: 325; margin-left: 0px;">Hours:</span><span class="cards-text"><%= @restaurant.working_hours %></span></li>
+            <li style="padding-left: 0px";><span class="cards-text" style="font-weight: 325; margin-left: 0px;">Hours: </span><span class="cards-text"><%= @restaurant.working_hours %></span></li>
             <li>
               <% if @restaurant.average_rating.nil? %>
               <span class="no-rating">No ratings yet</span>

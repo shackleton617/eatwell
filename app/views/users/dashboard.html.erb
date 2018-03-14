@@ -30,27 +30,29 @@
       <% end %></span>
     </p>
 
-  <div class="card-container-dashboard">
-    <%= link_to offers_path do %>
-      <div class="card-dashboard">
-        <%= image_tag("dashboard-offers-icon.png", height: 70, class: "flex-item offers-icon-padding") %>
-        <div class="card-text-container-dashboard flex-item">
-          <h4> Redeem points </h4>
-          <p>Check out all the amazing offers!</p>
-        </div>
-      </div>
-    <% end %>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-offset-3 col-sm-6">
+        <%= link_to offers_path do %>
+          <div class="card-dashboard">
+            <%= image_tag("dashboard-offers-icon.png", height: 70, class: "flex-item offers-icon-padding") %>
+            <div class="card-text-container-dashboard flex-item">
+              <h4> Redeem points </h4>
+              <p>Check out all the amazing offers!</p>
+            </div>
+          </div>
+        <% end %>
+
     <div class="card-dashboard">
-    <%= link_to favorite_restaurants_path do %>
+
       <%= image_tag("dashboard-fav-icon.png", height: 70, class: "flex-item offers-icon-padding") %>
       <div class="card-text-container-dashboard flex-item">
         <h4> Favorites </h4>
         <p> 12 restaurants that care</p>
       </div>
     </div>
-  </div>
 
-  <% end %>
+  </div>
 
 </div>
 

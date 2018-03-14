@@ -2,10 +2,10 @@
   height: 420px;
   border-radius: 4px;
   background-color: $white;
-  margin: 0 0 10px 0;
   box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.2);
   position: relative;
   padding: 0px;
+  margin-top: 10px;
 }
 
 .card-img-offer {
@@ -34,10 +34,17 @@
 
 .btn-redeem-offers {
   margin-top: 10px;
+    background-color: #EF5B5B;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: normal;
+    width: 125px;
+    box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.2);
 }
 
 .offers-wrapper {
   padding: 10px;
+  background-color: $white;
 }
 
 .card-padding-offers {
@@ -45,5 +52,13 @@
 }
 
 .offers-wrapper h3 {
-  color: white;
+  color: $gray;
+}
+
+.impact-count-text-offer {
+  color: $green;
+}
+
+.card-wrapper-offer-card {
+  margin: 10px;
 }
