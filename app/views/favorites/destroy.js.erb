@@ -2,8 +2,7 @@ var badge = '<%= j render "shared/favorite_badge", restaurant: @restaurant %>';
 var id = 'love-' + '<%= @restaurant.id %>';
 console.log(id, badge);
 
+
 var element = document.getElementById(id)
 
 element.innerHTML = badge
-
-
