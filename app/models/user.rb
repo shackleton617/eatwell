@@ -17,4 +17,8 @@ class User < ApplicationRecord
   validates :email, presence: true, uniqueness: true
   validates :password, presence: true, on: :create
 
+  def find_favorite_by_restaurant(restaurant)
+    favorites.find { |f| f.restaurant == restaurant }
+  end
+
 end

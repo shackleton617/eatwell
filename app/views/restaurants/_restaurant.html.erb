@@ -7,10 +7,10 @@
         </div>
 
         <div>
+        <div id=<%= "love-#{restaurant.id}"%>>
+          <%= render "shared/favorite_badge", restaurant: restaurant %>
+        </div>
 
-        <%= link_to restaurant_favorites_path(restaurant), method: :post, remote: true do %>
-           <%= image_tag "heart-inactive.png", class: "heart" %>  
-         <% end %>
 
         </div>
 

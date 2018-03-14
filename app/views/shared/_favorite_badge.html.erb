@@ -1,0 +1,13 @@
+<% unless current_user.nil? %>
+  <% favorite = current_user.find_favorite_by_restaurant(restaurant) %>
+  <% if favorite.nil? %>
+    <%= link_to restaurant_favorites_path(restaurant), method: :post, remote: true do %>
+      <%= image_tag "heart-inactive.png", class: "heart", id: "love-button" %>
+
+     <% end %>
+  <% else  %>
+     <%= link_to restaurant_favorite_path(restaurant, favorite), method: :delete, remote: true do %>
+       <%= image_tag "heart-active.png", class: "heart", id: "love-button" %>
+     <% end %>
+  <% end %>
+<% end %>
