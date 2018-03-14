@@ -2,13 +2,18 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" />
   <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
-  <title>EATWELL</title>
+  <title>Eatwell</title>
+  <%= favicon_link_tag 'favicon.ico' %>
   <%= csrf_meta_tags %>
   <%= action_cable_meta_tag %>
   <%= stylesheet_link_tag 'application', media: 'all' %>
   <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
+  <meta property="og:title" content="Eatwell - Conscious restaurant discovery and rewards.">
+  <meta property="og:image" content="facebook-card.jpg">
+  <meta property="og:description" content="Eatwell is the restaurant discovery platform for diners who want a better planet. Vote with your dollars. Earn impact points. Get cool rewards.">
+  <meta property="og:site_name" content="Eatwell"/>
 </head>
 
 <body>

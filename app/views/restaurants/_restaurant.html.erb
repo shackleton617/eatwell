@@ -1,4 +1,4 @@
-<% @restaurants.each do |restaurant| %>
+
   <div class="col-xs-12 col-md-6 col-lg-4">
     <div class="card-box">
       <%= link_to restaurant_path(restaurant) do %>
@@ -7,9 +7,9 @@
         </div>
 
         <div>
-        <div id=<%= "love-#{restaurant.id}"%>>
-          <%= render "shared/favorite_badge", restaurant: restaurant %>
-        </div>
+          <div id=<%= "love-#{restaurant.id}"%>>
+            <%= render "shared/favorite_badge", restaurant: restaurant %>
+          </div>
 
 
         </div>
@@ -54,5 +54,4 @@
       <% end %>
     </div>
   </div>
-<% end %>
 

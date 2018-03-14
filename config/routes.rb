@@ -10,12 +10,12 @@ root to: 'pages#home'
   resources :restaurants, only: [ :index, :show ] do
     resources :check_ins, only: [ :create ]
     resources :reviews, only: :create
-    resources :favorites, only: [ :create, :destroy ]
+    resources :favorites, only: [ :create , :destroy ]
 
 
 
   end
-
+  get "users/favorites", to: "users#favorites", as: "favorite"
   get "users/dashboard", to: "users#dashboard", as: "dashboard"
   # get "/restaurants/:restaurant_id/offers", to: "offers#show", as: "offers"
 

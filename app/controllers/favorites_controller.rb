@@ -10,10 +10,11 @@ class FavoritesController < ApplicationController
     @favorite.restaurant = @restaurant
     @favorite.user = current_user
     if @favorite.save
+      # redirect_to restaurants_path
       respond_to do |format|
-        format.html { redirect_to restaurants }
+        # format.html { redirect_to restaurants_path }
         format.js  # <-- will render `app/views/favorites/create.js.erb`
-      end
+       end
     else
       respond_to do |format|
         format.html { render 'restaurants/show' }
