@@ -15,7 +15,7 @@
   </div>
   <div class="center-avatar-dashboard">
     <div class="container-dashboard">
-      <%= cl_image_tag(@user.avatar, height: 130, width: 130, class: "user-avatar-dashboard") %>
+      <%= image_tag avatar_url(current_user), height: 130, width: 130, class: "user-avatar-dashboard" %>
     </div>
   </div>
 
