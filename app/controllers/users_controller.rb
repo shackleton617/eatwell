@@ -18,6 +18,13 @@ class UsersController < ApplicationController
 
   def favorites
 
+    @user_favorites = current_user.favorites.map do |f|
+      {
+        name: f.restaurant.name,
+        photo: f.restaurant.photos,
+        description: f.restaurant.description
+      }
+    end
   end
 
   def user

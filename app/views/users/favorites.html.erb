@@ -1,0 +1,26 @@
+
+<% content_for :background, 'white' %>
+
+<% content_for :background, 'white' %>
+
+<div class="wrapper-dashboard">
+  <div class="nav-dashboard">
+    <div class>
+      <%= link_to root_path do  %>
+        <% image_tag "logo.png", height: 40, class: "logo-dashboard" %>
+        <% end %>
+      </div>
+    <div class="edit-profile-dashboard">
+      <%= link_to edit_user_registration_path do %>
+        <p>Edit profile</p>
+      <% end %>
+    </div>
+  </div>
+  <div class="center-avatar-dashboard">
+    <div class="container-dashboard">
+      <%= cl_image_tag(current_user.avatar, height: 130, width: 130, class: "user-avatar-dashboard") %>
+    </div>
+  </div>
+    <%= render current_user.favorite_restaurants %>
+    </div>
+  </div>

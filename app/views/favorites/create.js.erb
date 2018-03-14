@@ -1,4 +1,4 @@
-var badge = '<%= j render "shared/favorite_badge", restaurant: @restaurant %>';
+var badge = '<%= j render "shared/favorite_badge", restaurant: @restaurant.reload %>';
 var id = 'love-' + '<%= @restaurant.id %>';
 console.log(id, badge);
 

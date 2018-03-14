@@ -43,15 +43,16 @@
           </div>
         <% end %>
 
+         <%= link_to favorite_path do %>
     <div class="card-dashboard">
 
       <%= image_tag("dashboard-fav-icon.png", height: 70, class: "flex-item offers-icon-padding") %>
       <div class="card-text-container-dashboard flex-item">
         <h4> Favorites </h4>
-        <p> 12 restaurants that care</p>
+        <span><% current_user.favorites.count %> restaurants that care</span>
       </div>
     </div>
-
+<% end %>
   </div>
 
 </div>
