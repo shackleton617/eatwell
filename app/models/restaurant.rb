@@ -33,11 +33,6 @@ class Restaurant < ApplicationRecord
     points += 10 if self.has_sourcing
     points
   end
-
-
-
-
-
 end
 
 # @points = @restaurant.calculate_points

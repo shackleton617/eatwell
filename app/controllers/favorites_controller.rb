@@ -6,7 +6,6 @@ class FavoritesController < ApplicationController
   end
 
   def create
-    @restaurant = Restaurant.find(params[:restaurant_id])
     @favorite = Favorite.new
     @favorite.restaurant = @restaurant
     @favorite.user = current_user
@@ -32,8 +31,16 @@ class FavoritesController < ApplicationController
     # end
 
   def destroy
-    Favorite.where(favorited_id: @restaurant.id, user_id: current_user.id).first.destroy
-    redirect_to @restaurant, notice: 'Restaurant is no longer in favorites'
+    @favorite = Favorite.find(params[:id])
+
+    @favorite.delete
+    @favorite = nil
+    respond_to do |format|
+        format.html { redirect_to restaurants }
+        format.js  # <-- will render `app/views/favorites/destroy.js.erb`
+    end
+
+
   end
 
   private
