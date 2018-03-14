@@ -71,11 +71,20 @@ body {
 }
 
 .button-home {
-  background-color: transparent;
+  background-color: $green;
   font-weight: lighter;
   border: 1px solid $white;
   color: $white;
   font-weight: 300;
+}
+
+.coll-header {
+  font-size: 16px;
+  color: $white;
+  margin-bottom: 5px;
+  margin-top: 30px;
+  font-weight: normal;
+  opacity: 0.8;
 }
 
 

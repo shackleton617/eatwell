@@ -17,7 +17,7 @@
   position: relative;
 }
 
-.card__img:hover {
+.card-box:hover {
   opacity: 0.8;
   filter: alpha(opacity=80);
   position: relative;
@@ -29,6 +29,15 @@
   right: 15px;
   width: 25px;
   z-index: 100;
+}
+
+.heart {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  color: rgba(30, 50, 49, 0.5);
+  font-size: 25px;
+  color: $white;
 }
 
 .symbols {

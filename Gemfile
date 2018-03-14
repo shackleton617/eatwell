@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 ruby '2.4.3'
 
+gem 'omniauth-facebook'
 gem 'jquery-rails'
 gem 'gmaps-autocomplete-rails'
 gem "geocoder"
