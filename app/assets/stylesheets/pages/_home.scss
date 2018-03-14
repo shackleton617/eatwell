@@ -81,6 +81,18 @@ body {
   font-weight: 300;
 }
 
+.button-home:hover {
+  color: $white;
+}
+
+.button-home:focus {
+  background-color: $green;
+  font-weight: lighter;
+  border: 1px solid $white;
+  color: $white;
+  font-weight: 300;
+}
+
 .coll-header {
   font-size: 16px;
   color: $white;
