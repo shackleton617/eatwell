@@ -12,6 +12,7 @@
 </head>
 
 <body>
+
   <div id="fb-root"></div>
   <script>(function(d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0];
@@ -20,7 +21,7 @@
     js.src = 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.12&appId=1824117704305026&autoLogAppEvents=1';
     fjs.parentNode.insertBefore(js, fjs);
   }(document, 'script', 'facebook-jssdk'));</script>
-  <div class="body<%= yield(:background) == 'white' ? ' white-background' : '' %>">
+  <div class="body <%= yield(:background) == 'white' ? ' white-background' : '' %>" style="background: linear-gradient(0deg, rgba(23,  190, 187, 0.95), rgba(23,  190, 187, 0.95)), url('<%= image_path "background-image.png" %>') ; background-size: 300px; background-repeat: repeat;">
     <% if content_for?(:navbar) %>
     <%= yield(:navbar) %>
     <% end %>
