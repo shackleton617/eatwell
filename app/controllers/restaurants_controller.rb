@@ -9,6 +9,7 @@ class RestaurantsController < ApplicationController
     else
       @restaurants = Restaurant.all
     end
+
     if params[:place].present?
       @restaurants = @restaurants.near(params[:place], 0.5)
     end

@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
 root to: 'pages#home'
   get 'about', to: 'pages#about'
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   resources :offers, only: [ :index, :show ] do
     resources :redemptions, only: [ :create ]
@@ -9,6 +10,9 @@ root to: 'pages#home'
   resources :restaurants, only: [ :index, :show ] do
     resources :check_ins, only: [ :create ]
     resources :reviews, only: :create
+    resources :favorites, only: :create
+
+
 
   end
 

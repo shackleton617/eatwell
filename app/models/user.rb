@@ -4,8 +4,12 @@ class User < ApplicationRecord
   mount_uploader :avatar, AvatarUploader
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
+
   devise :omniauthable, omniauth_providers: [:facebook]
 
+
+  has_many :favorites
+  has_many :favorite_restaurants, through: :favorites
   has_many :check_ins, dependent: :destroy
   has_many :redemptions, dependent: :destroy
   has_many :restaurants, through: :check_ins
