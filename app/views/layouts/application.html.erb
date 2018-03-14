@@ -12,7 +12,8 @@
 </head>
 
 <body>
-  <div class="body<%= yield(:background) == 'white' ? ' white-background' : '' %>">
+
+  <div class="body <%= yield(:background) == 'white' ? ' white-background' : '' %>" style="background: linear-gradient(0deg, rgba(23,  190, 187, 0.95), rgba(23,  190, 187, 0.95)), url('<%= image_path "background-image.png" %>') ; background-size: 300px; background-repeat: repeat;">
     <% if content_for?(:navbar) %>
         <%= yield(:navbar) %>
     <% end %>
