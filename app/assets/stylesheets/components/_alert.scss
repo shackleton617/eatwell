@@ -9,7 +9,18 @@
 }
 .alert-info {
   background: green;
+  text-align: center;
 }
 .alert-warning {
   background: $red;
+}
+
+.sweet-alert button.offer {
+  background-color: yellow;
+  color: black
+}
+
+.sweet-alert button.dashboard {
+  background-color: yellow;
+  color: black
 }

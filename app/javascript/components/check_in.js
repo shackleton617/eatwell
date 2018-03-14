@@ -10,13 +10,21 @@ function bindSweetAlertCheckIn() {
        swal({
          title: "Thank you for checking in!",
          text: "See offers to redeem your points or go to your profile.",
-         offer: {
-          text: "See offers",
-          value: "offer",
-         },
-         dashboard: {
-          text: "Profile",
-          value: "profile"
+         icon: "success",
+
+         buttons: {
+
+           offer: {
+            text: "See offers",
+            value: "offer",
+
+           },
+
+           dashboard: {
+            text: "Profile",
+            value: "profile",
+
+           },
          },
        })
        .then((value) => {
