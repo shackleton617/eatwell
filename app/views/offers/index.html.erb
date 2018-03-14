@@ -1,22 +1,30 @@
 <%= render 'shared/navbar_show' %>
+
 <div class="offers-wrapper">
-  <div class="container">
-    <div class="row text-center">
-      <h3>Redeem your <span class="impact-count-text-offer">
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-offset-3 col-sm-6">
+
+      <div>
+
+        <h3>Redeem your <span class="impact-count-text-offer">
         <% if current_user.token_wallet == nil %>
           <%= "0" %> impact points
         <% else %>
           <%= current_user.token_wallet %> impact points
-        <% end %> </span>
+        <% end %></span>
         for delicious offers!
-      </h3>
+        </h3>
+
+        <%= render 'offer' %>
+
+      </div>
+
     </div>
   </div>
-      <div class="container cards-container">
-        <div class="row">
-          <%= render 'offer' %>
-        </div>
-      </div>
+</div>
+
 </div>
 
 <!-- home link -->
