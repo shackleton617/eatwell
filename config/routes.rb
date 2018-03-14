@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  devise_for :users
-  root to: 'pages#home'
+
+root to: 'pages#home'
   get 'about', to: 'pages#about'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   resources :offers, only: [ :index, :show ] do
@@ -10,11 +10,11 @@ Rails.application.routes.draw do
     resources :check_ins, only: [ :create ]
     resources :reviews, only: :create
 
-
   end
-
-
 
   get "users/dashboard", to: "users#dashboard", as: "dashboard"
   # get "/restaurants/:restaurant_id/offers", to: "offers#show", as: "offers"
+
+  devise_for :users,
+        controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
 end
