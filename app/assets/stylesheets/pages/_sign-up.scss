@@ -1,13 +1,22 @@
 .wrapper-sign-up {
   background-color: $white;
+  padding: 35px 10px;
 }
 
 
 .sign-up-title {
   font-size: 25px;
-  color: $green;
+  color: $gray;
   font-weight: normal;
-  margin-bottom: 30px;
+  margin-bottom: 0px;
+  // text-align:center;
+}
+
+.sign-up-subtitle {
+  font-size: 20px;
+  color: $gray;
+  font-weight: normal;
+  margin-bottom: 20px;
   // text-align:center;
 }
 
@@ -17,15 +26,17 @@
 //   font-weight: 100;
 // }
 
-.sign-in-button {
-  background-color: $red;
+.sign-up-button {
+  background-color: $green;
   color: white;
+  font-size: 16px;
   border-radius: 4px;
   border-style: solid;
-  border-color: $red;
+  border-color: $green;
   font-size: 16px;
   font-weight: normal;
-  width: 100px;
+  width: 100%;
+  margin-bottom: 40px;
   box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.2);
 }
 
@@ -39,13 +50,28 @@
   color: white;
 }
 
-.fb-button {
-  background-color: #4267b2;
-  color: $white;
+.btn-success {
+  background-color: $green;
+  font-size: 16px;
   border-radius: 4px;
+  border-style: solid;
+  border-color: $green;
   font-size: 16px;
   font-weight: normal;
+  width: 100%;
+  margin-bottom: 0px;
   box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.2);
-  z-index: 100;
-  position: relative;
 }
+
+.color-btn {
+  color: $white;
+}
+
+.hint {
+  font-size: 16px;
+  color: $green;
+  font-weight: lighter;
+  margin-bottom: 0px;
+}
+
+
