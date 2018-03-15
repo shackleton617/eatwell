@@ -328,36 +328,21 @@ photos: "http://api.ning.com/files/JtotRF7dxCUCf-6m1VzohywPnoU5yTdu1*T0rcH*tyMj*
 
 Offer.destroy_all
 
+
+
 offer_1 = Offer.create(
 
-expiration_date: Date.today + 20.days,
-company: "Vegana Burgers",
-token_value: 30,
-description: "Get a free burger meal!",
-photo: "https://assets3.thrillist.com/v1/image/1762665/size/tmg-article_default_mobile.jpg"
-)
-
-offer_2 = Offer.create(
-
 expiration_date: Date.today + 30.days,
-company: "Sama Sama Crêpe and Juice Bar",
+company: "Sama Sama",
 token_value: 20,
 description: "Get a free coffee, tea (the ginger tea is amazing!) or lemonade when purchasing a crêpe!",
 photo: "https://www.thecocktailproject.com/sites/default/files/incredible-thumb-Jim-Beam-Lemonade.jpg"
 
 )
 
-offer_3 = Offer.create(
+sleep(2)
 
-expiration_date: Date.today + 60.days,
-company: "Ria Maravilha",
-token_value: 10,
-description: "Get a caneca of artesanal beer!",
-photo: "https://flggcanyonaletrail.files.wordpress.com/2014/04/savdist-com.jpg"
-
-)
-
-offer_4 = Offer.create(
+offer_2 = Offer.create(
 
 expiration_date: Date.today + 45.days,
 company: "Lisbon Winery",
