@@ -1,3 +1,11 @@
+Favorite.delete(Favorite.all)
+CheckIn.delete(CheckIn.all)
+
+Redemption.delete(Redemption.all)
+Offer.delete(Offer.all)
+
+Review.delete(Review.all)
+User.delete(User.all)
 Restaurant.destroy_all
 
 
