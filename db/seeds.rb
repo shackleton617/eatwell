@@ -323,12 +323,7 @@ photos: "http://api.ning.com/files/JtotRF7dxCUCf-6m1VzohywPnoU5yTdu1*T0rcH*tyMj*
 
 
 
-
-
-
 Offer.destroy_all
-
-
 
 offer_1 = Offer.create(
 
@@ -347,7 +342,7 @@ offer_2 = Offer.create(
 expiration_date: Date.today + 45.days,
 company: "Lisbon Winery",
 token_value: 10,
-description: "Get a free port wine with a two-wine tasting (a red and a white)!",
+description: "Get a free port wine with  with the purchase of a two-wine tasting (a red and a white)!",
 photo: "https://imageproxy-observadorontime.netdna-ssl.com/700x,q85/https://s3cdn-observadorontime.netdna-ssl.com/wp-content/uploads/2017/04/17193622/istock-494807824_770x433_acf_cropped.jpg"
 
 )

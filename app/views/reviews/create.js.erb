@@ -8,9 +8,44 @@ function addReview(reviewHTML) {
   reviews.insertAdjacentHTML('beforebegin', reviewHTML);
 }
 
-<% if @review.errors.any? %>
-  refreshForm('<%= j render "reviews/form", restaurant: @restaurant, review: @review %>');
+
+<% unless user_signed_in? %>
+swal({
+         title: "Oops!",
+         text: "Please sign up or log in to leave a review.",
+
+         buttons: {
+           ok: {
+            text: "Ok",
+            value: "signup",
+
+           },
+         },
+       })
+       .then((value) => {
+
+        // This only happens after btn clicked
+       // REDIRECT AND CONTROLLER ACTION
+
+       // Redirect the user
+        if (value == "signup") {
+
+          window.location.href = "../users/sign_up";
+          }
+        else {
+
+          window.location.href = window.location.href
+       }
+
+       });
+
+
 <% else %>
-  addReview('<%= j render "reviews/show", review: @review %>');
-  refreshForm('<%= j render "reviews/form", restaurant: @restaurant, review: Review.new %>');
+  <% if @review && @review.errors.any? %>
+    refreshForm('<%= j render "reviews/form", restaurant: @restaurant, review: @review %>');
+  <% else %>
+    addReview('<%= j render "reviews/show", review: @review %>');
+    refreshForm('<%= j render "reviews/form", restaurant: @restaurant, review: Review.new %>');
+  <% end %>
 <% end %>
+
