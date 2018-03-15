@@ -363,7 +363,7 @@ expiration_date: Date.today + 45.days,
 company: "Lisbon Winery",
 token_value: 10,
 description: "Get a free port wine with a two-wine tasting (a red and a white)!",
-photo: "https://media.npr.org/assets/img/2010/12/18/istock_000004547352xsmall_archive-82f9002e706033456294198a8a04656ae4c88a2f-s300-c85.jpg"
+photo: "https://imageproxy-observadorontime.netdna-ssl.com/700x,q85/https://s3cdn-observadorontime.netdna-ssl.com/wp-content/uploads/2017/04/17193622/istock-494807824_770x433_acf_cropped.jpg"
 
 )
 
