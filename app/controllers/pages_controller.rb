@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:home, :index, :show, :search]
+  skip_before_action :authenticate_user!, only: [:home, :index, :show, :search, :about]
 
   def home
     @restaurants = Restaurant.all
