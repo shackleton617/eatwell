@@ -1,39 +1,73 @@
-<% if current_user.save %>
-swal({
-         title: "Thank you for checking in!",
-         text: "See offers to redeem your points or go to your profile.",
-         icon: "success",
-         buttons: {
+<% if user_signed_in? %>
+  swal({
+    title: "Thank you for checking in!",
+    text: "See offers to redeem your points or go to your profile.",
+    icon: "success",
 
-           offer: {
+    buttons: {
+    offer: {
 
-            text: "See offers",
-            value: "offers",
+      text: "See offers",
+      value: "offers",
 
+    },
 
-           },
+    dashboard: {
+      text: "Profile",
+      value: "profile",
 
-           dashboard: {
-            text: "Profile",
-            value: "profile",
+    },
+  },
+  })
+  .then((value) => {
 
-           },
-         },
-       })
-       .then((value) => {
+    // This only happens after btn clicked
+    // REDIRECT AND CONTROLLER ACTION
 
-        // This only happens after btn clicked
-       // REDIRECT AND CONTROLLER ACTION
+    // Redirect the user
+    if (value == "offers") {
 
-       // Redirect the user
-        if (value == "offers") {
+      window.location.href = "../offers";
+    }
+    else if (value == "profile") {
 
-            window.location.href = "../offers";
-          }
-        else {
+      window.location.href = "../users/dashboard"
+    }
+    else {
+      window.location.href = window.location.href
+    }
 
-            window.location.href = "../users/dashboard"
-         }
+  });
+<% else %>
 
-       });
+  swal({
+    title: "Oops!",
+    text: "Please log in or sign up to check in.",
+
+    buttons: {
+      ok: {
+        text: "Ok",
+        value: "login",
+
+      },
+
+    },
+  })
+  .then((value) => {
+
+    // This only happens after btn clicked
+    // REDIRECT AND CONTROLLER ACTION
+
+    // Redirect the user
+    if (value == "login") {
+
+      window.location.href = "../users/sign_up";
+      }
+
+    else {
+      window.location.href = window.location.href
+      }
+
+    });
+
 <% end %>
