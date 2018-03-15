@@ -17,7 +17,7 @@ class RedemptionsController < ApplicationController
 
       current_user.update(token_wallet: new_value)
 
-      UserMailer.creation_confirmation(@redemption).deliver_now
+      # UserMailer.creation_confirmation(@redemption).deliver_now
         # redirect_to dashboard_path
 
       # redirect_to offers_path
