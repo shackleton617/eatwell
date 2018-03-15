@@ -34,7 +34,7 @@ name: "Lisbon Winery",
 address: "R. da Barroca 13, 1200-047 Lisboa",
 location: "Bairro Alto, Lisbon",
 cuisine: "Portuguese tapas",
-description: "Lisbon Winery is a tasting center and wine bar in Bairro Alto. The space has an unique 16th century cistern and a premium collection of Portuguese wines served by the glass. The selection includes wines from local small producers and artisanal cheeses and charcuterie.",
+description: "Lisbon Winery is a tasting center and wine bar in Bairro Alto. Here you can travel Portugal's regions without leaving your dining seat. The premium wines, ports, artisanal cheeses and charcuterie are produced by local small producers from all over the country. The space also has an unique 16th century cistern which reminds of Portugal's late medieval times.",
 phone_number: "21 826 0132",
 price_for_two: 50,
 working_hours: "15:00 - 24:00",
@@ -106,6 +106,29 @@ sleep(2)
 
 restaurant_6 = Restaurant.create(
 
+name: "Sama Sama Crêpe and Juice Bar",
+address: "Tv. Corpo Santo 7, 1200-131 Lisboa",
+location: "Cais do Sodré, Lisbon",
+cuisine: "Vegetarian/Vegan/Creperie/Juice bar",
+description: "Sama Sama is a crêpe and juice bar, serving all-organic crêpes, juices, wine, craft beer and more. The crepes are vegetarian, with vegan options. They come sweet and savory. Owners Sofia and Malte adapt their recipes to what is in season and locally available.
+
+Sama Sama has a thorough approach to recycling and waste reduction. If you bring your own cup, you get a discount on your drink. All the take-out materials are 100 per cent disposable. Sama Sama also collaborates with Garbags (https://www.garbags.eu/) an organization which remakes cardboard waste into fashionable items.
+
+Sama Sama is your healthy and sustainable fast food alternative. Go for a quick take-away lunch or hang out at the bar. Owners Sofia and Malte have plenty of stories to tell!",
+phone_number: "21 820 5668",
+price_for_two: 20,
+working_hours: "9:00 - 18:00",
+has_community: false,
+has_recycling: true,
+has_sourcing: true,
+photos: "https://lifecooler.com/files/registos/imagens/459281/387039.jpg",
+
+)
+
+sleep(2)
+
+restaurant_7 = Restaurant.create(
+
 name: "Ao 26 - Vegan Food Project",
 address: "R. Vítor Cordon 26, 1200-484 Lisboa",
 location: "Cais do Sodré, Lisbon",
@@ -127,7 +150,7 @@ photos: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRGVhnvEcL8-S2PzQ
 
   sleep(2)
 
-restaurant_7 = Restaurant.create(
+restaurant_8 = Restaurant.create(
 
 name: "Jardim dos Sentidos",
 address: "R. da Mãe de Água 3, 1250-154 Lisboa",
@@ -147,7 +170,7 @@ photos: "https://u.tfstatic.com/restaurant_photos/908/64908/169/612/jardim-dos-s
 
 sleep(2)
 
-restaurant_8 = Restaurant.create(
+restaurant_9 = Restaurant.create(
 
 name: "PSI",
 address: "Alameda Santo António dos Capuchos, 1150-314 Lisboa",
@@ -166,7 +189,7 @@ photos: "https://media-cdn.tripadvisor.com/media/photo-s/0b/53/7b/d9/restaurante
 
 sleep(2)
 
-restaurant_9 = Restaurant.create(
+restaurant_10 = Restaurant.create(
 
 name: "Mezze",
 address: "R. Ângela Pinto 22/23, 1900-067 Lisboa",
@@ -186,7 +209,7 @@ photos: "https://b.zmtcdn.com/data/reviews_photos/1bb/c0eef1b7136604ad34e1c91aee
 sleep(2)
 
 
-restaurant_10 = Restaurant.create(
+restaurant_11 = Restaurant.create(
 
 name: "Pois Cafe",
 address: "R. de São João da Praça 93-95, 1100-521 Lisboa",
@@ -205,7 +228,7 @@ photos: "http://www.poiscafe.com/wp-content/uploads/menu-3-300x200.jpg",
 
 sleep(2)
 
-restaurant_11 = Restaurant.create(
+restaurant_12 = Restaurant.create(
 
 name: "Green Beans Cafe Chiado",
 address: "R. Chagas 31, 1200-106 Lisboa",
@@ -224,7 +247,7 @@ photos: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTF1PcPVwva_vtfhkT
 
 sleep(2)
 
-restaurant_12 = Restaurant.create(
+restaurant_13 = Restaurant.create(
 
 name: "Rio Maravilha",
 address: "Rua Rodrigues Faria, 103, Entrada 3, Piso 4, Alcântara, Lisboa",
@@ -243,7 +266,7 @@ photos: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHZ4QYP9goagnwK-0
 
 sleep(2)
 
-restaurant_13 = Restaurant.create(
+restaurant_14 = Restaurant.create(
 
 name: "Terra",
 address: "R. da Palmeira 15, 1200-311 Lisboa",
@@ -262,7 +285,7 @@ photos: "https://media-cdn.tripadvisor.com/media/photo-s/10/02/ab/10/img-2017072
 
 sleep(2)
 
-restaurant_14 = Restaurant.create(
+restaurant_15 = Restaurant.create(
 
 name: "Cantina das Freiras",
 address: "Tv. Ferragial n.1, 1200-184",
@@ -281,7 +304,7 @@ photos: "https://media-cdn.tripadvisor.com/media/photo-s/0e/38/eb/64/20170119-14
 
 sleep(2)
 
-restaurant_15 = Restaurant.create(
+restaurant_16 = Restaurant.create(
 
 name: "A Padaria Portuguesa",
 address: "Av. 24 de Julho 1G, 1200-425 Lisbon",
@@ -317,10 +340,10 @@ photo: "https://assets3.thrillist.com/v1/image/1762665/size/tmg-article_default_
 offer_2 = Offer.create(
 
 expiration_date: Date.today + 30.days,
-company: "Sama Sama",
-token_value: 10,
-description: "Get a free healthy cocktail!",
-photo: "http://del.h-cdn.co/assets/16/46/980x1471/spiked-chery-lemonade-slushies.jpg"
+company: "Sama Sama Crêpe and Juice Bar",
+token_value: 20,
+description: "Get a free coffee, tea (the ginger tea is amazing!) or lemonade when purchasing a crêpe!",
+photo: "https://www.thecocktailproject.com/sites/default/files/incredible-thumb-Jim-Beam-Lemonade.jpg"
 
 )
 
@@ -333,6 +356,17 @@ description: "Get a caneca of artesanal beer!",
 photo: "https://flggcanyonaletrail.files.wordpress.com/2014/04/savdist-com.jpg"
 
 )
+
+offer_4 = Offer.create(
+
+expiration_date: Date.today + 45.days,
+company: "Lisbon Winery",
+token_value: 10,
+description: "Get a free port wine with a two-wine tasting (a red and a white)!",
+photo: "https://media.npr.org/assets/img/2010/12/18/istock_000004547352xsmall_archive-82f9002e706033456294198a8a04656ae4c88a2f-s300-c85.jpg"
+
+)
+
 
 
 
