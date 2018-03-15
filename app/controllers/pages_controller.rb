@@ -9,6 +9,4 @@ class PagesController < ApplicationController
     @user = current_user
   end
 
-
-
 end
