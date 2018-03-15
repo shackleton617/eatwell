@@ -6,21 +6,21 @@
 
 .sign-up-title {
   font-size: 25px;
-  color: $gray;
+  color: $green;
   font-weight: normal;
   margin-bottom: 0px;
   // text-align:center;
 }
 
 .sign-up-subtitle {
-  font-size: 20px;
-  color: $gray;
+  font-size: 16px;
+  color: $green;
   font-weight: normal;
   margin-bottom: 20px;
   // text-align:center;
 }
 
-.sign-up-button {
+.form-button {
   background-color: $green;
   color: white;
   font-size: 16px;
@@ -33,6 +33,12 @@
   width: 100%;
   margin-bottom: 40px;
   box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.2);
+  transition: background-color 300ms;
+  &:hover {
+    background-color: #06adaa;
+    border-color: #06adaa;
+    color: white;
+  }
 }
 
 .type {
@@ -57,12 +63,15 @@
 
 .color-btn {
   color: $white;
+  &:hover {
+    color: white;
+  }
 }
 
 .hint {
   font-size: 14px;
   color: $gray;
-  font-weight: lighter;
+  font-weight: 100;
   margin-bottom: 0px;
 }
 
@@ -79,6 +88,11 @@
   box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.2);
   padding: 10px 0;
   text-align: center;
+  transition: background-color 300ms;
+  &:hover {
+    color: white;
+    background-color: #37569C;
+  }
 }
 
 
