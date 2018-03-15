@@ -96,10 +96,12 @@
   font-size: 15px !important;
   line-height: 22px !important;
   padding: 10px 20px;
+  z-index: 2;
 }
 .navbar-wagon-dropdown-menu li > a:hover {
   background: white !important;
   color: black !important;
+  z-index: 2;
 }
 .navbar-wagon-dropdown-menu:before {
   content: ' ';
