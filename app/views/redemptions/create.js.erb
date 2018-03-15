@@ -2,32 +2,55 @@
     swal({
              title: "Enjoy your offer!",
              text: "Check your email for details.",
-             icon: "success"
+             icon: "success",
+             buttons: {
+              profile: {
+                text: "See my profile",
+                value: "profile"
+
+              }
+             }
            },
            )
-           .then(() => {
+           .then((value) => {
 
             // This only happens after btn clicked
            // REDIRECT AND CONTROLLER ACTION
 
            // Redirect the user
+           if (value == "profile") {
             window.location.href = "users/dashboard";
 
+           }
+           else {
+            window.location.href = window.location.href
+          }
            });
   <% else %>
     swal({
              title: "Sorry, you don't have enough points!",
              text: "Check-in to get some more.",
-             icon: "error"
+             icon: "error",
+             buttons: {
+              ok: {
+                text: "Ok",
+                value: "gotorests"
+              }
+             }
            },
            )
-           .then(() => {
+           .then((value) => {
 
             // This only happens after btn clicked
            // REDIRECT AND CONTROLLER ACTION
 
            // Redirect the user
+           if (value == "gotorests") {
             window.location.href = "restaurants";
+            }
+            else {
+              window.location.href = window.location.href
+            }
 
            });
 
