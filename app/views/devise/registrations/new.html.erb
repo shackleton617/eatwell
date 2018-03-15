@@ -7,17 +7,17 @@
 
         <%= render "devise/shared/links" %>
 
-
+<hr>
         <p class="sign-up-title" style="margin-top: 30px;">New to Eatwell?</p>
         <p class="sign-up-subtitle">You can sign up here!</p>
 
 
-        <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), :html => {:multipart => true}) do |f| %>
+        <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), :html => {:multipart => true}, class: "login-form") do |f| %>
           <%= f.error_notification %>
           <div class="form-inputs">
-          <ul class="list-inline" style="margin-bottom: 0px;">
-            <li><%= f.input :first_name, required: true, input_html: { class: "recognitionStyling" }, label_html: { class: "type" } %></li>
-            <li><%= f.input :last_name, required: true, input_html: { class: "recognitionStyling" }, label_html: { class: "type" } %></li>
+          <ul class="list-inline" style="margin-bottom: 0px; display: inline !important;">
+            <li style="width: 49%;"><%= f.input :first_name, required: true, input_html: { class: "recognitionStyling" }, label_html: { class: "type" } %></li>
+            <li style="width: 49%;"><%= f.input :last_name, required: true, input_html: { class: "recognitionStyling" }, label_html: { class: "type" } %></li>
           </ul>
             <%= f.input :email, required: true, autofocus: true, input_html: { class: "recognitionStyling" }, label_html: { class: "type" } %>
             <%= f.input :password, required: true, input_html: { class: "recognitionStyling" }, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length), label_html: { class: "type" }, hint_html: { class: "hint" } %>
@@ -27,7 +27,7 @@
             <% end %>
 
           <div class="form-actions">
-            <%= f.button :submit, "Sign up", class: "sign-up-button" %>
+            <%= f.button :submit, "Sign up", class: "form-button" %>
         <% end %>
       </div>
     </div>

@@ -23,8 +23,27 @@
 
 .recognitionStyling {
   border-radius: 4px;
-  color: $light-gray;
+  color: #888;
   font-weight: lighter;
-  border-width: 0.4px;
   font-size: 14px;
+  box-shadow: none;
+  &:focus {
+    border-color: $green;
+  }
+}
+
+#new_user {
+  label {
+    font-size: 15px;
+    color: $gray;
+    font-weight: normal;
+    margin-bottom: 5px;
+  }
+
+  .hint {
+    font-size: 14px;
+    color: $gray;
+    font-weight: 100;
+    margin-bottom: 0px;
+  }
 }
