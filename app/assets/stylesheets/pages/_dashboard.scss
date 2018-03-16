@@ -49,7 +49,7 @@
 }
 
 .text-impact-gray {
-  color: $light-gray;
+  color: $gray;
   font-size: 14px;
   font-weight: 300;
 }
@@ -71,7 +71,7 @@
   width: 100%;
   height: 120px;
   background: $white;
-  border: 1px solid #DCDCDC;
+  border: 1px solid $light-gray;
   margin-top: 5px;
   border-radius: 4px;
   display: flex;
@@ -85,7 +85,7 @@
 
 .card-text-container-dashboard {
   line-height: 0px;
-  color: $light-gray;
+  color: $gray;
 }
 
 .card-text-container-dashboard h4 {
@@ -103,6 +103,27 @@
   padding-right: 10px;
 }
 
+.feedback-top {
+  font-weight: lighter;
+  font-size: 14px;
+  letter-spacing: 0.2px;
+  color: $gray;
+  margin-top: 30px;
+  margin-bottom: 0px;
+  text-align: center;
+}
+
+.feedback-bottom {
+  font-weight: lighter;
+  font-size: 14px;
+  letter-spacing: 0.2px;
+  color: $gray;
+  text-align: center;
+}
+
+.e-mail {
+  color: $green;
+}
 
 
 
