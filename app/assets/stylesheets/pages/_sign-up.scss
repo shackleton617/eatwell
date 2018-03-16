@@ -63,9 +63,10 @@
 }
 
 .type {
-  font-size: 20px;
-  color: $gray;
-  font-weight: 100;
+    font-size: 15px;
+    color: $gray;
+    font-weight: normal;
+    margin-bottom: 5px;
 }
 
 .btn-success {
@@ -94,6 +95,15 @@
   color: $gray;
   font-weight: 100;
   margin-bottom: 0px;
+}
+
+.avatar-edit {
+  font-size: 14px;
+  color: $green;
+  font-weight: 100;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  padding-left: 0px;
 }
 
 .btn-facebook {
