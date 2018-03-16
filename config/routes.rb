@@ -17,6 +17,7 @@ root to: 'pages#home'
   end
   get "users/favorites", to: "users#favorites", as: "favorite"
   get "users/dashboard", to: "users#dashboard", as: "dashboard"
+  get "privacy", to: "pages#privacy"
   # get "/restaurants/:restaurant_id/offers", to: "offers#show", as: "offers"
 
   devise_for :users,
