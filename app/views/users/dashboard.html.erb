@@ -14,8 +14,7 @@
     </div>
   </div>
   <div class="center-avatar-dashboard">
-    <div class="container-dashboard">
-      <%= image_tag avatar_url(current_user), height: 130, width: 130, class: "user-avatar-dashboard" %>
+    <div class="profile-pic" style="height: 130px; width: 130px; background: url(<%= avatar_url(current_user) %>) no-repeat center center; background-size: cover; border-radius: 50%; box-shadow: 0 0 1px rgba(0,0,0,0.8);">
     </div>
   </div>
 
