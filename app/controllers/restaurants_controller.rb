@@ -2,6 +2,7 @@ class RestaurantsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
   before_action :set_restaurant, only: [:show ]
   def index
+      @location = request.location
     # Restaurant.near("lisbon", 20)
     if params[:query].present?
       @restaurants = Restaurant.search_by_any_word(params[:query])
@@ -12,6 +13,7 @@ class RestaurantsController < ApplicationController
 
     if params[:place].present?
       @restaurants = @restaurants.near(params[:place], 0.5)
+      raise
     end
     get_location
   end
