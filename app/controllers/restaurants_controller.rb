@@ -13,7 +13,6 @@ class RestaurantsController < ApplicationController
 
     if params[:place].present?
       @restaurants = @restaurants.near(params[:place], 0.5)
-      raise
     end
     get_location
   end
