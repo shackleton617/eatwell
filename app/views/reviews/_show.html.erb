@@ -1,4 +1,4 @@
-<span style="font-weight: 325";> <%= review.user.first_name.capitalize %> <%= review.user.last_name.capitalize  %></span>, <span style="font-size: 14px;"><%= review.created_at.to_date %></span>
+<span style="font-weight: 325";> <%= review.user.first_name.capitalize %> <%= review.user.last_name.capitalize  %></span>, <span style="font-size: 14px;"><%= review.created_at.to_date.strftime("%m %b %Y ") %></span>
 <p style="margin-bottom: 0px; overflow-wrap: break-word;  "><%= review.content %></p>
 <p>Rating: <%= review.rating %></p>
 
