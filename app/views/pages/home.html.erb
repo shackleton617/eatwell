@@ -44,6 +44,15 @@
           <%= submit_tag "SEARCH", class: "btn btn-block  button-home" %>
         <% end %>
       </div>
+
+      <div>
+        <%= form_tag restaurants_path, method: :get do %>
+          <%= label :location, "Search restaurants near you" %>
+          <%= text_field_tag request.location %>
+
+          <%= submit_tag "Search" %>
+        <% end %>
+      </div>
       <!-- search form end -->
 
     </div>
