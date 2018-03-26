@@ -46,12 +46,7 @@
       </div>
 
       <div>
-        <%= form_tag restaurants_path, method: :get do %>
-          <%= label :location, "Search restaurants near you" %>
-          <%= text_field_tag request.location.city %>
-
-          <%= submit_tag "Search" %>
-        <% end %>
+        <%= request.location.city %>
       </div>
 
       <!-- search form end -->
